@@ -213,7 +213,7 @@ a:hover, a:active  {color:#BDBDBD;} /*text-decoration:underline;}*/
 	}
 
 	.mainheader nav {
-	height: 160px;
+	height: 155px;
 	}
 
 	.mainheader nav ul li {
@@ -223,6 +223,5 @@ a:hover, a:active  {color:#BDBDBD;} /*text-decoration:underline;}*/
     text-align: left;}
 
 	.frame img {
-	width: 150px;
-}
+	width: 150px;}
 }
