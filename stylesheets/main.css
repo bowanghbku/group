@@ -1,6 +1,6 @@
 /******************************************** index page *************************************/
 body {
-	font-size:100%; /*default 14px*/
+	font-size:106%; /*default 14px*/
 /*	font-family: 'Ubuntu', sans-serif, Myriad, Arial, Helvetica, Helvetica; /*Futura*/
 	/*color: #444444;*/
 	line-height: 1.2;
@@ -9,12 +9,12 @@ body {
     background-repeat: repeat; */
 	background-color: #43474D;
 	margin: 0 auto;
-	width: 915px;/*67.5%;*/
+	width: 915px;/*915px;/*67.5%;*/
 	clear: both;
 }
 .frame {
 	font-family: Helvetica,'Ubuntu', Myriad, Arial, Futura, Helvetica; /*Futura*/
-	font-weight: 300;
+	font-weight: 350;
 	width: 100%;
 	margin-top: 0%;
 	float: center;
@@ -44,7 +44,7 @@ body {
 }
 
 .mainheader nav ul li {
-	font-size: 16px;
+	font-size: 17px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0px;
@@ -105,14 +105,13 @@ a:hover, a:active  {color:#BDBDBD;} /*text-decoration:underline;}*/
 
 .onebox h3 {
 	/*background-color: #43474D; /*43474D*/
-	font-weight: 300;
-	font-size: 110%;
+	font-size: 120%;
 	padding-left: 0px;
 	text-align: left;
 	vertical-align: top;
 	margin-bottom: -2%;
 	color: #901235;
-	font-weight: 500;
+	font-weight: 550;
 	border-bottom: 1px solid #901235;
 }
 
@@ -130,15 +129,14 @@ a:hover, a:active  {color:#BDBDBD;} /*text-decoration:underline;}*/
 }
 
 .onebox li {
-	/*list-style: square; */
+	list-style: square;
 	/*font-family: monospace;	*/
-	font-size: 95%;
+	font-size: 100%;
 	margin-left: -23px;   /*-12 -17*/  
 	margin-bottom: -7px; /*-12 -18*/
 }
 
 /******************************************** publication page *************************************/
-
 .group{
 	width: 20.5%;
 	margin-top: 10%;
@@ -165,6 +163,14 @@ a:hover, a:active  {color:#BDBDBD;} /*text-decoration:underline;}*/
 .group li {
 	list-style: none;
 	margin: 0 auto 10px 0;
+}
+
+.news li {
+	list-style: none;
+	/*font-family: monospace;	*/
+	font-size: 100%;
+	margin-left: -39px;   /*-12 -17*/  
+	margin-bottom: -16px; /*-12 -18*/
 }
 
 .title{
