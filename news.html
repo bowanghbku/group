@@ -1,92 +1,103 @@
 <!DOCTYPE html>
-<html lang="en"><!--<![endif]-->
-<head><meta charset="utf-8"><!-- Set the viewport width to device width for mobile --><meta name="viewport" content="width=device-width", initial-scale=1.0>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- 视口：宽度跟随设备宽度（移动端适配） -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bo Lab | Group</title>
-	<!-- Included CSS Files -->
-	<link href="stylesheets/main.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,200,300,400,500,700" rel="stylesheet" /><!--[if lt IE 9]>
-<link rel="stylesheet" href="stylesheets/main.css">
-<![endif]--><script src="javascripts/modernizr.foundation.js"></script><!-- IE Fix for HTML5 Tags --><!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
+	<!-- 站点样式表（全站唯一使用的样式文件） -->
+	<link href="css/main.css" rel="stylesheet">
+	<!-- Ubuntu 网络字体（导航栏专用） -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Modernizr：浏览器特性检测 -->
+	<script src="js/modernizr.foundation.js"></script>
 </head>
-<body class="body"><a name="top"></a>
-<div class="frame"><!-- <header class="mainheader">	
-<a href="http://www.hbku.edu.qa/"><img src="images/hbku.png"></a>
-</header> -->
-<div class="mainheader">
-<h5></h5>
 
-<nav>
-<ul>
-	<li><a href="index.html">HOME</a></li>
-	<li><a href="research.html">RESEARCH</a></li>
-	<li><a href="publication.html">PUBLICATIONS</a></li>
-	<li><a href="group.html">GROUP</a></li>
-	<li><a href="news.html"><font color="#BDBDBD" style="text-decoration: underline">NEWS</font></a></li>
-</ul>
-</nav>
+<body class="body">
+<!-- 页面顶部锚点（供 Back to top 链接跳转） -->
+<a name="top"></a>
+<div class="frame">
+	<!-- 顶部导航栏（当前页 NEWS 高亮显示） -->
+	<div class="mainheader">
+		<h5></h5>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="research.html">RESEARCH</a></li>
+				<li><a href="publication.html">PUBLICATIONS</a></li>
+				<li><a href="group.html">GROUP</a></li>
+				<li><a href="news.html"><span style="color:#FFF; text-decoration:underline">NEWS</span></a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- 新闻列表：按时间倒序排列 -->
+	<div class="onebox">
+		<h3>Group News</h3>
+		<br>
+		<div class="news">
+			<ul>
+				<li>[Jan 2026] One paper on electrochemical sensing interface IC was accepted by <i>ISCAS'26</i>.</li><br>
+
+				<li>[Nov 2025] One research matching fund program (1st cycle) totaling QAR750K has been granted by the <i>Office of the Vice President for Research, HBKU</i>, B. Wang as PI.</li><br>
+
+				<li>[Aug 2025] One flagship research grant project totaling QAR900K has been granted by <i>HBKU</i>, B. Wang as PI.</li><br>
+
+				<li>[Jan 2025] Two papers were accepted by <i>ISCAS'25</i>.</li><br>
+
+				<li>[Jan 2025] One paper was accepted by <i>CICC'25</i>.</li><br>
+
+				<li>[Dec 2024] One ARG project totaling $730K has been granted by <i>QRDI</i>, B. Wang as Lead PI.</li><br>
+
+				<li><span style="color:#686868">[................] <i>did not track for few years</i></span>.</li><br>
+
+				<li>[July 2020] One journal paper by B. Wang was accepted by <i>IEEE TCAS-I</i>.</li><br>
+
+				<li>[Feb 2020] One paper on ultra-low-power PMIC was accepted by <i>IMS'20</i>.</li><br>
+
+				<li>[Jan 2020] Two papers were accepted by <i>ISCAS'20</i>.</li><br>
+
+				<li>[Nov 2019] Welcome Dr. Nasir A. Quadir to join our group as a <i>Senior Research Fellow</i>.</li><br>
+
+				<li>[Nov 2019] One innovation fund totaling 10K QAR from innovation center has been granted to M. Asfand.</li><br>
+
+				<li>[Oct 2019] One journal paper by Dr. Y. Yi was accepted by <i>Sensors</i>.</li><br>
+
+				<li>[July 2019] One journal paper by Dr. Y. Yi was accepted by <i>Energies</i>.</li><br>
+
+				<li>[May 2019] One paper by Dr. Y. Yi was accepted by <i>FLEPS&rsquo;19</i>.</li><br>
+
+				<li>[Jan 2019] One journal paper by W. Xu was accepted by <i>IEEE sensors letters</i>.</li><br>
+
+				<li>[Jan 2019] Welcome Muhammad Asfandyer Awan to join our group as a <i>PhD student</i>.</li><br>
+
+				<li>[Dec 2018] Welcome Dr. Ying Yi to join our group as a <i>Senior Research Fellow</i>.</li><br>
+
+				<li>[Nov 2018] One journal paper by B. Wang was accepted by <i>IEEE Trans. Ind. Electron</i>.</li><br>
+
+				<li>[Nov 2018] One NPRP project totaling $599.7K has been granted by <i>QNRF</i>, B. Wang as Lead PI.</li><br>
+
+				<li>[Nov 2018] One NPRP project totaling $400K has been granted by <i>QNRF</i>, B. Wang as PI.</li><br>
+
+				<li>[May 2018] One paper by T. N. Lin was accepted by <i>MWSCAS&rsquo;18</i>.</li><br>
+
+				<li>[Aug 2017] One UREP project totaling $25,000 has been granted by <i>QNRF</i>, B. Wang as Lead PI.</li><br>
+
+				<li>[Aug 2017] One journal paper by B. Wang was accepted by <i>IEEE TCAS-II</i>.</li><br>
+
+				<li>[Feb 2017] Two papers were accepted by <i>ISCAS'17</i>.</li><br>
+
+				<li>[Jan 2017] Dr. Bo Wang joined HBKU in Qatar as a Founding Faculty and an Assitant Professor.</li><br>
+			</ul>
+			<p align="right"><a href="#top"><span style="font-size:small"><i>Back to top&raquo;</i></span></a></p>
+		</div>
+	</div>
 </div>
-
-<div class="onebox">
-<h3>Group News</h3>
-<br>
-<div class="news">
-<ul>
-			<li>[Jan 2026] One paper on electrochemical sensing interface IC was accepted by <i>ISCAS'26</i>.</li><br>
-			
-			<li>[Nov 2025] One research matching fund program (1st cycle) totaling QAR750K has been granted by the <i>Office of the Vice President for Research, HBKU</i>, B. Wang as PI.</li><br>
-
-			<li>[Aug 2025] One flagship research grant project totaling QAR900K has been granted by <i>HBKU</i>, B. Wang as PI.</li><br>
-
-			<li>[Jan 2025] Two papers were accepted by <i>ISCAS'25</i>.</li><br>
-
-			<li>[Jan 2025] One paper was accepted by <i>CICC'25</i>.</li><br>
-
-			<li>[Dec 2024] One ARG project totaling $730K has been granted by <i>QRDI</i>, B. Wang as Lead PI.</li><br>
-
-			<li><font color="686868">[................] <i>did not track for few years</i></font>.</li><br>
-
-			<li>[July 2020] One journal paper by B. Wang was accepted by <i>IEEE TCAS-I</i>.</li><br>
-
-			<li>[Feb 2020] One paper on ultra-low-power PMIC was accepted by <i>IMS'20</i>.</li><br>	
-
-			<li>[Jan 2020] Two papers were accepted by <i>ISCAS'20</i>.</li><br>
-
-			<li>[Nov 2019] Welcome Dr. Nasir A. Quadir to join our group as a <i>Senior Research Fellow</i>.</li><br>
-
-			<li>[Nov 2019] One innovation fund totaling 10K QAR from innovation center has been granted to M. Asfand.</li><br>
-			
-			<li>[Oct 2019] One journal paper by Dr. Y. Yi was accepted by <i>Sensors</i>.</li><br>
-
-			<li>[July 2019] One journal paper by Dr. Y. Yi was accepted by <i>Energies</i>.</li><br>
-
-			<li>[May 2019] One paper by Dr. Y. Yi was accepted by <i>FLEPS’19</i>.</li><br>
-
-			<li>[Jan 2019] One journal paper by W. Xu was accepted by <i>IEEE sensors letters</i>.</li><br>
-
-			<li>[Jan 2019] Welcome Muhammad Asfandyer Awan to join our group as a <i>PhD student</i>.</li><br>
-
-			<li>[Dec 2018] Welcome Dr. Ying Yi to join our group as a <i>Senior Research Fellow</i>.</li><br>
-
-			<li>[Nov 2018] One journal paper by B. Wang was accepted by <i>IEEE Trans. Ind. Electron</i>.</li><br>
-
-			<li>[Nov 2018] One NPRP project totaling $599.7K has been granted by <i>QNRF</i>, B. Wang as Lead PI.</li><br>
-
-			<li>[Nov 2018] One NPRP project totaling $400K has been granted by <i>QNRF</i>, B. Wang as PI.</li><br>
-
-			<li>[May 2018] One paper by T. N. Lin was accepted by <i>MWSCAS’18</i>.</li><br>
-
-			<li>[Aug 2017] One UREP project totaling $25,000 has been granted by <i>QNRF</i>, B. Wang as Lead PI.</li><br>
-
-			<li>[Aug 2017] One journal paper by B. Wang was accepted by <i>IEEE TCAS-II</i>.</li><br>
-
-			<li>[Feb 2017] Two papers were accepted by <i>ISCAS'17</i>.</li><br>
-
-			<li>[Jan 2017] Dr. Bo Wang joined HBKU in Qatar as a Founding Faculty and an Assitant Professor.</li><br>
-</ul>
-<p align="right"><a href="#top"><font size="2px"><i>Back to top&raquo;</i></font></a></p>
-</div>
-</div>
+	<!-- 链接域名悬停提示框（模仿浏览器原生链接预览，排除导航栏与 Read PDF»） -->
+	<script src="js/link-tooltip.js"></script>
 </body>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</html>
