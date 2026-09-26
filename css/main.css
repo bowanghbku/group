@@ -64,7 +64,7 @@ html {
 }
 
 body {
-	font-size: 106.25%;              /* 正文 17px（对齐 MIT 正文字号，16px 基准 × 1.0625） */
+	font-size: 17.5px;              /* 正文 17px（对齐 MIT 正文字号，16px 基准 × 1.0625） */
 	line-height: 1.5;                /* 行距 1.2→1.5，提升长文可读性 */
 	background-color: #43474D;
 	margin: 0 auto;
@@ -366,9 +366,18 @@ a[href*="scholar.google"] {
 		font-size: 100%;
 	}
 
+	/* 窄屏取消导航固定定位：避免导航遮挡/压缩可见内容区域，
+	   让用户能看到更多正文信息；导航随页面正常滚动（static）。 */
+	.mainheader {
+		position: static;            /* 覆盖桌面端 sticky，窄屏不固定 */
+		margin-bottom: 8px;          /* 缩小导航与正文间距，减少纵向浪费 */
+	}
+
 	/* 窄屏导航纵向堆叠（等效于原浮动布局的逐行换行） */
 	.mainheader nav {
 		height: auto;
+		padding-left: 8px;           /* 减小导航左右内边距，增加内容宽度 */
+		padding-right: 8px;
 	}
 
 	.mainheader nav ul {
@@ -385,10 +394,38 @@ a[href*="scholar.google"] {
 	/* 移动端导航项增大点击热区 */
 	.mainheader nav ul li a:link,
 	.mainheader nav ul li a:visited {
-		padding: 14px 9px 14px 20px;
+		padding: 14px 9px 14px 16px;
+	}
+
+	/* 减小正文区左右内边距，增加窄屏下的实际内容显示宽度 */
+	.onebox {
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 
 	.frame img {
 		width: 125px;
+	}
+}
+
+/* 更窄断点（手机竖屏）：进一步压缩两侧边距，最大化内容宽度 */
+@media only screen and (min-width: 100px) and (max-width: 480px) {
+	.onebox {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	.mainheader nav {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+
+	.mainheader nav ul li a:link,
+	.mainheader nav ul li a:visited {
+		padding: 12px 6px 12px 12px;
+	}
+
+	.frame img {
+		width: 100px;                /* 更窄屏下照片进一步缩小，避免挤压文字列 */
 	}
 }
