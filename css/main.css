@@ -403,6 +403,33 @@ a[href*="scholar.google"] {
 		padding-right: 12px;
 	}
 
+	/* 窄屏下成员照片与文字改为上下堆叠（桌面端仍左右并排）：
+	   把 member-group 表格的 tr/td 都改为块级，使照片 td 在上、文字 td 在下；
+	   中间的间隔 td（width 40 的空单元格）隐藏，避免产生多余空行。 */
+	.onebox .member-group table,
+	.onebox .member-group tbody,
+	.onebox .member-group tr {
+		display: block;              /* 表格容器块级化，打破表格布局 */
+		width: 100%;
+	}
+
+	.onebox .member-group td {
+		display: block;              /* 每个单元格占满一行，自然上下堆叠 */
+		width: 100% !important;      /* 覆盖 HTML 内联 width（160/40/715） */
+		padding: 2px 0;              /* 保留少量纵向间距 */
+		text-align: left;
+	}
+
+	/* 隐藏中间的间隔单元格（原 width=40 的空 td） */
+	.onebox .member-group td:nth-child(2) {
+		display: none;
+	}
+
+	/* 照片单元格：图片居左，下方留一点间距与文字分隔 */
+	.onebox .member-group td:first-child {
+		margin-bottom: 6px;
+	}
+
 	.frame img {
 		width: 125px;
 	}
