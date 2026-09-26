@@ -60,29 +60,29 @@
 				<tr>
 					<td align="left" valign="middle" width="225"><img src="images/tsensor.jpg" width="225"></td>
 					<td align="left" valign="top" width="0"></td>
-					<!-- 芯片描述默认隐藏，点击 “show/hide chip description...” 展开 -->
+					<!-- 芯片描述默认隐藏，点击 “show more...” 展开 -->
 					<td align="left" valign="top" width="690">BJT-based Temperature Sensor
-					<div id="words3" style="display:none;">This design proposed a subranging BJT-based temperature sensor optimized for an ultra-wide sensing range operation from -50 to 180 <sup>o</sup>C. It achieves low-power (micro-watt) operation and high energy efficiency at high temperatures. We presented and demonstrated this design in ISSCC 2022.</div>
+					<span id="words3" style="display:none;">This design proposed a subranging BJT-based temperature sensor optimized for an ultra-wide sensing range operation from -50 to 180 <sup>o</sup>C. It achieves low-power (micro-watt) operation and high energy efficiency at high temperatures. We presented and demonstrated this design in ISSCC 2022.</span>
 
-					<div id="cl3" style="display:inline;"><a href="#"><span style="font-size:small"><i>show/hide chip description...</i></span></a></div>
+					<div id="cl3" style="display:inline;"><a href="#"><span style="font-size:small"><i>more...</i></span></a></div>
 					</td>
 				</tr>
 				<tr>
 					<td align="left" valign="middle" width="225"><img src="images/IA.jpg" width="225"></td>
 					<td align="left" valign="top" width="0"></td>
 					<td align="left" valign="top" width="690">Lower-power Instrumentation Amplifier
-					<div id="words2" style="display:none;">This design proposed a power-up calibration scheme to mitigate the offset of a capacitive-gain chopper instrumentation amplifier (CCIA), thus suppressing the offset-induced output ripple.</div>
+					<span id="words2" style="display:none;">This design proposed a power-up calibration scheme to mitigate the offset of a capacitive-gain chopper instrumentation amplifier (CCIA), thus suppressing the offset-induced output ripple.</span>
 
-					<div id="cl2" style="display:inline;"><a href="#"><span style="font-size:small"><i>show/hide chip description...</i></span></a></div>
+					<div id="cl2" style="display:inline;"><a href="#"><span style="font-size:small"><i>more...</i></span></a></div>
 					</td>
 				</tr>
 				<tr>
 					<td align="left" valign="middle" width="225"><img src="images/die.jpg" width="225"></td>
 					<td align="left" valign="top" width="0"></td>
 					<td align="left" valign="top" width="690">UHF RFID Sensor Tag
-					<div id="words" style="display:none;">This design is an ultra high frequency (UHF) passive sense tag targeting for electrical grid and substation thermal monitoring, with emphasis on the design of an ultra-low power embedded temperature sensor as well as the tag system optimization to extend the tag operating range. The designed tag achieves a -12.3 dBm sensitivity under active temperature monitoring operation, which is state of the art among existing UHF passive temperature sense tag products. By using a low-cost wireless single-point trimming, the embedded temperature sensor achieves an inaccuracy of +/-2.5 <sup>o</sup>C (3&sigma;) from -25 to 120 <sup>o</sup>C.</div>
+					<span id="words" style="display:none;">This design is an ultra high frequency (UHF) passive sense tag targeting for electrical grid and substation thermal monitoring, with emphasis on the design of an ultra-low power embedded temperature sensor as well as the tag system optimization to extend the tag operating range. The designed tag achieves a -12.3 dBm sensitivity under active temperature monitoring operation, which is state of the art among existing UHF passive temperature sense tag products. By using a low-cost wireless single-point trimming, the embedded temperature sensor achieves an inaccuracy of +/-2.5 <sup>o</sup>C (3&sigma;) from -25 to 120 <sup>o</sup>C.</span>
 
-					<div id="cl" style="display:inline;"><a href="#"><span style="font-size:small"><i>show/hide chip description...</i></span></a></div>
+					<div id="cl" style="display:inline;"><a href="#"><span style="font-size:small"><i>more...</i></span></a></div>
 					</td>
 				</tr>
 			</tbody>
@@ -93,12 +93,12 @@
 			function bindToggle(triggerId, targetId) {
 				document.getElementById(triggerId).onclick = function (event) {
 					event.preventDefault();   /* 阻止 <a href="#"> 默认跳转，避免页面滚到顶部 */
-					var show = document.getElementById(targetId);
-					if (show.style.display == "block") {
-						show.style.display = "none";
-					} else {
-						show.style.display = "block";
-					}
+				var show = document.getElementById(targetId);
+				if (show.style.display == "inline") {
+					show.style.display = "none";
+				} else {
+					show.style.display = "inline";
+				}
 				};
 			}
 			bindToggle("cl3", "words3");

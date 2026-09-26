@@ -196,6 +196,36 @@ a:focus-visible {
 }
 
 /* ----------------------------------------------------------
+   publication 页论文列表的 "Read PDF»" 链接：去掉下划线，
+   保留黑色文字与 » 箭头；悬停时文字变红（与全局 a:hover 一致）。
+   用 .onebox li a:not(.ieee-link) 精准命中（publication 页 <li>
+   内只有 Read PDF 链接；导航栏 <li> 在 .mainheader 内不受影响；
+   其他页面的 .onebox 无 li+a 链接）。
+   ---------------------------------------------------------- */
+.onebox li a:not(.ieee-link):link,
+.onebox li a:not(.ieee-link):visited {
+	text-decoration: none;           /* 去掉 MIT 红下划线 */
+	color: #000;                     /* 保持黑色文字 */
+}
+
+.onebox li a:not(.ieee-link):hover,
+.onebox li a:not(.ieee-link):active {
+	text-decoration: none;           /* 悬停也不显示下划线 */
+	color: #FF1423;                  /* 悬停文字变亮红（跟随全局 a:hover） */
+}
+
+/* ----------------------------------------------------------
+   "Check Google Scholar»" 链接：亮红色边框包围（MIT 亮红 #FF1423，
+   不用暗红），并去掉文字下划线。用 a[href*="scholar.google"]
+   精准命中（全站唯一）。
+   ---------------------------------------------------------- */
+a[href*="scholar.google"] {
+	border: 1px solid #FF1423;               /* 亮红色边框 */
+	padding: 2px 8px;                        /* 边框与文字留出呼吸空间 */
+	text-decoration: none;                   /* 去掉文字下划线 */
+}
+
+/* ----------------------------------------------------------
    链接域名悬停提示框（模仿浏览器原生链接预览气泡）
    黑底白字，悬停/键盘聚焦正文链接时显示在链接上方，
    内容为链接目标域名；由 js/link-tooltip.js 控制显示与定位。
@@ -255,7 +285,7 @@ a:focus-visible {
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: -5px;
+	bottom: -4px;
 	width: 20%;
 	height: 2px;
 	background: var(--divider-color-left, var(--accent-color));   /* 默认主题红 #7D0E2D，可在单个 <h3> 上覆盖 */
@@ -266,7 +296,7 @@ a:focus-visible {
 	content: "";
 	position: absolute;
 	left: 20%;
-	bottom: -3.5px;                          /* 顶边与左段 2px 线的顶边对齐 */
+	bottom: -2.5px;                          /* 顶边与左段 2px 线的顶边对齐 */
 	width: 80%;
 	height: 0.5px;
 	background: var(--divider-color-right, #BDBDBD);
@@ -278,6 +308,26 @@ a:focus-visible {
 	color: var(--accent-color);       /* 主题红 #7D0E2D（原 #901235） */
 	font-weight: 500;
 	margin: 0;
+}
+
+/* 组员分类标题（group 页 Postdoc Researcher / Ph.D. Students / Research Assistant）：
+   黑色文字（覆盖默认主题红）。下方灰色横线由外层 .member-group 容器提供。 */
+.onebox h4.section-label {
+	color: #000;                       /* 黑色文字（覆盖默认主题红） */
+	font-weight: 500;
+}
+
+/* 组员分类区块容器：底部 0.5px 灰色横线，分隔各成员区块；
+   最后一个区块（Research Assistant）不显示横线。 */
+.onebox .member-group {
+	border-bottom: 0.5px solid #BDBDBD;  /* 0.5px 浅灰横线 */
+	padding-bottom: 10px;                /* 横线与内容之间留出呼吸空间 */
+	margin-bottom: 12px;                 /* 区块之间的间距 */
+}
+
+/* 最后一个模块不加横线 */
+.onebox .member-group:last-of-type {
+	border-bottom: none;
 }
 
 /* 内容区版权/说明文字（h6）：辅助文字，小字号灰色 */
@@ -313,7 +363,7 @@ a:focus-visible {
 @media only screen and (min-width: 100px) and (max-width: 750px) {
 	.body {
 		width: 100%;
-		font-size: 80%;
+		font-size: 100%;
 	}
 
 	/* 窄屏导航纵向堆叠（等效于原浮动布局的逐行换行） */
@@ -327,7 +377,7 @@ a:focus-visible {
 
 	.mainheader nav ul li {
 		width: 100%;
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 300;
 		text-align: left;
 	}
@@ -339,6 +389,6 @@ a:focus-visible {
 	}
 
 	.frame img {
-		width: 150px;
+		width: 125px;
 	}
 }
