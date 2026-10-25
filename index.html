@@ -2,69 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<!-- 视口：宽度跟随设备宽度（移动端适配） -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bo Lab | Home</title>
 
-	<!-- 站点样式表（全站唯一使用的样式文件） -->
 	<link rel="stylesheet" href="css/main.css">
-	<!-- Ubuntu 网络字体（导航栏专用） -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;700&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<!-- Modernizr：浏览器特性检测 -->
 	<script src="js/modernizr.foundation.js"></script>
+
+	<!-- 刷新（F5）后回到页面顶部：关闭浏览器的滚动位置恢复 -->
+	<script src="js/scroll-top.js"></script>
 </head>
 
 <body class="body">
 	<div class="frame">
-		<!-- 顶部导航栏（当前页 HOME 高亮显示） -->
 		<div class="mainheader">
-			<h5>
-				<nav>
-					<ul>
-						<li><a href="index.html"><span style="color:#FFF; text-decoration:underline">HOME</span></a></li>
-						<li><a href="research.html">RESEARCH</a></li>
-						<li><a href="publication.html">PUBLICATIONS</a></li>
-						<li><a href="group.html">GROUP</a></li>
-					<!--<li><a href="news.html">NEWS</a></li>-->
-					</ul>
-				</nav>
-			</h5>
+			<h5></h5>
+			<nav>
+				<ul>
+					<li><a href="index.html"><span style="color:#FFF; text-decoration:underline">HOME</span></a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+					<li><a href="group.html">GROUP</a></li>
+					<li><a href="publication.html">PUBLICATIONS</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				<!--<li><a href="news.html">NEWS</a></li>-->
+				</ul>
+			</nav>
 		</div>
 
-		<!-- 主内容区：左栏为联系方式与链接，右栏为实验室简介 -->
 		<div class="onebox">
-			<!-- 实验室 Logo（margin-top 18.25px × 2/3 ≈ 12.17px） -->
-			<img src="images/logo.png" width="280" align="middle" style="padding-left:0px; padding-bottom:0px; margin-top:12.17px">
-			<h3></h3>
-			<br><br>
-			<table border="0" style="border-collapse:collapse;" cellpadding="0" cellspacing="0">
-			<tr>
-				<td width="275" valign="top">
-					Hamad Bin Khalifa University<br>
-					College of Science &amp; Engineering<br>
-					Manufactury Building, 338E<br>
-					Education City<br>
-					Doha, Qatar<br>
-					Email: bwang{at}hbku.edu.qa<br><br>
-					<aside>
-					<a href="https://www.hbku.edu.qa/en">HBKU official website</a><br>
-					<a href="https://www.qf.org.qa/">Qatar foundation</a><br>
-					</aside>
-				</td>
-				<td width="20" align="left" valign="top"></td>
-				<td width="665" align="left" valign="top">
-					The <a href="https://www.ss-sensing.com">HBKU Solid-State Sensing Laboratory</a> led by Dr. Bo Wang focuses on the analysis, design, implementation and field verification of various circuits/systems for the Internet-of-Things (IoT) and in-vitro/vivo healthcare. Techniques covered in this group range from sensing, low power interface, data transmission to ultimate signal analysis.<br><br>
-					One focus of our group is to design innovative battery-less sensing system. Another focus of our group is to develop enabling technologies and miniaturized devices which bring benefits to people that are not accessible to regular medical screening.<br><br>
-					<img src="images/hbku_2.png" width="180" align="right">
-				</td>
-			</tr>
-			</table>
+			<div class="lab-hero lab-hero--banner">
+				<div class="lab-hero__text">
+					<h1 class="lab-hero__title">Integrated Sensor IC Design Lab</h1>
+					<p class="lab-hero__tagline"><b>Analog and Mixed-Signal Circuits for Intelligent Sensing</b><br><b>ISIC Lab@HBKU</b></p>
+				</div>
+			</div>
+			
+			<h3 class="news-section no-divider">Welcome to ISIC Lab</h3>
+			<p class="lab-intro">Our lab designs analog and mixed-signal ICs for intelligent sensing, with a particular focus on analog front-ends (AFEs), data converters, and integrated sensors, enabling efficient collection of physical-world information in the AI era.</p>
+
+			<!-- Join Us：链接到 opening.html（该页不在导航栏中）；标题用 no-divider 居中且无分隔线 -->
+			<h3 class="news-section no-divider"><a href="opening.html">Join Us</a></h3>
+			<p class="lab-openings">We are looking for motivated <b>Postdoctoral Fellows</b>, <b>Ph.D.</b> and <b>MS</b> students, and Visiting Students to join us, with competitive salary/scholarship packages. <a href="opening.html">See more&nbsp;&raquo;</a></p>
+
+			<!-- Latest News：与 news.html 最新 10 条保持同步（新增时复制到最上方、删掉最后一条）；
+		     更早的条目保留在列表下方注释中 -->
+			<h3 class="news-section no-divider">Lab News</h3>
+			<ul class="news-latest">
+				<li><span class="news-date">2026/09</span><span class="news-text">Ali's work on an FPGA Accelerator for HAR has been accepted to <b>IEEE TCAS-II</b></span></li>
+				<li><span class="news-date">2026/09</span><span class="news-text">Our lab received a joint project award (QAR 700K) from <b>HBKU</b> in collaboration with CUHK, with Dr. Wang as PI</span></li>
+				<li><span class="news-date">2026/08</span><span class="news-text">We are pleased to welcome Haris and Mazen joining our lab as Ph.D. students</span></li>
+				<li><span class="news-date">2026/02</span><span class="news-text">Abubakar's work on an AI Imager has been accepted to <b>IEEE TCAS-I</b></span></li>
+				<li><span class="news-date">2026/01</span><span class="news-text">Asfand's work on an Electrochemical Sensing Interface IC has been accepted to <b>ISCAS 2026</b></span></li>
+				<li><span class="news-date">2025/11</span><span class="news-text">Our lab received a Research Matching Fund grant (QAR 750K) from <b>HBKU OVPR</b>, with Dr. Wang as PI</span></li>
+				<li><span class="news-date">2025/08</span><span class="news-text">Our lab received a Flagship Research Grant (QAR 900K) from <b>HBKU</b>, with Dr. Wang as PI</span></li>
+				<li><span class="news-date">2025/01</span><span class="news-text">Amgad's work on a Quantization-Skip Incremental &Delta;&Sigma; ADC has been accepted to <b>ISCAS 2025</b></span></li>
+				<li><span class="news-date">2025/01</span><span class="news-text">Nasir's work on Ambient-Light Rejection for VLC Receivers has been accepted to <b>ISCAS 2025</b></span></li>
+				<li><span class="news-date">2025/01</span><span class="news-text">Dr. Wang's work on an Incremental ADC with Shooting Integrator has been accepted to <b>CICC 2025</b></span></li>
+				<li><span class="news-date">2024/12</span><span class="news-text">Our lab received an ARG award ($730K) from <b>QRDI</b>, with Dr. Wang as Lead PI</span></li>
+			<!-- 2024/11 之前的条目（按要求注释保留，未删除；恢复时把下面三行的注释去掉即可）
+			<li><span class="news-date">2020/07</span><span class="news-text">Wang's work on Near-Optimal Decoding of Incremental &Delta;&Sigma; ADCs has been accepted to <b>IEEE TCAS-I</b></span></li>
+			<li><span class="news-date">2020/02</span><span class="news-text">Zizhen's work on an Ultra-Low-Power PMIC for RF Energy Harvesting has been accepted to <b>IMS 2020</b></span></li>
+			<li><span class="news-date">2020/01</span><span class="news-text">Two of our works have been accepted to <b>ISCAS 2020</b></span></li>
+			-->
+			</ul>
 		</div>
 	</div>
-	<!-- 链接域名悬停提示框（模仿浏览器原生链接预览，排除导航栏与 Read PDF»） -->
-	<script src="js/link-tooltip.js"></script>
 </body>
 </html>

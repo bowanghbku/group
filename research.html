@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- 注意：本文件实际编码为 UTF-8（原声明 us-ascii 不正确） -->
 	<meta charset="utf-8">
-	<!-- 视口：宽度跟随设备宽度（移动端适配） -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bo Lab | Research</title>
 
-	<!-- 站点样式表（全站唯一使用的样式文件） -->
 	<link href="css/main.css" rel="stylesheet">
-	<!-- Ubuntu 网络字体（导航栏专用） -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<!-- Modernizr：浏览器特性检测 -->
 	<script src="js/modernizr.foundation.js"></script>
+
+	<!-- 刷新（F5）后回到页面顶部：关闭浏览器的滚动位置恢复 -->
+	<script src="js/scroll-top.js"></script>
 </head>
 
 <body class="body">
-<!-- 页面顶部锚点（供 Back to top 链接跳转） -->
-<a name="top"></a>
+<a id="top"></a>
 <div class="frame">
-	<!-- 顶部导航栏（当前页 RESEARCH 高亮显示） -->
 	<div class="mainheader">
 		<h5></h5>
 		<nav>
 			<ul>
 				<li><a href="index.html">HOME</a></li>
 				<li><a href="research.html"><span style="color:#FFF; text-decoration:underline">RESEARCH</span></a></li>
-				<li><a href="publication.html">PUBLICATIONS</a></li>
 				<li><a href="group.html">GROUP</a></li>
+				<li><a href="publication.html">PUBLICATIONS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
 			<!--<li><a href="news.html">NEWS</a></li>-->				
 			</ul>
 		</nav>
 	</div>
 
 	<div class="onebox">
-		<!-- ============ 当前研究方向 ============ -->
-		<h3>Current Research Areas</h3>
+		<!-- 研究主题：三个盒子，左图 + 右文 -->
+		<h3>Research Topics</h3>
 		&nbsp;
 
-		<p><span class="text-accent">Low Power Circuits (Sensor Interface, Analog/Mixed-signal Integrated Circuits)</span><br>
-		Advanced fabrication technologies and emerging systems like quantum computer, sensing networks, etc. have new requirements on the circuits in terms of power consumption, operating environment, and precision. We are exploring novel circuit design techniques to maintain the ASICs&#39; performance under extreme conditions like high/low temperature, strong EM irradiation, etc.</p>
+		<div class="research-list">
+			<div class="topic-card">
+				<img class="topic-photo" src="images/topic1.svg" width="1140" height="720" alt="Sensor interface IC: R/C/V/I sensors read out by an AFE and ADC">
+				<div class="topic-info">
+					<span class="topic-index">Topic 1</span>
+					<h4 class="topic-title">Sensor Interface IC</h4>
+					<p class="topic-desc">Every sensor&mdash;a strain gauge, a MEMS accelerometer, an electrochemical cell, or a photodiode&mdash;produces a small electrical signal that must be digitized before any algorithm can use it. For a given sensing device, the readout circuit largely determines the accuracy of the whole system. We develop energy-efficient analog front-ends (AFEs) and data converters for resistive, capacitive, voltage, and current sensors, and co-design the interface with MEMS transducers to collect richer information per unit energy.</p>
+					<ul class="topic-points">
+						<li>AFEs and data converters for R/C/V/I sensors</li>				
+						<li>Interface IC co-design with MEMS sensors</li>
+					</ul>
+				</div>
+			</div>
 
-		<p><span class="text-accent">Passive Sensing Platform for the Internet of Things (IoT)</span><br>
-		To enable the vision of IoT and AI-powered future world, the front-end devices, sensors, are of utmost importance to collect and feed data into the AI engine to perform analysis and control. Given the number and diversity of the target sensing spots, the sensor node should be low-cost and maintenance-free. We are working on new passive sensing platforms integrating power, sensor, communication, as well as coarse data process on a single substrate.</p>
+			<div class="topic-card">
+				<img class="topic-photo" src="images/topic2.svg" width="1140" height="720" alt="Integrated sensing systems: CMOS temperature sensor, image sensor with edge processing, optical blood flow sensing">
+				<div class="topic-info">
+					<span class="topic-index">Topic 2</span>
+					<h4 class="topic-title">Integrated Sensing System</h4>
+					<p class="topic-desc">Demand for highly integrated sensors is growing rapidly, from thermal management of processors to machine vision and health monitoring, where compact sensing nodes must deliver information rather than raw data. We integrate sensing, readout, and processing into single-chip or tightly packaged systems, including CMOS temperature sensors with low-cost trimming, image sensors with near-sensor processing that cut data bandwidth and energy for edge AI, and miniaturized blood flow sensing systems for point-of-care use.</p>
+					<ul class="topic-points">
+						<li>CMOS temperature sensor</li>
+						<li>CMOS image sensor with edge processing</li>
+						<li>Optical blood flow sensing system</li>
+					</ul>
+				</div>
+			</div>
 
-		<p><span class="text-accent">Heterogeneous Sensors (Chemical, Biomolecular, MEMS) for Biomedical Applications</span><br>
-		To develop enabling technologies and miniaturized devices which bring benefits to people that are not accessible to regular medical screening, various sensors are required to capture different bio-signals. Our group is exploring the interface and integration techniques to design heterogeneous biomedical sensing systems. We are also trying to embed intelligence in the sensors with near-sensor signal processing for performance enhancement.</p>
+			<div class="topic-card">
+				<img class="topic-photo" src="images/topic3.svg" width="1140" height="720" alt="Voltage, current and clock references with low drift over temperature">
+				<div class="topic-info">
+					<span class="topic-index">Topic 3</span>
+					<h4 class="topic-title">Analog Circuits for Readout ICs</h4>
+					<p class="topic-desc">Behind every precise measurement are building blocks the user never sees: voltage references, current references, and on-chip clocks. Their stability over PVT sets the accuracy of an ADC, the bias of an AFE, and the timing of duty-cycled sensor nodes. We design ultra-low-power, low-drift references and energy-efficient oscillators that let complete sensing systems run accurately without external components or costly calibration.</p>
+					<ul class="topic-points">
+						<li>Voltage/current/clock reference</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 补充说明 -->
+		<p class="topic-note"><i>As the technology landscape evolves, these topics may be updated from time to time in line with our group’s research goals.</i></p>
 
 		<!-- ============ 芯片与系统展示 ============ -->
+		<!-- [已注释隐藏] Chip and System Gallery 区块开始（内容保留，删除本段注释标记即可恢复）
 		<br>
 		<h3>Chip and System Gallery</h3>
 		<br>
@@ -60,7 +93,9 @@
 				<tr>
 					<td align="left" valign="middle" width="225"><img src="images/tsensor.jpg" width="225"></td>
 					<td align="left" valign="top" width="0"></td>
+		-->
 					<!-- 芯片描述默认隐藏，点击 “show more...” 展开 -->
+		<!--
 					<td align="left" valign="top" width="690">BJT-based Temperature Sensor
 					<span id="words3" style="display:none;">This design proposed a subranging BJT-based temperature sensor optimized for an ultra-wide sensing range operation from -50 to 180 <sup>o</sup>C. It achieves low-power (micro-watt) operation and high energy efficiency at high temperatures. We presented and demonstrated this design in ISSCC 2022.</span>
 
@@ -88,7 +123,9 @@
 			</tbody>
 		</table>
 
+		-->
 		<!-- “show/hide chip description” 展开收起逻辑：点击链接切换对应详情块的显示状态 -->
+		<!--
 		<script>
 			function bindToggle(triggerId, targetId) {
 				document.getElementById(triggerId).onclick = function (event) {
@@ -105,47 +142,32 @@
 			bindToggle("cl2", "words2");
 			bindToggle("cl", "words");
 		</script>
+		[已注释隐藏] Chip and System Gallery 区块结束 -->
 
 		<!-- ============ 科研项目 ============ -->
 		<br>
 		<h3>Research Grants</h3>
 		&nbsp;
 
-		<ol>
-			<li>Principal Investigator (PI) (Collaborator: Yin Yang, Roberto Baldacci, Abdelkrim Khelif, Marco Agus, Jens Schneider, Georgios Dimitropolous, Aref Al Tamimi, Mohammed Abdallah), &ldquo;Smart Fleet: An AI-Driven Sensing and Optimization Platform for Next-Generation Qatar's Smart Transportation,&rdquo; <i><u>HBKU Research Matching Fund Program Cycle 1</u>, 2026-2028<!--[QAR 750,000]-->.</i></li>
-			<br>
-
-			<li>Principal Investigator (PI) (Collaborator: Amine Bermak, Roberto Baldacci, Abdelkrim Khelif, Sa&rsquo;d Shannak, Sanjay Chawla), &ldquo;Integrated Aerial-Ground Intelligent Sensing and AI Platform for ResourceEfficient and Sustainable Agriculture in Qatar&rsquo;s Arid Climate,&rdquo; <i><u>HBKU Flagship Research Grant Cycle 3</u>, 2025-2027<!--[QAR 900,000]-->.</i></li>
-			<br>
-
-			<li>Lead Principal Investigator (LPI) (Collaborator: Man-Kay Law), &ldquo;Multi-Mode 2D/3D Image Sensor Chip for Next-Generation Intelligent Machine Vision,&rdquo; <i>Qatar Research Development and Innovation Council (<u>QRDI</u>), ARG02-0421-240247, 2025-2028<!--[USD 710,135]-->.</i></li>
-			<br>
-
-			<li>Principal Investigator (PI) (Collaborator: Amine Bermak, Yunhui Liu, Samir Brahim Belhaouari, Abdelkrim Khelif), &ldquo;Light and Sound for Improved Artificial Vision,&rdquo; <i>Qatar Research Development and Innovation Council (<u>QRDI</u>), ARG01-0522-230274, 2024-2027<!--[USD 728,192]-->.</i></li>
-			<br>
-
-			<li>Lead Principal Investigator (LPI), &ldquo;A Homecare Blood Flowmetry Device for Patient with Peripheral Arterial Disease &ndash; Towards Field Application,&rdquo; <i><u>HBKU Innovation Fund</u> - 5th Cycle, 2022-2023<!-- [QAR 50,000]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI) and Research Mentor (Primary Research Mentor: Spiridon Bakiras), &ldquo;Design and Implementation of Certificateless Cryptography for IoT Applications,&rdquo; <i>Graduate Sponsorship Research Award (<u>GSRA</u>), GSRA8-L-2-0430-21021, 2021-2023<!-- [USD 122,000]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI) (Other collaborators: Spiridon Bakiras, Berk Sunar), &ldquo;Endpoint Secured Multi-sensor Interface Chip for IoT Applications,&rdquo; <i>National Priorities Research Program (<u>NPRP</u>), NPRP13S-0122-200135, 2021-2024<!-- [USD 500,040]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI) (Collaborator: Kabir Hassan Biswas), &ldquo;A Miniaturized High-Dynamic Range Bioluminescence and Fluorescence Biosensing System for Biomedical Applications,&rdquo; <i><u>HBKU Thematic Grant</u> - 1st Cycle, 2021&ndash;2023<!-- [QAR 432,122]-->.</i></li>
-			<br>
-			<li>Principal Investigator (PI) (Collaborator: Hicham Hamoudi), &ldquo;3D Printing Based on Self-assembled Molecular Building Blocks for Materials Design and Bio-applications,&rdquo; <i><u>HBKU Thematic Grant</u> - 1st Cycle, 2021&ndash;2023<!-- [QAR 400,000]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI), &ldquo;A Blood Flowmetry Homecare Device for Diabetes Patients,&rdquo; <i><u>HBKU Innovation Fund</u> &ndash; 2nd Cycle, 2020-2021<!-- [QAR 50,000]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI) (Other collaborators: Mohamed Abdallah, Edgar Sanchez-Sinencio, Patrick Mercier), &ldquo;Electric Grid Failures&ndash;Don&rsquo;t Wait Until They Happen,&rdquo; <i>National Priorities Research Program (<u>NPRP</u>), NPRP11S-0104-180192, 2019-2022<!-- [USD 599,700]-->.</i></li>
-			<br>
-			<li>Principal Investigator (PI) (Collaborator: Amine Bermak, Chi Ying Tsui, Jinho Bae), &ldquo;Low-cost Wearable Self-Powered Wireless Sensors Network for real-time human activity and health monitoring,&rdquo; <i>National Priorities Research Program (<u>NPRP</u>), NPRP11S-0110-180246, 2019-2022<!-- [USD 400,000]-->.</i></li>
-			<br>
-			<li>Lead Principal Investigator (LPI) (Collaborator: David Yin Yang), &ldquo;Line-Tracking Smart Car with Edge-based Path Recognition and Dual-PID Control Strategy,&rdquo; <i>Undergraduate Research Experience Program (<u>UREP</u>), UREP21-136-2-055, 2018-2019<!-- [USD 25,000]-->.</i></li>
-			<br>
-			<li>Principal Investigator (PI), &ldquo;Smart Wearable Sensing Platform with Wireless Communication and Embedded Processing for Health Monitoring Applications,&rdquo; <i>Undergraduate Research Experience Program (<u>UREP</u>), UREP19-220-2-069, 2017-2018<!-- [USD 20,000]-->.</i></li>
+		<ol class="grant-list">
+			<li>Principal Investigator (PI)<!-- (Collaborator: Yin Yang, Roberto Baldacci, Abdelkrim Khelif, Marco Agus, Jens Schneider, Georgios Dimitropolous, Aref Al Tamimi, Mohammed Abdallah) -->, &ldquo;Smart Fleet: An AI-Driven Sensing and Optimization Platform for Next-Generation Qatar's Smart Transportation,&rdquo; <i>HBKU Research Matching Fund Program Cycle 1</i>, 2026&ndash;2028<!--[QAR 750,000]-->.</li>
+			<li>Principal Investigator (PI)<!-- (Collaborator: Amine Bermak, Roberto Baldacci, Abdelkrim Khelif, Sa&rsquo;d Shannak, Sanjay Chawla) -->, &ldquo;Integrated Aerial-Ground Intelligent Sensing and AI Platform for Resource-Efficient and Sustainable Agriculture in Qatar&rsquo;s Arid Climate,&rdquo; <i>HBKU Flagship Research Grant Cycle 3</i>, 2025&ndash;2027<!--[QAR 900,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>)<!-- (Collaborator: Man-Kay Law) -->, &ldquo;Multi-Mode 2D/3D Image Sensor Chip for Next-Generation Intelligent Machine Vision,&rdquo; <i>Qatar Research, Development and Innovation Council (QRDI)</i>, ARG02-0421-240247, 2025&ndash;2028<!--[USD 710,135]-->.</li>
+			<li>Principal Investigator (PI)<!-- (Collaborator: Amine Bermak, Yunhui Liu, Samir Brahim Belhaouari, Abdelkrim Khelif) -->, &ldquo;Light and Sound for Improved Artificial Vision,&rdquo; <i>Qatar Research, Development and Innovation Council (QRDI)</i>, ARG01-0522-230274, 2024&ndash;2027<!--[USD 728,192]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>), &ldquo;A Homecare Blood Flowmetry Device for Patient with Peripheral Arterial Disease &ndash; Towards Field Application,&rdquo; <i>HBKU Innovation Fund &ndash; 5th Cycle</i>, 2022&ndash;2023<!-- [QAR 50,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>) and Research Mentor<!-- (Primary Research Mentor: Spiridon Bakiras) -->, &ldquo;Design and Implementation of Certificateless Cryptography for IoT Applications,&rdquo; <i>Graduate Sponsorship Research Award (GSRA)</i>, GSRA8-L-2-0430-21021, 2021&ndash;2023<!-- [USD 122,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>)<!-- (Other collaborators: Spiridon Bakiras, Berk Sunar) -->, &ldquo;Endpoint Secured Multi-sensor Interface Chip for IoT Applications,&rdquo; <i>National Priorities Research Program (NPRP)</i>, NPRP13S-0122-200135, 2021&ndash;2024<!-- [USD 500,040]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>)<!-- (Collaborator: Kabir Hassan Biswas) -->, &ldquo;A Miniaturized High-Dynamic Range Bioluminescence and Fluorescence Biosensing System for Biomedical Applications,&rdquo; <i>HBKU Thematic Grant &ndash; 1st Cycle</i>, 2021&ndash;2023<!-- [QAR 432,122]-->.</li>
+			<li>Principal Investigator (PI)<!-- (Collaborator: Hicham Hamoudi) -->, &ldquo;3D Printing Based on Self-assembled Molecular Building Blocks for Materials Design and Bio-applications,&rdquo; <i>HBKU Thematic Grant &ndash; 1st Cycle</i>, 2021&ndash;2023<!-- [QAR 400,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>), &ldquo;A Blood Flowmetry Homecare Device for Diabetes Patients,&rdquo; <i>HBKU Innovation Fund &ndash; 2nd Cycle</i>, 2020&ndash;2021<!-- [QAR 50,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>)<!-- (Other collaborators: Mohamed Abdallah, Edgar Sanchez-Sinencio, Patrick Mercier) -->, &ldquo;Electric Grid Failures&ndash;Don&rsquo;t Wait Until They Happen,&rdquo; <i>National Priorities Research Program (NPRP)</i>, NPRP11S-0104-180192, 2019&ndash;2022<!-- [USD 599,700]-->.</li>
+			<li>Principal Investigator (PI)<!-- (Collaborator: Amine Bermak, Chi Ying Tsui, Jinho Bae) -->, &ldquo;Low-cost Wearable Self-Powered Wireless Sensors Network for real-time human activity and health monitoring,&rdquo; <i>National Priorities Research Program (NPRP)</i>, NPRP11S-0110-180246, 2019&ndash;2022<!-- [USD 400,000]-->.</li>
+			<li>Lead Principal Investigator (<b>LPI</b>)<!-- (Collaborator: David Yin Yang) -->, &ldquo;Line-Tracking Smart Car with Edge-based Path Recognition and Dual-PID Control Strategy,&rdquo; <i>Undergraduate Research Experience Program (UREP)</i>, UREP21-136-2-055, 2018&ndash;2019<!-- [USD 25,000]-->.</li>
+			<li>Principal Investigator (PI), &ldquo;Smart Wearable Sensing Platform with Wireless Communication and Embedded Processing for Health Monitoring Applications,&rdquo; <i>Undergraduate Research Experience Program (UREP)</i>, UREP19-220-2-069, 2017&ndash;2018<!-- [USD 20,000]-->.</li>
 		</ol>
 
 		<!-- ============ 实验室设备 ============ -->
+		<!-- [已注释隐藏] Lab Resources 区块开始（内容保留，删除本段注释标记即可恢复）
 		<br>
 		<h3>Lab Resources</h3>
 		<br>
@@ -162,10 +184,11 @@
 		Tektronix TLA6400 Logic Analyzer<br>
 		Fluke 8508A Reference Multimeter<br>
 		Others: Bonding machine, PCB maker, 3D printer, optical bentch, inkjet printer, SEM, advanced rework station, etc.
-		<p align="right"><a href="#top"><span style="font-size:small"><i>Back to top&raquo;</i></span></a></p>
+		[已注释隐藏] Lab Resources 区块结束 -->
+		<p style="text-align:right"><a href="#top"><span style="font-size:small"><i>Back to top&raquo;</i></span></a></p>
 	</div>
 </div>
-	<!-- 链接域名悬停提示框（模仿浏览器原生链接预览，排除导航栏与 Read PDF»） -->
-	<script src="js/link-tooltip.js"></script>
+	<!-- 链接悬停提示框已全局关闭（js/link-tooltip.js 不再加载）；如需恢复取消下面一行的注释 -->
+	<!--<script src="js/link-tooltip.js"></script>-->
 </body>
 </html>
