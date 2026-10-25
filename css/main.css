@@ -1,94 +1,46 @@
-/* ==========================================================================
-   Bo Lab 站点样式表（全站唯一使用的样式文件）
-
-   目录结构：
-     /            HTML 页面（index / research / publication / group / news）
-     /css         样式表
-     /js          脚本（scroll-top.js、link-tooltip.js、modernizr）
-     /images      图片
-     /paper       论文 PDF
-
-   页面结构：
-     body.body
-       └─ .frame            白色页面容器（1100px，居中）
-            ├─ .mainheader  顶部导航栏（主题红底、白字，桌面端吸顶）
-            └─ .onebox      内容区
-
-   颜色（统一在 :root 变量中定义，改一处即全站生效）：
-     --accent-color   #7D0E2D  主题红：导航栏背景、h3 分隔线左段、键盘焦点框
-     --link-hover     #FF1423  亮红：论文高亮（期刊/会议缩写）、获奖标注（非悬停强调）
-     --link-hover-blue #1A73E8 悬停蓝：链接悬停色，与 contact 页 "Open in Maps" 实心填充同色
-     --divider-gray   #BDBDBD  浅灰：h3 分隔线右段、组员区块分隔线
-     页面外围背景 #E9EBEE；正文与链接文字 #000（链接带黑色 1px 下划线）
-
-   字体：
-     正文     Avenir LT 35 Light（无则 Nunito Sans Light 300），20px，行高 1.4
-     导航     Anton 17px 大写
-     标题     Oswald Medium：h3 30px（区块标题）、h4 / 子标题 23px
-     列表     16px
-
-   h3 分隔线（底部两段拼接，顶部对齐）：
-     左段 20% 宽、2px、--divider-color-left（默认主题红），::before 绘制；
-     右段 80% 宽、0.5px、--divider-color-right（默认浅灰），::after 绘制；
-     两个变量可在 :root 或单个 <h3> 的内联样式中覆盖。
-   ========================================================================== */
 
 
-/* ----------------------------------------------------------
-   主题变量与文本强调工具类
-   ---------------------------------------------------------- */
 :root {
-	--accent-color: #7D0E2D;         /* 主题红 */
-	--link-hover: #FF1423;           /* 亮红（MIT 红）：仅用于论文高亮、获奖标注等非悬停强调 */
-	--link-hover-blue: #1A73E8;      /* 链接悬停蓝：与 contact 页 "Open in Maps" 实心填充同色 */
-	--divider-gray: #BDBDBD;         /* 浅灰分隔线 */
+	--accent-color: #7D0E2D;
+	--link-hover: #FF1423;
+	--link-hover-blue: #1A73E8;
+	--divider-gray: #BDBDBD;
 }
 
-/* HTML 中需要主题红的 span 加此 class（在 .onebox 内会被下方规则改为黑色子标题） */
 .text-accent {
 	color: var(--accent-color);
 }
 
 
-/* ----------------------------------------------------------
-   页面基础：body 固定 1100px 宽并水平居中
-   ---------------------------------------------------------- */
 html {
-	scroll-behavior: smooth;         /* "Back to top" 锚点平滑滚动 */
-	scrollbar-gutter: stable;        /* 始终预留滚动条空间，切换页面时白框不左右跳动 */
-	color-scheme: light;             /* 声明页面为浅色主题：防止系统深色模式把
-	                                    Google Maps iframe 等嵌入内容渲染成深色 */
+	scroll-behavior: smooth;
+	scrollbar-gutter: stable;
+	color-scheme: light;
 }
 
 body {
 	font-size: 20px;
 	line-height: 1.4;
-	background-color: #E9EBEE;       /* 页面外围浅灰 */
+	background-color: #E9EBEE;
 	margin: 0 auto;
 	width: 1100px;
 }
 
-/* 白色页面容器：正文字体在此统一设定，全站继承 */
 .frame {
-	/*font-family: "Avenir LT W01 35 Light", "Avenir LT Std", "Avenir Next", Avenir, "Nunito Sans", sans-serif;*/
-	font-family: Arial, Helvetica, sans-serif;  /* 正文/标题/按钮等（导航栏除外）：Arial */
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 300;
 	color: #000;
 	background-color: #FFF;
 }
 
 
-/* ----------------------------------------------------------
-   顶部导航栏：高 100px，文字由 flex 垂直居中
-   ---------------------------------------------------------- */
 .mainheader {
-	margin-bottom: 16px;             /* 导航栏与内容区间距 */
-	position: sticky;                /* 长页滚动时导航固定顶部 */
+	margin-bottom: 16px;
+	position: sticky;
 	top: 0;
 	z-index: 100;
 }
 
-/* 消除 h5 默认样式（index 的 nav 包在 h5 内，其余页为空 h5），保证各页导航一致 */
 .mainheader h5 {
 	margin: 0;
 	font-size: 100%;
@@ -104,7 +56,7 @@ body {
 .mainheader nav ul {
 	list-style: none;
 	display: flex;
-	align-items: center;             /* 导航文字垂直居中 */
+	align-items: center;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -115,19 +67,17 @@ body {
 	font-size: 17px;
 	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0.5px;           /* Anton 为窄体，略加字距更易读 */
+	letter-spacing: 0.5px;
 }
 
-/* 导航链接：白色无下划线；当前页的下划线由 HTML 内联 span 提供 */
 .mainheader nav a:link,
 .mainheader nav a:visited {
 	color: #FFF;
 	text-decoration: none;
 	display: block;
-	padding: 0 14px;                 /* 条目间距 28px */
+	padding: 0 14px;
 }
 
-/* 首项文字与内容区左缘对齐 */
 .mainheader nav ul li:first-child a:link,
 .mainheader nav ul li:first-child a:visited {
 	padding-left: 20px;
@@ -139,15 +89,11 @@ body {
 
 .mainheader nav a:hover,
 .mainheader nav a:active {
-	color: #FFD6DF;                  /* 悬停浅玫瑰色 + 下划线（曾短暂改为浅蓝 #BBD9FF，用户要求还原） */
+	color: #FFD6DF;
 	text-decoration: underline;
 }
 
 
-/* ----------------------------------------------------------
-   全局链接：黑色文字 + 黑色 1px 下划线，悬停文字与下划线变亮红
-   （publication 页期刊/会议缩写 a.venue-link 也直接沿用此样式）
-   ---------------------------------------------------------- */
 a {
 	transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
@@ -161,29 +107,25 @@ a:visited {
 
 a:hover,
 a:active {
-	color: var(--link-hover-blue);       /* 悬停蓝（原为亮红 --link-hover），与 Open in Maps 同色 */
+	color: var(--link-hover-blue);
 	text-decoration-color: var(--link-hover-blue);
 }
 
-/* 键盘焦点指示（仅键盘导航时可见） */
 a:focus-visible {
 	outline: 2px solid var(--accent-color);
 	outline-offset: 2px;
 }
 
-/* publication 页 Patents 列表的专利号链接：无下划线（悬停变红沿用全局 a:hover） */
 .onebox li a.patent-link:link,
 .onebox li a.patent-link:visited {
 	text-decoration: none;
 }
 
-/* "Google Scholar Profile"（publication 页）：实心蓝底按钮 —— 与 contact 页 "Open in Maps"
-   用同一组颜色（底 #1A73E8、悬停 #1765CC），文字改白色，Oswald 23px，居中 */
 a[href*="scholar.google"] {
 	background-color: #1A73E8;
 	padding: 8px 18px;
 	border: 0;
-	border-radius: 18px;             /* 与 Open in Maps 一致的胶囊形 */
+	border-radius: 18px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	color: #FFF;
 	font-family: Oswald, sans-serif;
@@ -191,51 +133,41 @@ a[href*="scholar.google"] {
 	font-weight: 500;
 	line-height: 1.4;
 	display: block;
-	width: fit-content;              /* 按钮宽度贴合文字 */
-	margin: 10px auto 14px;          /* 左右 auto 居中 */
+	width: fit-content;
+	margin: 10px auto 14px;
 	text-decoration: none;
 	white-space: nowrap;
 }
 
-/* Google Scholar Profile 文字前的 Google Scholar 小图标（images/icon.svg） */
 a[href*="scholar.google"] img.scholar-icon {
 	width: 24px;
 	height: 24px;
-	vertical-align: -2px;            /* 与 23px Oswald 文字视觉居中对齐 */
-	margin-right: 9px;               /* 图标与文字的间距 */
-	filter: brightness(0) invert(1); /* 原图标是 Google 蓝色系，在蓝底上会糊掉，转成纯白 */
+	vertical-align: -2px;
+	margin-right: 9px;
+	filter: brightness(0) invert(1);
 }
 
-/* 悬停/按下：整块变深蓝（与 contact 页 Open in Maps 的悬停色一致） */
 a[href*="scholar.google"]:hover,
 a[href*="scholar.google"]:active {
 	background-color: #1765CC;
 }
 
-/* 论文高亮（li.pub-highlight）：期刊/会议缩写（JSSC、ISSCC 等）常态为亮红，标题与作者保持黑色 */
 .onebox li.pub-highlight a.venue-link:link,
 .onebox li.pub-highlight a.venue-link:visited {
 	color: var(--link-hover);
 }
 
-/* 同上：鼠标悬停/按下时改为链接蓝（与全站 a:hover 一致）。
-   必须单独写 —— 上面 :link/:visited 的特异性高于全局 a:hover，不写的话红色会盖住悬停色 */
 .onebox li.pub-highlight a.venue-link:hover,
 .onebox li.pub-highlight a.venue-link:active {
 	color: var(--link-hover-blue);
 	text-decoration-color: var(--link-hover-blue);
 }
 
-/* 获奖标注（如 Best Design Award）：亮红，覆盖 .text-accent 的主题红 */
 .onebox li span.pub-award {
 	color: var(--link-hover);
 }
 
 
-/* ----------------------------------------------------------
-   链接域名悬停提示框（由 js/link-tooltip.js 创建与定位）
-   黑底白字，显示在链接上方；导航栏、锚点等排除逻辑在 JS 中
-   ---------------------------------------------------------- */
 .link-tip {
 	position: absolute;
 	z-index: 200;
@@ -246,9 +178,9 @@ a[href*="scholar.google"]:active {
 	line-height: 1.3;
 	padding: 5px 12px;
 	white-space: nowrap;
-	pointer-events: none;            /* 不阻挡鼠标，避免闪烁 */
+	pointer-events: none;
 	opacity: 0;
-	transform: translateY(3px);      /* 淡入时轻微上移 */
+	transform: translateY(3px);
 	transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
@@ -258,15 +190,11 @@ a[href*="scholar.google"]:active {
 }
 
 
-/* ----------------------------------------------------------
-   内容区（.onebox）
-   ---------------------------------------------------------- */
 .onebox {
 	padding: 0 30px 10px;
 	background-color: #FFF;
 }
 
-/* 区块大标题：Oswald 30px 黑色 + 底部两段拼接分隔线 */
 .onebox h3 {
 	font-family: Oswald, sans-serif;
 	font-size: 30px;
@@ -275,11 +203,10 @@ a[href*="scholar.google"]:active {
 	color: #000;
 	text-align: left;
 	margin-bottom: -3%;
-	position: relative;                      /* ::before / ::after 的定位基准 */
-	border-bottom: 1px solid transparent;    /* 保留 1px 高度占位 */
+	position: relative;
+	border-bottom: 1px solid transparent;
 }
 
-/* 分隔线左段：20% 宽、2px、主题红 */
 .onebox h3::before {
 	content: "";
 	position: absolute;
@@ -290,7 +217,6 @@ a[href*="scholar.google"]:active {
 	background: var(--divider-color-left, var(--accent-color));
 }
 
-/* 分隔线右段：80% 宽、0.5px、浅灰，顶边与左段对齐 */
 .onebox h3::after {
 	content: "";
 	position: absolute;
@@ -301,8 +227,6 @@ a[href*="scholar.google"]:active {
 	background: var(--divider-color-right, var(--divider-gray));
 }
 
-/* 区块内子标题（h4，如 group 页的成员分类）与段首 .text-accent 子标题：
-   Oswald Medium 23px 黑色 */
 .onebox h4,
 .onebox p > .text-accent {
 	font-family: Oswald, sans-serif;
@@ -318,21 +242,18 @@ a[href*="scholar.google"]:active {
 
 .onebox p > .text-accent {
 	display: block;
-	margin-bottom: 6px;              /* 子标题与正文间距 */
+	margin-bottom: 6px;
 }
 
-/* 子标题后的 <br> 已由 display:block 取代，隐藏以免多出空行 */
 .onebox p > .text-accent + br {
 	display: none;
 }
 
-/* 列表条目之间的 <br>：隐藏，条目间距统一由 li 的 margin-bottom 控制 */
 .onebox ul > br,
 .onebox ol > br {
 	display: none;
 }
 
-/* group 页成员区块：底部浅灰分隔线，最后一个区块不加 */
 .onebox .member-group {
 	border-bottom: 0.5px solid var(--divider-gray);
 	padding-bottom: 10px;
@@ -343,7 +264,6 @@ a[href*="scholar.google"]:active {
 	border-bottom: none;
 }
 
-/* 版权/说明小字（h6） */
 .onebox h6 {
 	font-size: 15px;
 	font-weight: 300;
@@ -352,7 +272,6 @@ a[href*="scholar.google"]:active {
 	color: #000;
 }
 
-/* 内容区列表项：圆点、16px */
 .onebox li {
 	list-style: disc;
 	font-size: 17px;
@@ -361,7 +280,6 @@ a[href*="scholar.google"]:active {
 	margin-bottom: 10px;
 }
 
-/* news 页列表：无符号 */
 .news li {
 	list-style: none;
 	font-size: 17px;
@@ -371,63 +289,50 @@ a[href*="scholar.google"]:active {
 }
 
 
-/* ----------------------------------------------------------
-   publication 页：期刊 / 会议 / 专利分区，每区一个编号列表
-   ---------------------------------------------------------- */
 .onebox h3.pub-section {
-	margin-top: 48px;                /* 分区之间留白 */
+	margin-top: 48px;
 }
 
 .onebox h3.pub-section + ol.pub-list {
-	margin-top: 44px;                /* 列表避开标题分隔线 */
+	margin-top: 44px;
 }
 
 .onebox ol.pub-list {
 	margin: 0 0 8px;
-	padding-left: 30px;              /* 编号缩进 */
+	padding-left: 30px;
 }
 
 .onebox ol.pub-list > li,
 .onebox ol.grant-list > li {
-	margin-bottom: 12px;             /* 条目之间约半行 */
+	margin-bottom: 12px;
 	line-height: 1.5;
 }
 
 .onebox ol.pub-list > li {
-	list-style: decimal;             /* 覆盖 .onebox li 的圆点 */
+	list-style: decimal;
 	margin-left: 0;
 }
 
-/* Research Grants 条目：17px（本就继承自 .onebox li 的 17px，此处显式声明，避免以后被改动影响） */
 .onebox ol.grant-list > li {
 	font-size: 17px;
-	list-style: none;                /* 去掉圆点，改用下方自定义 ▸ 箭头（覆盖 .onebox li 的 disc） */
+	list-style: none;
 	position: relative;
 }
 
-/* ▸ 箭头：与 Research Topics 要点、group 页 Alumni 完全相同的符号与颜色。
-   left: -20px —— 箭头悬浮在条目盒外（ol 的 40px 内缩区里，不会被裁掉），
-   使「箭头定位盒 → 文字盒」= 20px，与 .topic-points 要点（16 - (-4)）一致；
-   箭头墨迹落在 194px，正好与 "Research Grants" 标题墨迹对齐，文字位置完全不动、不重排。 */
 .onebox ol.grant-list > li::before {
-	content: "\25B8";                /* ▸ */
+	content: "\25B8";
 	position: absolute;
 	left: -20px;
 	top: 0;
 	color: var(--accent-color);
 }
 
-/* 期刊/会议缩写、Research Grants 的角色名真粗体（页面需加载 Nunito Sans 700） */
 .onebox ol.pub-list b,
 .onebox ol.grant-list b {
-	font-weight: 700;                /* 覆盖 UA 的 bolder（父级 300 → 仅到 400） */
+	font-weight: 700;
 }
 
 
-/* ----------------------------------------------------------
-   首页标题区（.lab-hero）：居中的实验室名称 + 宽字距副标题
-   .lab-hero__photo 为已注释隐藏的圆形芯片照片保留样式，恢复照片即可用
-   ---------------------------------------------------------- */
 .lab-hero {
 	display: flex;
 	align-items: center;
@@ -464,17 +369,14 @@ a[href*="scholar.google"]:active {
 	font-weight: 300;
 	letter-spacing: 0.1em;
 	line-height: 1.6;
-	color: #333;                     /* 略浅于标题，保留层次 */
-	margin: calc(14px + 1.6em) 0 0;  /* 14px + 一个行高 */
+	color: #333;
+	margin: calc(14px + 1.6em) 0 0;
 }
 
-/* 副标题两行真加粗（UA 的 bolder 在父级 300 时只到 400，必须显式写 700）；
-   内含的 Dr. Bo Wang 链接无自己的 font-weight，会继承该粗体 */
 .lab-hero__tagline b {
 	font-weight: 700;
 }
 
-/* 副标题里的 Dr. Bo Wang 链接去掉下划线（覆盖全站 a:link 的 1px 下划线） */
 .lab-hero__tagline a:link,
 .lab-hero__tagline a:visited,
 .lab-hero__tagline a:hover,
@@ -482,27 +384,20 @@ a[href*="scholar.google"]:active {
 	text-decoration: none;
 }
 
-/* 横幅版（index.html：<div class="lab-hero lab-hero--banner">）：
-   芯片显微照片 images/lab_banner_chip2b.jpg（由 "2 - Copy.jpg" 旋转 90°、只取上下两排焊盘之间的芯片区域、AI 放大、增强对比度）作背景（2200×807，2 倍分辨率；换回 1.jpg 版改为 lab_banner_v2.jpg），叠浅色遮罩（中央略深），
-   标题与副标题改为白色；横幅左右撑满白框（抵消 .onebox 的 30px 内边距）。
-   去掉 --banner 这个 class 即可恢复原来的纯白标题区。 */
 .lab-hero--banner {
-	/* 遮罩减淡：整体仅 5% 黑，另在文字所在的中央加一层柔和椭圆暗区（最深 30%）；照片本身也已提亮（lab_banner_hq_*.jpg：取自原图 2.jpg 同一区域，EDSR 2× 放大，一次性增强与压缩），
-	   照片保持明亮，白字仍清晰（原为整体 50% 黑，过暗） */
 	background: radial-gradient(ellipse 55% 50% at center, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 100%),
 	            linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
 	            url("../images/lab_banner_hq_2200.jpg") center / cover no-repeat;
-	/* 高分屏（≥2x）改用 3380px 原始放大版，普通屏用 2200px 版以减小下载量 */
 	background-image: radial-gradient(ellipse 55% 50% at center, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 100%),
 	                  linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
 	                  image-set(url("../images/lab_banner_hq_2200.jpg") 1x, url("../images/lab_banner_hq_3380.jpg") 2x);
-	margin: -16px -30px 0;          /* 上 -16px：抵消 .mainheader 的 margin-bottom，横幅紧贴导航栏底边 */
-	padding: 150px 30px 140px;       /* 横幅加高（原 96/88） */
+	margin: -16px -30px 0;
+	padding: 150px 30px 140px;
 }
 
 .lab-hero--banner .lab-hero__title {
 	color: #FFF;
-	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 2px 14px rgba(0, 0, 0, 0.5);   /* 在照片亮处也保持清晰 */
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5), 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
 .lab-hero--banner .lab-hero__tagline {
@@ -517,22 +412,14 @@ a[href*="scholar.google"]:active {
 
 
 
-/* 首页实验室简介：一段文字 + 右下角 HBKU 标志（联系方式已移到 contact.html） */
-/* opening.html（Join Us）：正文 17px（原继承 body 的 20px）；
-   .text-accent 的小标题仍是 23px，由 .onebox p > .text-accent 控制，不受影响 */
 .onebox.opening p {
 	font-size: 17px;
 }
 
-/* opening.html：职位小标题（Postdoctoral Fellow / PhD Students / Visiting Students & Researchers /
-   MS Students）居中，正文保持左对齐；.text-accent 已是 display:block，故 text-align 生效 */
 .onebox.opening p > .text-accent {
 	text-align: center;
 }
 
-/* opening.html：奖学金说明 "HBKU offers competitive scholarships to outstanding applicants."
-   单独成行并居中（所属段落的其余正文仍左对齐）；
-   其后的 <br> 隐藏，与 .text-accent 的处理方式一致，避免多出一个空行 */
 .onebox.opening p > .scholarship-note {
 	display: block;
 	text-align: center;
@@ -542,14 +429,10 @@ a[href*="scholar.google"]:active {
 	display: none;
 }
 
-/* opening.html：除上述居中项外，段落正文一律左对齐（显式声明，避免误继承居中）。
-   末尾 "« Back to home" 用 HTML 属性 align="right"，用 :not([align]) 排除，保持右对齐 */
 .onebox.opening p:not([align]) {
 	text-align: left;
 }
 
-/* 首页实验室简介正文：17px + 居中（原继承 body 的 20px）
-   用 .lab-intro 直接选中，不依赖与标题的相邻关系（标题后有 <br> 也能生效） */
 .lab-intro {
 	font-size: 17px;
 	text-align: center;
@@ -557,50 +440,43 @@ a[href*="scholar.google"]:active {
 
 .lab-intro__logo {
 	display: block;
-	margin: 24px 0 0 auto;           /* 靠右，与原右栏中的位置一致 */
+	margin: 24px 0 0 auto;
 }
 
 
-/* Contact 页：左侧联系方式、右侧 Google 地图（窄屏改为上下排列） */
 .contact-layout {
 	display: flex;
 	align-items: flex-start;
 	gap: 40px;
-	margin-bottom: 24px;             /* 地图与白框底边留白 */
+	margin-bottom: 24px;
 }
 
 .contact-text {
-	flex: 0 0 auto;                  /* 文字按内容宽度，地图占剩余空间 */
+	flex: 0 0 auto;
 }
 
-/* Contact 页左栏下方的 HBKU logo */
 .contact-logo {
 	display: block;
-	margin-top: 14px;                /* 与上方链接组留出间距 */
-	height: auto;                    /* 窄屏下 .frame img 只改 width，这里保证等比缩放不变形 */
+	margin-top: 14px;
+	height: auto;
 }
 
 .contact-map {
 	flex: 1 1 auto;
 	min-width: 0;
-	font-size: 17px;                 /* 让下面的 1em = 17px，与左栏 17px 文字的 1em 上边距一致 */
-	margin-top: 1em;                 /* 与左侧首行文字顶端对齐（抵消 p 的上边距） */
+	font-size: 17px;
+	margin-top: 1em;
 }
 
-/* 联系方式正文（地址五行 / 邮箱 / 相关链接 HBKU official website、Qatar foundation）：17px，
-   与 opening.html 正文、首页简介一致 */
 .contact-text .contact-info {
 	font-size: 17px;
 }
 
-/* 地图容器：固定高度并裁掉 iframe 顶部 130px（Google 自动展开的地点信息卡），
-   底部的 Google 标志、版权与全屏按钮保持可见 */
 .contact-map-frame {
 	position: relative;
 	height: 360px;
 	overflow: hidden;
 	box-sizing: border-box;
-	/* 外框边线已移除（原 border: 0.5px solid var(--divider-gray)） */
 }
 
 .contact-map iframe {
@@ -610,11 +486,8 @@ a[href*="scholar.google"]:active {
 	width: 100%;
 	height: calc(100% + 130px);
 	border: 0;
-	/* 曾用 filter: grayscale(1) contrast(1.08) brightness(1.06) 把底图调成中性灰以对齐站点配色，
-	   现已还原为 Google 默认配色（如需重新启用，把上面那行加回来即可） */
 }
 
-/* 左上角 "Open in Maps" 按钮（仿 Google 地图按钮：蓝底白字圆角） */
 .onebox a.map-open-btn:link,
 .onebox a.map-open-btn:visited {
 	position: absolute;
@@ -625,7 +498,7 @@ a[href*="scholar.google"]:active {
 	gap: 6px;
 	padding: 8px 14px;
 	border-radius: 18px;
-	background-color: #1A73E8;          /* Google 地图按钮蓝 */
+	background-color: #1A73E8;
 	color: #FFF;
 	font-family: Roboto, Arial, sans-serif;
 	font-size: 14px;
@@ -637,32 +510,27 @@ a[href*="scholar.google"]:active {
 
 .onebox a.map-open-btn:hover,
 .onebox a.map-open-btn:active {
-	background-color: #1765CC;          /* 蓝色的深色 hover */
+	background-color: #1765CC;
 }
 
-/* 首页 Latest News（版式参考 icdesignlab.net）：每条一行，左侧主题红日期标签 + 文字，期刊/会议名加粗 */
 .onebox h3.news-section {
-	margin-top: 48px;                /* 与上方简介留白，同 publication 分区标题 */
+	margin-top: 48px;
 }
 
 .onebox h3.news-section + p,
 .onebox h3.news-section + ul.news-latest {
-	margin-top: 44px;                /* 列表避开标题分隔线 */
+	margin-top: 44px;
 }
 
-/* 不要分隔线的分区标题（如首页 "About ISIC Lab"）：只隐藏两段线，标题与简介均居中 */
 .onebox h3.news-section.no-divider::before,
 .onebox h3.news-section.no-divider::after {
 	display: none;
 }
 
 .onebox h3.news-section.no-divider {
-	text-align: center;              /* 覆盖 .onebox h3 的左对齐 */
+	text-align: center;
 }
 
-/* 首页 "Join Us" 分区标题本身是链接（指向 opening.html，该页不在导航栏中）：
-   保持标题外观（Oswald 30px 黑色），默认不加下划线以免和标题下的分隔线混淆；
-   悬停/按下时才变主题红并出现下划线 */
 .onebox h3.news-section a:link,
 .onebox h3.news-section a:visited {
 	color: inherit;
@@ -673,21 +541,15 @@ a[href*="scholar.google"]:active {
 
 .onebox h3.news-section a:hover,
 .onebox h3.news-section a:active {
-	color: var(--link-hover-blue);       /* 悬停蓝（与全站链接一致） */
-	text-decoration: none;               /* 要求：鼠标悬停时也不出现下划线 */
+	color: var(--link-hover-blue);
+	text-decoration: none;
 }
 
-/* 首页 Join Us 段落：与上方标题一致居中（标题靠 .no-divider 居中），
-   正文 17px（原继承 body 的 20px，与上方 Welcome 简介一致） */
 .onebox p.lab-openings {
 	text-align: center;
 	font-size: 17px;
 }
 
-/* 标题与简介的间距：由 .onebox h3.news-section + p 的 margin-top: 44px 提供
-   （2026/10：删除了标题后原本用于撑出空隙的 <br> —— 它被划进文字选区时会画出一块
-     悬浮在行首的蓝色竖条，看起来像"隐形空格"；删除后 44px 的 margin 恰好补出同样间距，
-     简介位置一像素未动） */
 
 .onebox ul.news-latest {
 	margin: 0 0 16px;
@@ -699,7 +561,7 @@ a[href*="scholar.google"]:active {
 	display: flex;
 	align-items: baseline;
 	gap: 12px;
-	margin: 0;                       /* 条目之间不留额外间距（仅行高） */
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -707,32 +569,23 @@ a[href*="scholar.google"]:active {
 .onebox ul.news-latest .news-date {
 	flex: 0 0 auto;
 	padding: 1px 7px;
-	/* 日期标签：浅绿底 + 黑字（配色参考 icdesignlab.net 的日期高亮 #BADA55；
-	   黑字保证对比度，浅绿直接当文字色在白底上会偏淡） */
 	background-color: #BADA55;
 	color: #000;
 	font-size: 13px;
-	font-weight: 700;                /* 日期加粗 */
+	font-weight: 700;
 	letter-spacing: 0.03em;
-	font-variant-numeric: tabular-nums;   /* 日期等宽，竖向对齐 */
-	min-width: 4.6em;                /* 所有日期标签同宽 */
+	font-variant-numeric: tabular-nums;
+	min-width: 4.6em;
 	text-align: center;
 }
 
-/* 首页 Lab Openings 段落：职位名真加粗 */
 .onebox p.lab-openings b,
 .onebox ul.news-latest b {
 	font-weight: 700;
 }
 
-/* ----------------------------------------------------------
-   group 页成员条目（版式参考 icdesignlab.net/students）：
-   每人一块，左侧大照片，右侧 姓名（Oswald）→ 职位（主题红）→ 简介（17px）
-   注意：用户要求「保留浅灰底，但不要外框线」—— 只去掉 border，底色与内边距照旧；
-        往届成员展开后的卡片同样适用
-   ---------------------------------------------------------- */
 .onebox h3.member-section {
-	margin-top: 48px;                /* 分区之间留白，同 publication 分区标题 */
+	margin-top: 48px;
 }
 
 .onebox h3.member-section:first-child {
@@ -741,32 +594,31 @@ a[href*="scholar.google"]:active {
 
 .onebox h3.member-section + .member-list,
 .onebox h3.member-section + .alumni-list {
-	margin-top: 44px;                /* 避开标题分隔线（h3 的 margin-bottom 为负值） */
+	margin-top: 44px;
 }
 
 .member-list {
 	display: flex;
 	flex-direction: column;
-	gap: 38px;                       /* 成员条目之间的间距（16 → 26 → 32 → 38px） */
+	gap: 38px;
 }
 
-/* 成员条目：保留浅灰底 #F6F6F7，只去掉外框线（原 border: 1px solid #E6E6E8） */
 .member-card {
 	display: flex;
 	align-items: flex-start;
 	gap: 28px;
 	padding: 20px;
-	background-color: #F6F6F7;       /* 恢复初始设计的灰底（中途一度调浅到 #FAFAFA，用户要求还原） */
-	border: none;                    /* 只要底色，不要框线（原 border: 1px solid #E6E6E8） */
+	background-color: #F6F6F7;
+	border: none;
 }
 
 .onebox .member-card img.member-photo,
 .frame .member-card img.member-photo {
 	flex: 0 0 auto;
-	width: 250px;                    /* 大照片（180 → 230 → 250px），所有人同尺寸 */
-	height: 312px;                   /* 4:5 竖幅（225 → 287 → 312px） */
-	object-fit: cover;               /* 尺寸统一，比例不同的原图按 4:5 裁切 */
-	object-position: center top;     /* 裁切时保留头部 */
+	width: 250px;
+	height: 312px;
+	object-fit: cover;
+	object-position: center top;
 	display: block;
 }
 
@@ -776,7 +628,7 @@ a[href*="scholar.google"]:active {
 }
 
 .onebox h4.member-name {
-	font-size: 24px;                 /* Oswald Medium（沿用 .onebox h4） */
+	font-size: 24px;
 	line-height: 1.25;
 }
 
@@ -784,21 +636,19 @@ a[href*="scholar.google"]:active {
 	margin: 4px 0 10px;
 	font-size: 17px;
 	font-weight: 400;
-	color: #000;                     /* 职位改黑色（原为主题红 var(--accent-color)），用户要求 */
+	color: #000;
 }
 
-/* 邮箱单独一行，放在职位（title）下方 —— 竖线分隔符不再需要，隐藏即可。
-   写成 xxx@hbku.edu.qa 纯文本（真实地址，与 contact 页一致；原先用 {at} 占位防爬虫，用户要求改回 @） */
 .member-role .member-sep {
 	display: none;
 }
 
 .member-role .member-email {
 	color: #000;
-	display: block;                  /* 独占一行，位于职位下方 */
+	display: block;
 	margin-top: 2px;
-	margin-bottom: 24px;             /* 邮箱与简介之间多加约一整行空白（实测净间距约 25px ≈ 一个行高） */
-	white-space: nowrap;             /* 邮箱不折行 */
+	margin-bottom: 24px;
+	white-space: nowrap;
 }
 
 .member-bio {
@@ -811,27 +661,25 @@ a[href*="scholar.google"]:active {
 	margin-bottom: 0;
 }
 
-/* 往届成员：一行一人（姓名 | 学位/职位 | 现单位），点击展开照片与简介 */
 .alumni-list {
 	display: flex;
 	flex-direction: column;
 }
 
-/* 各条目之间不加分隔线（用户要求）：去掉原 border-bottom，改为纯留白区分 */
 .alumni-item {
 	border-bottom: none;
 }
 
 .alumni-list > .alumni-item + .alumni-item {
-	margin-top: 0;                   /* 条目之间不再额外加间距（上下 padding 已足够） */
+	margin-top: 0;
 }
 
 .alumni-item > summary {
 	cursor: pointer;
-	list-style: none;                /* 去掉默认三角，用下方自定义箭头 */
-	padding: 0 0 0 22px;             /* 纵向 padding 全为 0 —— 行距只由 line-height 决定，条目间不加额外空隙 */
+	list-style: none;
+	padding: 0 0 0 22px;
 	position: relative;
-	font-size: 17px;                 /* 名单文字 17px（.onebox 是 20px，需显式声明） */
+	font-size: 17px;
 	line-height: 1.5;
 }
 
@@ -840,10 +688,10 @@ a[href*="scholar.google"]:active {
 }
 
 .alumni-item > summary::before {
-	content: "\25B8";                /* ▸ 收起；展开时旋转为 ▾ */
+	content: "\25B8";
 	position: absolute;
 	left: 2px;
-	top: 0;                          /* 跟随 summary 的 padding-top（现为 0），箭头与首行对齐 */
+	top: 0;
 	color: var(--accent-color);
 	transition: transform 0.15s ease;
 }
@@ -853,13 +701,13 @@ a[href*="scholar.google"]:active {
 }
 
 .alumni-item > summary:hover .alumni-name {
-	color: var(--link-hover-blue);       /* 悬停蓝（与全站链接一致） */
+	color: var(--link-hover-blue);
 }
 
 .alumni-name {
 	font-weight: 700;
-	display: inline-block;           /* 固定姓名列宽度：让每条的第一条竖线 "|" 垂直对齐 */
-	min-width: 190px;                /* 最宽姓名 "Dr. Abubakar Abubakar" 实测 187px，取 190px */
+	display: inline-block;
+	min-width: 190px;
 }
 
 .alumni-sep {
@@ -868,40 +716,29 @@ a[href*="scholar.google"]:active {
 }
 
 .alumni-item .member-card {
-	margin: 4px 0 8px;               /* 下边距原 14px，随行距一并收紧 */
+	margin: 4px 0 8px;
 }
 
-/* ----------------------------------------------------------
-   research.html 研究主题（Research Topics）：
-   与 group 页成员条目同款盒子 —— 浅灰底、无框线，左侧配图 + 右侧 编号/标题/说明/要点
-   （结构参考 icdesignlab.net/research 的 "Topic | 0X" 编号 + 要点列表）
-   ---------------------------------------------------------- */
 .research-list {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;                       /* 原 38px（与 group 页 .member-list 一致），用户要求略微收紧。
-	                                    卡片自身还有上下各 20px 内边距，故相邻主题的实际视觉间距
-	                                    = 20 + 24 + 20 = 64px（上一条最后一个要点 → 下一条标题，原为 78px） */
+	gap: 24px;
 }
 
 .onebox h3 + .research-list {
-	margin-top: 0;                   /* 让「分隔线 → 首张配图」的净间距 == 「Research Grants 分隔线 → 列表」的净间距（均约 14px）。
-	                                    盒子自身还有 20px 内边距，所以配图会比盒子上沿低 20px */
+	margin-top: 0;
 }
 
 .topic-card {
 	display: flex;
-	align-items: flex-start;         /* 配图与文字顶端对齐，配图位于盒子最左侧 */
+	align-items: flex-start;
 	justify-content: flex-start;
-	gap: 32px;                       /* 配图与右侧文字的间距（28 → 48 → 64px，用户逐次要求加宽）。
-	                                    宽度预算：内容区 1040px = 配图 380 + 间距 36 + 文字列 596 */
-	padding: 20px 0;                 /* 左右内边距均为 0：左缘让配图与 "Research Topics" 标题文字对齐，
-	                                    右缘让文字列延伸到与 Research Grants 列表同一右边界 */
-	background-color: #FFF;          /* 白底（原为浅灰 #F6F6F7），用户要求 */
-	border: none;                    /* 无框线 */
+	gap: 32px;
+	padding: 20px 0;
+	background-color: #FFF;
+	border: none;
 }
 
-/* 左侧配图占位：统一 380×240（约 16:10 横幅，原 300×190），比例不同的原图按此裁切 */
 .research-list img.topic-photo,
 .frame .research-list img.topic-photo {
 	flex: 0 0 auto;
@@ -910,25 +747,16 @@ a[href*="scholar.google"]:active {
 	object-fit: cover;
 	object-position: center;
 	display: block;
-	margin: 7px 0 0;                 /* 下移 7px：让配图顶缘对准标题的**实际字形**（而非行盒）——
-	                                    标题行盒 32.2px 比字形高（Oswald 23px 大写字母墨迹高 19px），
-	                                    字形顶比行盒顶低约 7px。
-	                                    （原为 30px = 23 + 7：那时 "Topic | 0X" 单独占一行，
-	                                      标题在第二行。现在编号与标题同行，23px 那部分不再需要，
-	                                      配图随之回到 7px，分隔线到配图的间距也回到约 14+7px） */
+	margin: 7px 0 0;
 }
 
-/* 文字列改为 flex 换行容器：让 "Topic | 0X" 编号与主题标题**同一行**（基线对齐），
-   说明与要点各占整行排在下面。字号一律不变（编号 15px / 标题 23px）。
-   标题过长时 flex-wrap 会自动换到编号下面，不会溢出。 */
 .topic-info {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: baseline;           /* 编号与标题按基线对齐（字号不同也能看着齐平） */
+	align-items: baseline;
 	flex: 1 1 auto;
 	min-width: 0;
-	max-width: none;                 /* 不设上限：文字列填满配图右侧的剩余空间，
-	                                    右缘与 Research Grants 列表对齐（此前 560/540px 会在右侧空出一大块） */
+	max-width: none;
 }
 
 .topic-index {
@@ -937,20 +765,19 @@ a[href*="scholar.google"]:active {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.08em;
-	color: #000;                     /* 编号改黑色（原中性灰 #888，用户要求） */
-	margin: 0 10px 0 0;              /* 只留右侧间隔：与标题同一行后不再需要 margin-bottom */
+	color: #000;
+	margin: 0 10px 0 0;
 }
 
 .onebox h4.topic-title {
-	font-family: Oswald, sans-serif; /* 与 publication 页 "Google Scholar Profile" 按钮文字同一字体 */
-	font-size: 23px;                 /* 原 24px → 23px，与 Google Scholar Profile 一致 */
-	font-weight: 500;                /* Oswald Medium，同上 */
-	line-height: 1.4;                /* 同上（原 1.25） */
+	font-family: Oswald, sans-serif;
+	font-size: 23px;
+	font-weight: 500;
+	line-height: 1.4;
 	margin: 0 0 8px;
 	color: #000;
 }
 
-/* 说明与要点各自独占一整行（排在编号+标题那一行下面） */
 .topic-desc,
 .topic-points {
 	flex: 1 1 100%;
@@ -964,40 +791,32 @@ a[href*="scholar.google"]:active {
 
 .topic-points {
 	margin: 0;
-	padding-left: 0;                 /* 原 22px：圆点被推到说明文字右侧，用户要求与上文左对齐 */
-	list-style-position: inside;     /* 圆点纳入内容盒，使其左缘正好落在与 .topic-desc 相同的位置 */
+	padding-left: 0;
+	list-style-position: inside;
 	font-size: 17px;
 	line-height: 1.5;
 }
 
 .topic-points > li {
-	/* 项目符号改为 ▸ 箭头（与 group 页 Alumni 的展开箭头同一符号、同一颜色），不再用圆点。
-	   注意：list-style 必须写在 li 上 —— 全局 .onebox li { list-style: disc } 是简写，
-	   特异性 (0,1,1) 高于 .topic-points (0,1,0)，写在 ul 上会被盖掉 */
 	list-style: none;
 	position: relative;
-	padding-left: 16px;              /* 文字让开箭头的位置：需与 group 页 Alumni 箭头后的间距一致。
-	                                    两侧字号同为 17px、同为 ▸，故只需让「箭头定位盒 → 文字盒」的距离相等：
-	                                    Alumni = 22(padding) - 2(::before left) = 20px，
-	                                    这里 = 16(padding) - (-4)(::before left) = 20px，视觉间距即完全相同 */
-	margin-left: 0;                  /* 抵消全局 .onebox li 的 margin-left: -23px（那会让符号跑到文字列外面） */
+	padding-left: 16px;
+	margin-left: 0;
 	margin-bottom: 6px;
 }
 
 .topic-points > li::before {
-	content: "\25B8";                /* ▸ —— 与 .alumni-item > summary::before 完全相同的符号 */
+	content: "\25B8";
 	position: absolute;
-	left: -4px;                      /* ▸ 字形自带约 4px 左侧留白，左移 4px 才能让箭尖墨迹
-	                                    与标题文字墨迹对齐（像素实测：不偏时箭尖在 641、标题在 637） */
+	left: -4px;
 	top: 0;
-	color: var(--accent-color);      /* 主题红，与 Alumni 箭头同色 */
+	color: var(--accent-color);
 }
 
 .topic-points > li:last-child {
 	margin-bottom: 0;
 }
 
-/* Research Topics 区块后的补充说明：17px、居中 */
 .onebox p.topic-note {
 	margin: 30px 0 0;
 	font-size: 17px;
@@ -1006,9 +825,6 @@ a[href*="scholar.google"]:active {
 	color: #000;
 }
 
-/* ----------------------------------------------------------
-   窄屏（≤ 750px）：导航纵向堆叠、取消吸顶、内容边距收窄、成员照片与文字上下排列
-   ---------------------------------------------------------- */
 @media only screen and (max-width: 750px) {
 	.body {
 		width: 100%;
@@ -1016,7 +832,7 @@ a[href*="scholar.google"]:active {
 	}
 
 	.mainheader {
-		position: static;            /* 取消吸顶，避免遮挡内容 */
+		position: static;
 		margin-bottom: 8px;
 	}
 
@@ -1035,13 +851,11 @@ a[href*="scholar.google"]:active {
 		text-align: left;
 	}
 
-	/* 导航项增大点击热区 */
 	.mainheader nav ul li a:link,
 	.mainheader nav ul li a:visited {
 		padding: 14px 9px 14px 16px;
 	}
 
-	/* 首项（HOME）与其余项左缘对齐：覆盖桌面端 li:first-child 的 padding-left: 20px（其选择器优先级更高） */
 	.mainheader nav ul li:first-child a:link,
 	.mainheader nav ul li:first-child a:visited {
 		padding-left: 16px;
@@ -1053,7 +867,7 @@ a[href*="scholar.google"]:active {
 	}
 
 	.lab-hero {
-		flex-direction: column-reverse;  /* 照片在上、文字在下 */
+		flex-direction: column-reverse;
 		gap: 20px;
 		padding: 24px 0 20px;
 	}
@@ -1081,42 +895,39 @@ a[href*="scholar.google"]:active {
 		height: 300px;
 	}
 
-	/* group 页成员条目：照片在上、文字在下（同样只有底色、无框线） */
 	.member-card {
 		flex-direction: column;
 		gap: 14px;
 		padding: 14px;
 	}
 
-	/* research.html 主题盒：窄屏同样去掉左内边距，配图与标题左缘对齐 */
 	.topic-card {
 		flex-direction: column;
 		gap: 14px;
-		padding: 14px 0;             /* 同桌面：左右内边距为 0，文字左右缘与列表内容对齐 */
+		padding: 14px 0;
 	}
 
 	.onebox .member-card img.member-photo,
 	.frame .member-card img.member-photo {
-		width: 210px;                /* 窄屏同比例缩小（原 160×200 → 200×250 → 210×262） */
+		width: 210px;
 		height: 262px;
 	}
 
-	/* research.html 研究主题：窄屏改为图在上、文字在下 */
 	.research-list img.topic-photo,
 	.frame .research-list img.topic-photo {
-		width: 300px;
-		height: 190px;
-		margin: 0;                   /* 窄屏是图在上、文字在下，不需要桌面端那 23px 的下移量 */
+		width: calc(100% + 24px);
+		max-width: none;
+		height: auto;
+		margin: 0 -12px;
 	}
 
 
 
 	.lab-hero--banner {
-		margin: -8px -12px 0;        /* 上 -8px 贴住导航栏；左右跟随 .onebox 窄屏内边距 12px */
+		margin: -8px -12px 0;
 		padding: 88px 16px 80px;
 	}
 
-	/* 成员表格块级化：照片在上、文字在下，隐藏中间的间隔单元格 */
 	.onebox .member-group table,
 	.onebox .member-group tbody,
 	.onebox .member-group tr {
@@ -1126,7 +937,7 @@ a[href*="scholar.google"]:active {
 
 	.onebox .member-group td {
 		display: block;
-		width: 100% !important;      /* 覆盖 HTML 中的 width 属性（160/40/715） */
+		width: 100% !important;
 		padding: 2px 0;
 		text-align: left;
 	}
@@ -1144,7 +955,6 @@ a[href*="scholar.google"]:active {
 	}
 }
 
-/* 手机竖屏（≤ 480px）：进一步压缩边距 */
 @media only screen and (max-width: 480px) {
 	.onebox {
 		padding-left: 8px;
@@ -1156,7 +966,13 @@ a[href*="scholar.google"]:active {
 	}
 
 	.lab-hero--banner {
-		margin: -8px -8px 0;         /* 左右跟随 .onebox 窄屏内边距 8px */
+		margin: -8px -8px 0;
+	}
+
+	.research-list img.topic-photo,
+	.frame .research-list img.topic-photo {
+		width: calc(100% + 16px);
+		margin: 0 -8px;
 	}
 
 	.mainheader nav {
@@ -1168,7 +984,6 @@ a[href*="scholar.google"]:active {
 		padding: 12px 6px 12px 12px;
 	}
 
-	/* 首项（HOME）与其余项左缘对齐：覆盖桌面端 li:first-child 的 padding-left: 20px（其选择器优先级更高） */
 	.mainheader nav ul li:first-child a:link,
 	.mainheader nav ul li:first-child a:visited {
 		padding-left: 12px;
@@ -1178,7 +993,6 @@ a[href*="scholar.google"]:active {
 		width: 100px;
 	}
 
-	/* Alumni 名单：窄屏取消姓名列固定宽度（否则 190px 会白占近一半宽度，文字被挤成多行） */
 	.alumni-name {
 		display: inline;
 		min-width: 0;
