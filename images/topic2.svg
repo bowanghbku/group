@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 380 240"
+   width="380"
+   height="240"
+   version="1.1"
+   id="svg168"
+   sodipodi:docname="topic2.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata172">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3654"
+     inkscape:window-height="2125"
+     id="namedview170"
+     showgrid="false"
+     inkscape:zoom="3.9333333"
+     inkscape:cx="121.89162"
+     inkscape:cy="88.062744"
+     inkscape:window-x="175"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg168" />
+  <style
+     id="style2">text{font-family:Inter,'Helvetica Neue',Arial,sans-serif;fill:#3A3F47}
+.lbl{font-size:9px;font-weight:600}
+.sm{font-size:7.5px;fill:#6B7280}
+.ttl{font-size:10.5px;font-weight:700;fill:#7D0E2D}
+.mono{font-family:'DejaVu Sans Mono',monospace;font-size:9px;fill:#7D0E2D;font-weight:600}
+</style>
+  <defs
+     id="defs12">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4844"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#7d0e2d;stroke-width:1pt;stroke-opacity:1;fill:#7d0e2d;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       id="ar"
+       viewBox="0 0 8 8"
+       refX="7"
+       refY="4"
+       markerWidth="5"
+       markerHeight="5"
+       orient="auto">
+      <path
+         d="M0,0 L8,4 L0,8z"
+         fill="#7D0E2D"
+         id="path4" />
+    </marker>
+    <linearGradient
+       id="skin"
+       x1="0"
+       y1="30.201885"
+       x2="0"
+       y2="101.58816"
+       gradientTransform="matrix(1.3728129,0,0,0.72843136,266,30)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#F6D9C8"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#EDBFA6"
+         id="stop9" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4844-4"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#7d0e2d;fill-opacity:1;fill-rule:evenodd;stroke:#7d0e2d;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+  </defs>
+  <rect
+     width="380"
+     height="240"
+     id="rect14"
+     fill="#fff" />
+  <!-- panel backgrounds -->
+  <rect
+     x="6"
+     y="14"
+     width="118"
+     height="168"
+     rx="8"
+     fill="#F3F4F6"
+     id="rect16" />
+  <rect
+     x="131"
+     y="14"
+     width="118"
+     height="168"
+     rx="8"
+     fill="#F3F4F6"
+     id="rect18" />
+  <rect
+     x="256"
+     y="14"
+     width="118"
+     height="168"
+     rx="8"
+     fill="#F3F4F6"
+     id="rect20" />
+  <!-- (1) temperature sensor: die with BJT + thermometer -->
+  <rect
+     x="22"
+     y="40"
+     width="86"
+     height="86"
+     rx="4"
+     fill="#fff"
+     stroke="#7D0E2D"
+     stroke-width="1.8"
+     id="rect22" />
+  <g
+     stroke="#7D0E2D"
+     stroke-width="1.5"
+     id="g26">
+    <path
+       d="M34,40v-5 M50,40v-5 M66,40v-5 M82,40v-5 M98,40v-5 M34,126v5 M50,126v5 M66,126v5 M82,126v5 M98,126v5"
+       id="path24" />
+  </g>
+  <!-- BJT symbol -->
+  <!-- thermometer -->
+  <text
+     x="65"
+     y="150"
+     class="lbl"
+     text-anchor="middle"
+     id="text46"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6016">CMOS Temperature</tspan>
+  </text>
+  <text
+     x="65"
+     y="161"
+     class="lbl"
+     text-anchor="middle"
+     id="text48"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6018">Sensor</tspan>
+  </text>
+  <text
+     x="65"
+     y="177"
+     class="sm"
+     id="text50"
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+    <tspan
+       style="font-size:8.66666698px"
+       id="tspan5986">on-chip thermal monitoring</tspan>
+  </text>
+  <!-- (2) image sensor + edge processing -->
+  <!-- tiny NN -->
+  <g
+     transform="translate(210,36)"
+     id="g116">
+    <g
+       id="g96"
+       style="stroke:#8a93a0;stroke-width:0.69999999">
+      <path
+         d="M 5,8 17,4 M 5,8 17,26 M 5,8 17,48 M 5,26 17,4 M 5,26 H 17 M 5,26 17,48 M 5,44 17,4 M 5,44 17,26 M 5,44 17,48 M 17,4 28,26 M 17,26 H 28 M 17,48 28,26"
+         id="path94"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g110"
+       style="fill:#3a3f47">
+      <circle
+         cx="5"
+         cy="8"
+         r="3"
+         id="circle98" />
+      <circle
+         cx="5"
+         cy="26"
+         r="3"
+         id="circle100" />
+      <circle
+         cx="5"
+         cy="44"
+         r="3"
+         id="circle102" />
+      <circle
+         cx="17"
+         cy="4"
+         r="3"
+         id="circle104" />
+      <circle
+         cx="17"
+         cy="26"
+         r="3"
+         id="circle106" />
+      <circle
+         cx="17"
+         cy="48"
+         r="3"
+         id="circle108" />
+    </g>
+    <circle
+       cx="28"
+       cy="26"
+       r="3.5"
+       id="circle112"
+       style="fill:#7d0e2d" />
+    <text
+       x="16"
+       y="66"
+       class="sm"
+       id="text114"
+       style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+      <tspan
+         style="font-size:8.66666698px"
+         id="tspan5992">edge AI</tspan>
+    </text>
+  </g>
+  <rect
+     x="142.44067"
+     y="112"
+     width="95.118645"
+     height="14"
+     rx="3.0000002"
+     id="rect118"
+     style="fill:#ffffff;stroke:#3a3f47;stroke-width:1"
+     ry="3" />
+  <text
+     x="190.12695"
+     y="121.29362"
+     class="sm"
+     id="text120"
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+    <tspan
+       style="font-size:8.66666698px"
+       id="tspan5994">features, not raw pixels</tspan>
+  </text>
+  <text
+     x="190"
+     y="150"
+     class="lbl"
+     text-anchor="middle"
+     id="text122"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6020">CMOS Image Sensor</tspan>
+  </text>
+  <text
+     x="190"
+     y="161"
+     class="lbl"
+     text-anchor="middle"
+     id="text124"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6022">with Edge Processing</tspan>
+  </text>
+  <text
+     x="190"
+     y="177"
+     class="sm"
+     id="text126"
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+    <tspan
+       style="font-size:8.66666698px"
+       id="tspan5988">low bandwidth · low energy</tspan>
+  </text>
+  <!-- (3) optical blood flow -->
+  <text
+     x="315"
+     y="150"
+     class="lbl"
+     text-anchor="middle"
+     id="text158"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6024">Optical Blood Flow</tspan>
+  </text>
+  <text
+     x="315"
+     y="161"
+     class="lbl"
+     text-anchor="middle"
+     id="text160"
+     style="fill:#000000;fill-opacity:1;">
+    <tspan
+       style="font-size:10px"
+       id="tspan6026">Sensing System</tspan>
+  </text>
+  <text
+     x="315"
+     y="177"
+     class="sm"
+     id="text162"
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+    <tspan
+       style="font-size:8.66666698px"
+       id="tspan5996">point-of-care monitoring</tspan>
+  </text>
+  <!-- base bar -->
+  <rect
+     x="6"
+     y="194"
+     width="368"
+     height="32"
+     rx="8"
+     fill="#7D0E2D"
+     id="rect164" />
+  <text
+     x="190"
+     y="214"
+     style="font-weight:600;font-size:10px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;letter-spacing:0.40000001px;text-anchor:middle;fill:#ffffff"
+     id="text166">Sensing · Readout · (Processing) — integrated on chip</text>
+  <g
+     id="g4683"
+     transform="translate(2.5)">
+    <g
+       transform="translate(0,1)"
+       id="g4666">
+      <g
+         style="fill:none;stroke:#3a3f47;stroke-width:1.39999998"
+         id="g36">
+        <path
+           inkscape:connector-curvature="0"
+           d="M 44,70 V 94"
+           id="path28" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 32,82 H 44"
+           id="path30" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 44,76 56,68 V 60"
+           id="path32" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 44,88 12,8 v 8"
+           id="path34" />
+      </g>
+    </g>
+    <g
+       transform="translate(0,-3.675)"
+       id="g4671">
+      <rect
+         style="fill:#ffffff;stroke:#3a3f47;stroke-width:1.29999995"
+         ry="5"
+         x="80"
+         y="58"
+         width="10"
+         height="44"
+         rx="5"
+         id="rect40" />
+      <circle
+         style="fill:#7d0e2d"
+         cx="85"
+         cy="108"
+         r="8"
+         id="circle42" />
+      <rect
+         style="fill:#7d0e2d"
+         x="83"
+         y="72"
+         width="4"
+         height="34"
+         id="rect44" />
+    </g>
+  </g>
+  <rect
+     style="fill:url(#skin)"
+     id="rect128"
+     rx="4"
+     height="52"
+     width="98"
+     y="52"
+     x="266" />
+  <ellipse
+     style="opacity:0.85;fill:#c0392b"
+     id="ellipse130"
+     ry="7"
+     rx="40"
+     cy="88"
+     cx="315" />
+  <g
+     style="opacity:0.9;fill:#ffffff"
+     id="g140"
+     transform="translate(266,30)">
+    <circle
+       id="circle132"
+       r="2"
+       cy="58"
+       cx="30" />
+    <circle
+       id="circle134"
+       r="2"
+       cy="57"
+       cx="44" />
+    <circle
+       id="circle136"
+       r="2"
+       cy="59"
+       cx="58" />
+    <circle
+       id="circle138"
+       r="2"
+       cy="57"
+       cx="70" />
+  </g>
+  <path
+     style="fill:#7d0e2d;fill-opacity:1;stroke:#7d0e2d;stroke-width:1;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+     inkscape:connector-curvature="0"
+     id="path142"
+     d="m 326,88 h 6.8569" />
+  <rect
+     style="fill:#3a3f47"
+     id="rect144"
+     rx="2"
+     height="12"
+     width="16"
+     y="40"
+     x="280" />
+  <text
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280"
+     id="text146"
+     class="sm"
+     y="37"
+     x="288">
+    <tspan
+       style="font-size:8.66666667px"
+       id="tspan5998">LED</tspan>
+  </text>
+  <rect
+     style="fill:#3a3f47"
+     id="rect148"
+     rx="2"
+     height="12"
+     width="16"
+     y="40"
+     x="332" />
+  <text
+     style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280"
+     id="text150"
+     class="sm"
+     y="37"
+     x="340">
+    <tspan
+       style="font-size:8.66666667px"
+       id="tspan6000">PD</tspan>
+  </text>
+  <path
+     style="fill:none;stroke:#e0a526;stroke-width:1.60000002;stroke-dasharray:3, 2"
+     inkscape:connector-curvature="0"
+     id="path152"
+     d="m 288,52 q 26,56 52,0" />
+  <path
+     style="fill:none;stroke:#7d0e2d;stroke-width:1.60000002;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path154"
+     d="m 266,128 c 4,0 6,-16 11,-16 4,0 5,8 8,8 3,0 4,-3 6,-3 3,0 5,11 8,11 4,0 6,-16 11,-16 4,0 5,8 8,8 3,0 4,-3 6,-3 3,0 5,11 8,11 4,0 6,-16 11,-16 4,0 5,8 8,8 3,0 4,-3 6,-3 3,0 5,11 8,11" />
+  <path
+     style="fill:#7d0e2d;fill-opacity:1;stroke:#7d0e2d;stroke-width:1;stroke-opacity:1;marker-end:url(#TriangleOutM-4)"
+     inkscape:connector-curvature="0"
+     id="path142-5"
+     d="m 198.35451,62.033895 h 8.65451" />
+  <g
+     transform="translate(142,34)"
+     id="g90">
+    <rect
+       x="0"
+       y="0"
+       width="56"
+       height="56"
+       rx="3"
+       id="rect52"
+       ry="3"
+       style="fill:#ffffff;stroke:#3a3f47;stroke-width:1.29999995" />
+    <g
+       id="g86"
+       style="fill:#7d0e2d">
+      <rect
+         x="5"
+         y="5"
+         width="9"
+         height="9"
+         id="rect54"
+         style="opacity:0.25" />
+      <rect
+         x="18"
+         y="5"
+         width="9"
+         height="9"
+         id="rect56"
+         style="opacity:0.55" />
+      <rect
+         x="31"
+         y="5"
+         width="9"
+         height="9"
+         id="rect58"
+         style="opacity:0.8" />
+      <rect
+         x="44"
+         y="5"
+         width="7"
+         height="9"
+         id="rect60"
+         style="opacity:0.4" />
+      <rect
+         x="5"
+         y="18"
+         width="9"
+         height="9"
+         id="rect62"
+         style="opacity:0.6" />
+      <rect
+         x="18"
+         y="18"
+         width="9"
+         height="9"
+         id="rect64"
+         style="opacity:0.9" />
+      <rect
+         x="31"
+         y="18"
+         width="9"
+         height="9"
+         id="rect66"
+         style="opacity:0.35" />
+      <rect
+         x="44"
+         y="18"
+         width="7"
+         height="9"
+         id="rect68"
+         style="opacity:0.7" />
+      <rect
+         x="5"
+         y="31"
+         width="9"
+         height="9"
+         id="rect70"
+         style="opacity:0.4" />
+      <rect
+         x="18"
+         y="31"
+         width="9"
+         height="9"
+         id="rect72"
+         style="opacity:0.7" />
+      <rect
+         x="31"
+         y="31"
+         width="9"
+         height="9"
+         id="rect74"
+         style="opacity:0.95" />
+      <rect
+         x="44"
+         y="31"
+         width="7"
+         height="9"
+         id="rect76"
+         style="opacity:0.3" />
+      <rect
+         x="5"
+         y="44"
+         width="9"
+         height="7"
+         id="rect78"
+         style="opacity:0.8" />
+      <rect
+         x="18"
+         y="44"
+         width="9"
+         height="7"
+         id="rect80"
+         style="opacity:0.3" />
+      <rect
+         x="31"
+         y="44"
+         width="9"
+         height="7"
+         id="rect82"
+         style="opacity:0.6" />
+      <rect
+         x="44"
+         y="44"
+         width="7"
+         height="7"
+         id="rect84"
+         style="opacity:0.5" />
+    </g>
+    <text
+       x="28"
+       y="68"
+       class="sm"
+       id="text88"
+       style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
+      <tspan
+         style="font-size:8.66666698px"
+         id="tspan5990">pixel array</tspan>
+    </text>
+  </g>
+</svg>

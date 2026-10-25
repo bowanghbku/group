@@ -2,283 +2,155 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<!-- 视口：宽度跟随设备宽度（移动端适配） -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bo Lab | Publication</title>
 
-	<!-- 站点样式表（全站唯一使用的样式文件） -->
 	<link href="css/main.css" rel="stylesheet">
-	<!-- Ubuntu 网络字体（导航栏专用） -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<!-- Modernizr：浏览器特性检测 -->
 	<script src="js/modernizr.foundation.js"></script>
+
+	<!-- 刷新（F5）后回到页面顶部：关闭浏览器的滚动位置恢复 -->
+	<script src="js/scroll-top.js"></script>
 </head>
 
 <body class="body">
-<!-- 页面顶部锚点（供 Back to top 链接跳转） -->
-<a name="top"></a>
+<a id="top"></a>
 <div class="frame">
-	<!-- 顶部导航栏（当前页 PUBLICATIONS 高亮显示） -->
 	<div class="mainheader">
 		<h5></h5>
 		<nav>
 			<ul>
 				<li><a href="index.html">HOME</a></li>
 				<li><a href="research.html">RESEARCH</a></li>
-				<li><a href="publication.html"><span style="color:#FFF; text-decoration:underline">PUBLICATIONS</span></a></li>
 				<li><a href="group.html">GROUP</a></li>
+				<li><a href="publication.html"><span style="color:#FFF; text-decoration:underline">PUBLICATIONS</span></a></li>
+				<li><a href="contact.html">CONTACT</a></li>
 				<!--<li><a href="news.html">NEWS</a></li>-->
 			</ul>
 		</nav>
 	</div>
 
-	<!-- 论文列表：按年份倒序，每条含本地 PDF 下载链接 -->
+	<!-- 论文列表：按年份倒序；给期刊/会议缩写套 <a class="venue-link" href="paper/xxx.pdf">
+	     即可指向 PDF；暂无 PDF 时不加链接，保持 (<b>缩写</b>) -->
 	<div class="onebox">
 		<!-- IEEE 版权声明 -->
 		<h6>The following IEEE copyrighted material is posted here with permission of the IEEE. Such permission of the IEEE does not in any way imply IEEE endorsement of any of the HBKU&#39;s services. Personal use of this material is permitted. However, permission to reprint/republish this material for advertising or promotional purposes or for creating new collective works for resale or redistribution must be obtained from the IEEE by writing to pubs-permissions@ieee.org. By choosing to view this document, you agree to all provisions of the copyright laws protecting it.</h6>
 
-		<i><b>Publications in JSSC, SSC-L, ISSCC, A-SSCC, CICC, TCAS-I/II, TBioCAS, TIE, TSP, etc.</b></i> <a href="https://scholar.google.com/citations?user=kc8oOxgAAAAJ&hl=en"><span style="font-size:17px"><b>Check Google Scholar</b>&raquo;</span></a>
-		<br>
+		<!-- <b>Publications in JSSC, SSC-L, ISSCC, A-SSCC, CICC, TCAS-I/II, TBioCAS, TIE, TSP.</b><br><br> -->
+		<a href="https://scholar.google.com/citations?user=kc8oOxgAAAAJ&amp;hl=en"><img class="scholar-icon" src="images/icon.svg" alt="" width="24" height="24">Google Scholar Profile</a>
 
-		<!-- ============ 2026 ============ -->
-		<h3>2026</h3>
-		&nbsp;
-		<ul>
-			<li>A. Raza, S. Belhaouari, and B. Wang, &ldquo;TinyLPFNet: A Near-Imager FPGA Accelerator for Real-Time Human Activity Recognition
-			,&rdquo; <i>IEEE Trans. Circ. Syst. II: Express Briefs (<b>TCAS-II</b>)</i>, Accepted. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
+		<!-- ============ Journal Publications（共 46 篇；按时间倒序，自动编号；新论文直接加在列表最上方） ============ -->
+		<h3 class="pub-section">Journal Publications</h3>
+		<ol class="pub-list">
+			<li>A. Raza, S. B. Belhaouari, and B. Wang, &ldquo;TinyLPFNet: A Near-Imager FPGA Accelerator for Real-Time Human Activity Recognition,&rdquo; <i>IEEE Trans. Circuits Syst. II, Exp. Briefs</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11703664"><b>TCAS-II</b></a>), early access, 2026.</li>
+			<li>J. Z. Li, Y. Zhou, F. B. Guo, M. Li, B. Wang, X. Y. Wang, S. R. Dong, X. H. Liu, and F. Gao, &ldquo;Passive Wireless Bolt Preload Monitoring Based on Magnetic Resonance Coupled Ultrasonic Time-of-Flight,&rdquo; <i>IEEE Trans. Instrum. Meas.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11554482"><b>TIM</b></a>), vol. 75, Art. no. 9524911, 2026.</li>
+			<li>A. Abubakar, B. Wang, and A. Bermak, &ldquo;A 1.5-2.0 TOPS/W 2T-Pixel CMOS Imager with Programmable In-Pixel Multi-Bit Feature Extraction,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11422021"><b>TCAS-I</b></a>), vol. 73, no. 7, pp. 4686&ndash;4696, Jul. 2026.</li>
+			<li>X. Y. Song, L. F. Huang, L. Z. Hong, B. Wang, X. F. Pan, and W. Xu, &ldquo;A Single-Chip Pulse-Driven CMOS-MEMS Flow Sensing System with Sub-mm/s Flow Detection Limit,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11225911"><b>TCAS-I</b></a>), vol. 73, no. 1, pp. 51&ndash;59, Jan. 2026.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>S. Shurbaji, A. Khan, M. K. Hassan, A. Bermak, W.-D. Li, K. H. Biswas, and B. Wang, &ldquo;Advances in Electrochemical Urea Biosensors: Trends and Future Prospects,&rdquo; <a class="venue-link" href="paper/Advances in Electrochemical Urea Biosensors Trends andFuture Prospects.pdf"><i>Adv. Sensor Res.</i></a>, vol. 5, no. 1, Art. no. e00117, Jan. 2026.</li> -->
+			<li>Y. J. Geng, H. C. Lin, B. Wang, and C. Wang, &ldquo;Cryo-CMOS Dual-Qubit Homodyne Reflectometer Array with Degenerate Parametric Amplification,&rdquo; <i>IEEE J. Solid-State Circuits</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10614653"><b>JSSC</b></a>), vol. 59, no. 10, pp. 3290&ndash;3306, Oct. 2024.</li>
+			<li>M. A. Awan, K. Ahmad, A. Bermak, K. H. Biswas, and B. Wang, &ldquo;An Asynchronous CMOS Current Readout with 124-dB Dynamic Range for Bioluminescence Sensing,&rdquo; <i>IEEE Solid-State Circuits Lett.</i> (<a class="venue-link" href="paper/An_Asynchronous_CMOS_Current_Readout_With_124-dB_Dynamic_Range_for_Bioluminescence_Sensing.pdf"><b>SSCL</b></a>), vol. 7, pp. 223&ndash;226, 2024.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>Z. U. Islam, A. Bermak, and B. Wang, &ldquo;A Review of Microstrip Patch Antenna-Based Passive Sensors,&rdquo; <i>Sensors</i>, vol. 24, no. 19, Art. no. 6355, Sep. 2024.</li> -->
+			<li>W. Xu, Z. J. Li, Z. T. Fang, B. Wang, et al., &ldquo;A Sub-5mW Monolithic CMOS-MEMS Thermal Flow Sensing SoC with &plusmn;6 m/s Linear Range,&rdquo; <i>IEEE J. Solid-State Circuits</i> (<a class="venue-link" href="paper/A_Sub-5mW_Monolithic_CMOS-MEMS_Thermal_Flow_Sensing_SoC_With_6_m_s_Linear_Range.pdf"><b>JSSC</b></a>), vol. 59, no. 5, pp. 1486&ndash;1496, May 2024.</li>
+			<li>M. Z. Duan, X.-P. Zhong, B. Wang, A. Khelif, Y.-K. Lee, and A. Bermak, &ldquo;A Highly Integrated Lab-on-a-CMOS Platform for Real-Time Monitoring of E. Coli Growth Kinetics,&rdquo; <i>IEEE Trans. Biomed. Circuits Syst.</i> (<a class="venue-link" href="paper/A_Highly_Integrated_Lab-on-a-CMOS_Platform_for_Real-Time_Monitoring_of_E._Coli_Growth_Kinetics.pdf"><b>TBioCAS</b></a>), vol. 18, no. 1, pp. 174&ndash;185, Feb. 2024.</li>
+			<li>Y. J. Geng, H. C. Lin, B. Wang, and C. Wang, &ldquo;A Cryo-CMOS Parametric Frequency Divider with &minus;189.1 dBm/Hz Output Noise Floor at 4.2 K for High-Fidelity All-Parametric Quantum Reflectometer,&rdquo; <i>IEEE Microw. Wireless Technol. Lett.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10296879"><b>MWTL</b></a>), vol. 33, no. 12, pp. 1650&ndash;1653, Dec. 2023.</li>
+			<li>B. Wang, M.-K. Law, and J. Schneider, &ldquo;L<sub>2</sub>min<sup>2/2s</sup>: Efficient Linear Reconstruction Filter for Incremental Delta-Sigma ADCs,&rdquo; <i>IEEE Trans. Signal Process.</i> (<a class="venue-link" href="paper/L2min2-Efficient Linear Reconstruction Filter for Incremental Delta-Sigma ADCs.pdf"><b>TSP</b></a>), vol. 71, pp. 3229&ndash;3241, 2023.</li>
+			<li>K. E. Jeon, T. N. Lin, J. She, S. Wong, R. Govindan, T. Al-Ansari, and B. Wang, &ldquo;LuXSensing Beacon: Batteryless IoT Sensor, Design Methodology, and Field Test for Sustainable Greenhouse Monitoring,&rdquo; <i>IEEE Trans. AgriFood Electron.</i> (<a class="venue-link" href="paper/LuXSensing_Beacon_Batteryless_IoT_Sensor_Design_Methodology_and_Field_Test_for_Sustainable_Greenhouse_Monitoring.pdf"><b>TAFE</b></a>), vol. 1, no. 2, pp. 86&ndash;98, Dec. 2023.</li>
+			<li>T. Yang, M. D. Li, Z. J. Wang, Y. Yang, L. Zhang, B. Wang, and F. Tang, &ldquo;A 100-ppm Integrated TDM-Based Single-Phase Wattmeter for Smart Grid,&rdquo; <i>IEEE Trans. Circuits Syst. II, Exp. Briefs</i> (<a class="venue-link" href="paper/A_100-ppm_Integrated_TDM-Based_Single-Phase_Wattmeter_for_Smart_Grid.pdf"><b>TCAS-II</b></a>), vol. 70, no. 2, pp. 406&ndash;410, Feb. 2023.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, M. Chiao, K. A. Mahmoud, and B. Wang, &ldquo;An MXene-Doped PVA/PVP Hydrogel-Based Strain Sensor Applicable in Liquid Environment,&rdquo; <i>Smart Mater. Struct.</i> (<a class="venue-link" href="paper/An MXene-doped PVA PVP hydrogel-based strain sensor applicable in liquid environment.pdf"><b>SMS</b></a>), vol. 32, no. 2, Art. no. 025010, Feb. 2023.</li> -->
+			<li class="pub-highlight">B. Wang and M.-K. Law, &ldquo;Subranging BJT-Based CMOS Temperature Sensor with a &plusmn;0.45&deg;C Inaccuracy (3&sigma;) from &minus;50&deg;C to 180&deg;C and a Resolution-FoM of 7.2 pJ&middot;K² at 150&deg;C,&rdquo; <i>IEEE J. Solid-State Circuits</i> (<a class="venue-link" href="paper/Subranging BJT-Based CMOS Temperature Sensor With a ±0.45°C Inaccuracy (3σ) From −50°C to 180°C and a Resolution-FoM of 7.2 pJ·K² at 150°C.pdf"><b>JSSC</b></a>), vol. 57, no. 12, pp. 3693&ndash;3703, Dec. 2022.</li>
+			<li>M. A. Awan, M. Ahmed, and B. Wang, &ldquo;A Laser Doppler Blood Flow Measurement System with a 151.4 dB&Omega; Gain and 0.05% Nonlinearity for PAD Patients,&rdquo; <i>IEEE Sensors J.</i> (<a class="venue-link" href="paper/A_Laser_Doppler_Blood_Flow_Measurement_System.pdf"><b>JSEN</b></a>), vol. 22, no. 14, pp. 14196&ndash;14204, Jul. 2022.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, M. Chiao, K. A. Mahmoud, L. Wu, and B. Wang, &ldquo;Preparation and Characterization of PVA/PVP Conductive Hydrogels Formed by Freeze&ndash;Thaw Processes as a Promising Material for Sensor Applications,&rdquo; <i>J. Mater. Sci.</i> (<a class="venue-link" href="paper/Preparation and characterization of PVA-PVP conductive hydrogels formed by freeze-thaw processes as a promising material for sensor applications.pdf"><b>JMS</b></a>), vol. 57, no. 16, pp. 8029&ndash;8038, Apr. 2022.</li> -->
+			<li>M. A. Akbar, B. Wang, and A. Bermak, &ldquo;Self-Repairing Carry-Lookahead Adder with Hot-Standby Topology Using Fault-Localization and Partial Reconfiguration,&rdquo; <i>IEEE Open J. Circuits Syst.</i> (<a class="venue-link" href="paper/Self-Repairing_Carry-Lookahead_Adder_With_Hot-Standby_Topology_Using_Fault-Localization_and_Partial_Reconfiguration.pdf"><b>OJCAS</b></a>), vol. 3, pp. 50&ndash;58, 2022.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, B. Wang, X. Liu, and C. Li, &ldquo;Flexible Piezoresistive Strain Sensor Based on CNTs&ndash;Polymer Composites: A Brief Review,&rdquo; <i>Carbon Lett.</i>, vol. 32, no. 3, pp. 713&ndash;726, May 2022.</li> -->
+			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Analysis of Output Ripple Shape and Amplitude in Chopper Instrumentation Amplifier,&rdquo; <i>IEEE Trans. Circuits Syst. II, Exp. Briefs</i> (<a class="venue-link" href="paper/Analysis_of_Output_Ripple_Shape_and_Amplitude_in_Chopper_Instrumentation_Amplifier.pdf"><b>TCAS-II</b></a>), vol. 69, no. 2, pp. 299&ndash;303, Feb. 2022.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>S. Khan, S. Ali, A. Khan, B. Wang, T. Al-Ansari, and A. Bermak, &ldquo;Substrate Treatment Evaluation and Their Impact on Printing Results for Wearable Electronics,&rdquo; <a class="venue-link" href="paper/Substrate treatment evaluation and their impact on printing results for wearable electronics.pdf"><i>Front. Electron.</i></a>, vol. 2, Art. no. 777434, Nov. 2021.</li> -->
+			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Ripple Suppression in Capacitive-Gain Chopper Instrumentation Amplifier Using Amplifier Slicing,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="paper/Ripple_Suppression_in_Capacitive-Gain_Chopper_Instrumentation_Amplifier_Using_Amplifier_Slicing.pdf"><b>TCAS-I</b></a>), vol. 68, no. 10, pp. 3991&ndash;4000, Oct. 2021.</li>
+			<li>Z. Z. Zeng, J. J. Estrada-L&oacute;pez, B. Wang, and E. S&aacute;nchez-Sinencio, &ldquo;A CMOS Energy Harvesting Interface Circuit with Cycle-to-Cycle Frequency-to-Amplitude Conversion MPPT for Centimeter-Scale Wind Turbine,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="paper/A CMOS Energy Harvesting Interface Circuit With Cycle-to-Cycle Frequency-to-Amplitude Conversion MPPT for Centimeter-Scale Wind Turbine.pdf"><b>TCAS-I</b></a>), vol. 68, no. 9, pp. 3587&ndash;3597, Sep. 2021.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>S. Khan, S. Ali, A. Khan, M. Ahmed, B. Wang, and A. Bermak, &ldquo;Inkjet Printing of Multi-Stripes Based Deflection Monitoring Sensor on Flexible Substrate,&rdquo; <a class="venue-link" href="paper/Inkjet printing of multi-stripes based deflection monitoring sensor on flexible substrate.pdf"><i>Sens. Actuators A, Phys.</i></a>, vol. 323, Art. no. 112638, Jun. 2021.</li> -->
+			<!-- [非 IEEE，已注释隐藏] <li>A. Khan, K. Rahman, S. Ali, S. Khan, B. Wang, and A. Bermak, &ldquo;Fabrication of Circuits by Multi-Nozzle Electrohydrodynamic Inkjet Printing for Soft Wearable Electronics,&rdquo; <i>J. Mater. Res.</i> (<a class="venue-link" href="paper/Fabrication of circuits by multi-nozzle electrohydrodynamic inkjet printing for soft wearable electronics.pdf"><b>JMR</b></a>), vol. 36, no. 18, pp. 3568&ndash;3578, Sep. 2021.</li> -->
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, M. Chiao, and B. Wang, &ldquo;An Electrochemically Actuated Drug Delivery Device with <i>In-Situ</i> Dosage Sensing,&rdquo; <i>Smart Mater. Struct.</i> (<a class="venue-link" href="paper/An electrochemically actuated drug delivery device with in-situ dosage sensing.pdf"><b>SMS</b></a>), vol. 30, no. 5, Art. no. 055003, May 2021.</li> -->
+			<li>S. Khan, S. Ali, A. Khan, B. Wang, and A. Bermak, &ldquo;Printing Sensors on Biocompatible Substrates for Selective Detection of Glucose,&rdquo; <i>IEEE Sensors J.</i> (<a class="venue-link" href="paper/Printing Sensors on Biocompatible Substrates for Selective Detection of Glucose.pdf"><b>JSEN</b></a>), vol. 21, no. 4, pp. 4167&ndash;4175, Feb. 2021.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>M. A. Akbar, B. Wang, and A. Bermak, &ldquo;A High-Speed Parallel Architecture for Ripple Carry Adder with Fault Detection and Localization,&rdquo; <a class="venue-link" href="https://www.mdpi.com/2079-9292/10/15/1791"><i>Electronics</i></a>, vol. 10, no. 15, Art. no. 1791, Jul. 2021.</li> -->
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, A. Samara, and B. Wang, &ldquo;A New Approach for an Ultra-Thin Piezoresistive Sensor Based on Solidified Carbon Ink Film,&rdquo; <i>J. Mater. Sci.</i> (<a class="venue-link" href="paper/A new approach for an ultra-thin piezoresistive sensor based on solidified carbon ink film.pdf"><b>JMS</b></a>), vol. 56, no. 1, pp. 607&ndash;614, Jan. 2021.</li> -->
+			<li>M. A. Akbar, B. Wang, and A. Bermak, &ldquo;Self-Repairing Hybrid Adder with Hot-Standby Topology Using Fault-Localization,&rdquo; <i>IEEE Access</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/9166473"><b>Access</b></a>), vol. 8, pp. 150051&ndash;150058, 2020.</li>
+			<li>B. Wang, M.-K. Law, S. B. Belhaouari, and A. Bermak, &ldquo;Near-Optimal Decoding of Incremental Delta-Sigma ADC Output,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="paper/Near-optimal Decoding of Incremental Delta-Sigma ADC Output.pdf"><b>TCAS-I</b></a>), vol. 67, no. 11, pp. 3670&ndash;3680, Nov. 2020.</li>
+			<li>F. Tang, et al., &ldquo;A Noise-Reduced Light-to-Frequency Converter for Sub-0.1% Perfusion Index Blood SpO<sub>2</sub> Sensing,&rdquo; <i>IEEE Trans. Biomed. Circuits Syst.</i> (<a class="venue-link" href="paper/A_Noise-Reduced_Light-to-Frequency_Converter_for_Sub-0.1_Perfusion_Index_Blood_SpO2_Sensing.pdf"><b>TBioCAS</b></a>), vol. 14, no. 5, pp. 931&ndash;941, Oct. 2020.</li>
+			<li>F. Tang, et al., &ldquo;A 32-Step Phase-Compensated Spread-Spectrum RF-PLL with 19.44-dB EMI Reduction and 10-fs Extra RMS Jitter,&rdquo; <i>IEEE Trans. Microw. Theory Techn.</i> (<a class="venue-link" href="paper/A_32-Step_Phase-Compensated_Spread-Spectrum_RF-PLL_With_19.44-dB_EMI_Reduction_and_10-fs_Extra_RMS_Jitter.pdf"><b>TMTT</b></a>), vol. 68, no. 4, pp. 1564&ndash;1575, Apr. 2020.</li>
+			<li>B. Wang, M.-K. Law, J. Yi, C.-Y. Tsui, and A. Bermak, &ldquo;A &minus;12.3 dBm UHF Passive RFID Sense Tag for Grid Thermal Monitoring,&rdquo; <i>IEEE Trans. Ind. Electron.</i> (<a class="venue-link" href="paper/A -12.3 dBm UHF Passive RFID Sense Tag for Grid Thermal Monitoring.pdf"><b>TIE</b></a>), vol. 66, no. 11, pp. 8811&ndash;8820, Nov. 2019.</li>
+			<!-- [非 IEEE，已注释隐藏] <li>Y. Yi, B. Wang, and A. Bermak, &ldquo;A Low-Cost Strain Gauge Displacement Sensor Fabricated via Shadow Mask Printing,&rdquo; <a class="venue-link" href="paper/A Low-Cost Strain Gauge Displacement Sensor Fabricated via Shadow Mask Printing.pdf"><i>Sensors</i></a>, vol. 19, no. 21, Art. no. 4713, Oct. 2019.</li> -->
+			<!-- [非 IEEE，已注释隐藏] <li>C. Li, B. Wang, R. Huang, and Y. Yi, &ldquo;A Resonant Coupling Power Transfer System Using Two Driving Coils,&rdquo; <a class="venue-link" href="paper/A Resonant Coupling Power Transfer System Using Two Driving Coils.pdf"><i>Energies</i></a>, vol. 12, no. 15, Art. no. 2914, Jul. 2019.</li> -->
+			<li>W. Xu, B. Wang, M. Z. Duan, M. Ahmed, A. Bermak, and Y.-K. Lee, &ldquo;A Three-Dimensional Integrated Micro Calorimetric Flow Sensor in CMOS MEMS Technology,&rdquo; <i>IEEE Sensors Lett.</i> (<a class="venue-link" href="paper/A 3D Integrated Micro Calorimetric Flow Sensor in CMOS MEMS Technology.pdf"><b>LSENS</b></a>), vol. 3, no. 2, pp. 1&ndash;4, Feb. 2019.</li>
+			<li>B. Wang, M.-K. Law, C.-Y. Tsui, and A. Bermak, &ldquo;A 10.6 pJ&middot;K<sup>2</sup> Resolution FoM Temperature Sensor Using Astable Multivibrator,&rdquo; <i>IEEE Trans. Circuits Syst. II, Exp. Briefs</i> (<a class="venue-link" href="paper/A 10.6 pJK2 Resolution FoM Temperature Sensor Using Astable Multivibrator.pdf"><b>TCAS-II</b></a>), vol. 65, no. 7, pp. 869&ndash;873, Jul. 2018.</li>
+			<li>F. Tang, S. Li, B. Wang, A. Bermak, X. Zhou, and S. Hu, &ldquo;A Low Power Class-AB Audio Power Amplifier with Dynamic Transconductance Compensation in 55 nm CMOS Process,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="paper/A Low Power Class-AB Audio Power Amplifier With Dynamic Transconductance Compensation in 55 nm CMOS Process.pdf"><b>TCAS-I</b></a>), vol. 63, no. 9, pp. 1360&ndash;1369, Sep. 2016.</li>
+			<li>F. Tang, B. Wang, A. Bermak, X. Zhou, S. Hu, and X. He, &ldquo;A Column-Parallel Inverter-Based Cyclic ADC for CMOS Image Sensor with Capacitance and Clock Scaling,&rdquo; <i>IEEE Trans. Electron Devices</i> (<a class="venue-link" href="paper/A Column-Parallel Inverter-Based Cyclic ADC for CMOS Image Sensor With Capacitance and Clock Scaling.pdf"><b>TED</b></a>), vol. 63, no. 1, pp. 162&ndash;167, Jan. 2016.</li>
+			<li>B. Wang, M.-K. Law, A. Bermak, and F. Tang, &ldquo;BJT Process Spread Compensation Utilizing Base Recombination Current in Standard CMOS,&rdquo; <i>IEEE Electron Device Lett.</i> (<a class="venue-link" href="paper/BJT Process Spread Compensation Utilizing Base Recombination Current in Standard CMOS.pdf"><b>EDL</b></a>), vol. 36, no. 11, pp. 1111&ndash;1113, Nov. 2015.</li>
+			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;A Precision CMOS Voltage Reference Exploiting Silicon Bandgap Narrowing Effect,&rdquo; <i>IEEE Trans. Electron Devices</i> (<a class="venue-link" href="paper/A Precision CMOS Voltage Reference Exploiting Silicon Bandgap Narrowing Effect.pdf"><b>TED</b></a>), vol. 62, no. 7, pp. 2128&ndash;2135, Jul. 2015.</li>
+			<li>B. Wang, M.-K. Law, A. Bermak, and H.-C. Luong, &ldquo;A Passive RFID Tag Embedded Temperature Sensor with Improved Process Spreads Immunity for a &minus;30&deg;C to 60&deg;C Sensing Range,&rdquo; <i>IEEE Trans. Circuits Syst. I, Reg. Papers</i> (<a class="venue-link" href="paper/A Passive RFID Tag Embedded Temperature Sensor With Improved Process Spreads Immunity for a -30 °C to 60 °C Sensing Range.pdf"><b>TCAS-I</b></a>), vol. 61, no. 2, pp. 337&ndash;346, Feb. 2014.</li>
+			<li>F. Tang, D.-G. Chen, B. Wang, A. Bermak, A. Amira, and S. Mohamad, &ldquo;CMOS On-Chip Stable True-Random ID Generation Using Antenna Effect,&rdquo; <i>IEEE Electron Device Lett.</i> (<a class="venue-link" href="paper/CMOS On-Chip Stable True-Random ID Generation Using Antenna Effect.pdf"><b>EDL</b></a>), vol. 35, no. 1, pp. 54&ndash;56, Jan. 2014.</li>
+			<li>F. Tang, D.-G. Chen, B. Wang, and A. Bermak, &ldquo;Low-Power CMOS Image Sensor Based on Column-Parallel Single-Slope/SAR Quantization Scheme,&rdquo; <i>IEEE Trans. Electron Devices</i> (<a class="venue-link" href="paper/Low-Power CMOS Image Sensor Based on Column-Parallel Single-Slope-SAR Quantization Scheme.pdf"><b>TED</b></a>), vol. 60, no. 8, pp. 2561&ndash;2566, Aug. 2013.</li>
+		</ol>
 
-			<li>J. Z. Li, Y. Zhou, F. B. Guo, M. Li, B. Wang, X. Y. Wang, S. R. Dong, X. H. Liu, and F. Gao, &ldquo;Passive Wireless Bolt Preload Monitoring Based on Magnetic Resonance Coupled Ultrasonic Time-of-Flight
-			,&rdquo; <i>IEEE Trans. Instrum. Meas. (<b>TIM</b>)</i>, June 2026. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
+		<!-- ============ Conference Publications（共 38 篇；按时间倒序，自动编号；新论文直接加在列表最上方） ============ -->
+		<h3 class="pub-section">Conference Publications</h3>
+		<ol class="pub-list">
+			<li>M. A. Awan, M. H. Farooq, A. Bermak, M. A. Akram, and B. Wang, &ldquo;A 4 nW 114 dB DR Electrochemical Sensing Interface IC with Digital-Intensive Regulation Loop,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11562290"><b>ISCAS</b></a>), Shanghai, China, pp. 4513&ndash;4517, May 2026.</li>
+			<li>H. Sang, Z. Wang, L. He, G. Zhao, W. Xie, B. Wang, R. P. Martins, and M.-K. Law, &ldquo;VoxCAD: A 0.82-to-81.0 mW Intelligent 3D-Perception dToF SoC with Sector-Wise Voxelization and High-Density Tri-Mode eDRAM CIM Macro,&rdquo; <i>IEEE Int. Solid-State Circuits Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11409182"><b>ISSCC</b></a>), San Francisco, CA, USA, pp. 114&ndash;116, Feb. 2026.</li>
+			<li>A. Ghonem, A. Bermak, and B. Wang, &ldquo;Incremental Delta-Sigma ADC with Reduced Conversion Cycles via Quantization-Skip,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Incremental_Delta-Sigma_ADC_with_Reduced_Conversion_Cycles_via_Quantization-Skip.pdf"><b>ISCAS</b></a>), London, UK, pp. 1&ndash;4, May 2025.</li>
+			<li>N. A. Quadir, M. A. Awan, B. Wang, and A. Bermak, &ldquo;Current-Mirror Based Ambient Light Rejection Technique for VLC Receiver,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/11043201"><b>ISCAS</b></a>), London, UK, pp. 1&ndash;4, May 2025.</li>
+			<li>B. Wang, A. Bermak, and M.-K. Law, &ldquo;A 16-Bit Incremental ADC Enabled by an Efficient Shooting Integrator with Inherent Noise Reduction,&rdquo; <i>IEEE Custom Integr. Circuits Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10983268"><b>CICC</b></a>), Boston, MA, USA, pp. 1&ndash;3, Apr. 2025.</li>
+			<li>X. L. Chen, J. C. Wu, B. Wang, and M.-K. Law, &ldquo;A 0.9V CMOS Voltage Reference with 0.41% Untrimmed Accuracy and 44.7 ppm/&deg;C TC from &minus;35&deg;C to 130&deg;C,&rdquo; <i>IEEE Asian Solid-State Circuits Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10848578"><b>A-SSCC</b></a>), Hiroshima, Japan, pp. 1&ndash;3, Nov. 2024.</li>
+			<li>K. Hu, J. C. Wu, B. Wang, and M.-K. Law, &ldquo;A 33.6nW Capacitively Coupled Chopper Amplifier with Stacked Input-Boosted Gate-and-Bulk-Driven Inverter Achieving 0.59 NEF and 0.42 PEF in 180nm CMOS,&rdquo; <i>IEEE Asian Solid-State Circuits Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10848564"><b>A-SSCC</b></a>), Hiroshima, Japan, pp. 1&ndash;3, Nov. 2024.</li>
+			<li>M. A. Awan, S. Shurbaji, A. Bermak, K. H. Biswas, and B. Wang, &ldquo;A Low Noise Current Readout with 124 dB Dynamic Range for Bioluminescence Sensing,&rdquo; <i>IEEE Biomed. Circuits Syst. Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10798344"><b>BioCAS</b></a>), Xi&rsquo;an, China, pp. 1&ndash;5, Oct. 2024.</li>
+			<li>A. Bermak, T. Liu, Z. Zhao, B. Wang, and M. Zhang, &ldquo;20 Years of Biomedical Image Acquisition and Processing at BioCAS,&rdquo; <i>IEEE Biomed. Circuits Syst. Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10798258"><b>BioCAS</b></a>), Xi&rsquo;an, China, pp. 1&ndash;8, Oct. 2024.</li>
+			<li>Y. J. Geng, H. C. Lin, B. Wang, and C. Wang, &ldquo;A Cryo-CMOS 4.5~7GHz Dual-Qubit Homodyne Reflectometer Array with High Q Degenerate Parametric Amplifier Through Dynamic Mode Coupling,&rdquo; <i>IEEE Asian Solid-State Circuits Conf.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/10347990"><b>A-SSCC</b></a>), Haikou, China, pp. 1&ndash;2, Nov. 2023.</li>
+			<li>N. Fares, B. Wang, and S. Bakiras, &ldquo;Design and Implementation of Certificateless Cryptography for IoT Applications,&rdquo; <i>IEEE Int. Midwest Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Design_and_Implementation_of_Certificateless_Cryptography_for_IoT_Applications.pdf"><b>MWSCAS</b></a>), Tempe, AZ, USA, pp. 933&ndash;937, Aug. 2023.</li>
+			<li>K. E. Jeon, J. She, and B. Wang, &ldquo;Information-Aware Sensing Framework for Long-Lasting IoT Sensors in Greenhouse,&rdquo; <i>IEEE Wireless Commun. Netw. Conf.</i> (<a class="venue-link" href="paper/Information-Aware_Sensing_Framework_for_Long-Lasting_IoT_Sensors_in_Greenhouse.pdf"><b>WCNC</b></a>), Glasgow, UK, pp. 1&ndash;6, Mar. 2023.</li>
+			<li>N. A. Quadir, M. Hamdi, M. A. Awan, B. Wang, and A. Bermak, &ldquo;Design and Analysis of a Dual-Band Bistatic Backscatter Circuit for Passive RFID Tags,&rdquo; <i>IEEE Int. Symp. Embedded Multicore/Many-core Syst.-on-Chip</i> (<a class="venue-link" href="paper/Design_and_Analysis_of_A_Dual-Band_Bistatic_Backscatter_Circuit_for_Passive_RFID_Tags.pdf"><b>MCSoC</b></a>), Penang, Malaysia, pp. 301&ndash;304, Dec. 2022.</li>
+			<li>Z. J. Li, Z. T. Fang, B. Wang, M. Ahmed, X. F. Pan, S. T. Han, X.-J. Zhao, and W. Xu, &ldquo;System-Level Modeling and Design of a Temperature Compensated CMOS MEMS Thermal Flow Sensor,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/System-Level_Modeling_and_Design_of_a_Temperature_Compensated_CMOS_MEMS_Thermal_Flow_Sensor.pdf"><b>ISCAS</b></a>), Austin, TX, USA, pp. 2072&ndash;2076, May 2022.</li>
+			<li class="pub-highlight">B. Wang, M.-K. Law, and A. Bermak, &ldquo;A BJT-Based CMOS Temperature Sensor Achieving an Inaccuracy of &plusmn;0.45&deg;C (3&sigma;) from &minus;50&deg;C to 180&deg;C and a Resolution-FoM of 7.2 pJ&middot;K<sup>2</sup> at 150&deg;C,&rdquo; <i>IEEE Int. Solid-State Circuits Conf.</i> (<a class="venue-link" href="paper/Tsensor_ISSCC_2022.pdf"><b>ISSCC</b></a>), San Francisco, CA, USA, pp. 72&ndash;74, Feb. 2022.</li>
+			<li>B. Wang, S. W. Wang, and M.-K. Law, &ldquo;On Low-Leakage CMOS Switches,&rdquo; <i>IEEE Int. Midwest Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/On_Low-Leakage_CMOS_Switches.pdf"><b>MWSCAS</b></a>), Lansing, MI, USA, pp. 1&ndash;5, Aug. 2021.</li>
+			<li>N. A. Quadir, M. A. Awan, M. Abdallah, and B. Wang, &ldquo;An Active Inductor Based TIA with Ambient Light Rejection for VLC Applications,&rdquo; <i>IEEE Int. Midwest Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/An_Active_Inductor_Based_TIA_with_Ambient_Light_Rejection_for_VLC_Applications.pdf"><b>MWSCAS</b></a>), Lansing, MI, USA, pp. 882&ndash;885, Aug. 2021.</li>
+			<li>M. A. Awan, B. Wang, N. A. Quadir, and A. Bermak, &ldquo;Review and Analysis of CMOS Current Readout Circuits for Biosensing Applications,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Review_and_Analysis_of_CMOS_Current_Readout_Circuits_for_Biosensing_Applications.pdf"><b>ISCAS</b></a>), Daegu, Korea, pp. 1&ndash;5, May 2021.</li>
+			<li>J. H. Fernandez, B. Wang, A. Massoud, S. Talib, M. Shhaab, and A. Mohamed, &ldquo;On Ambient Temperature of Transformer Substations in Desert Climates,&rdquo; <i>IEEE PES Innov. Smart Grid Technol. Conf.</i> (<a class="venue-link" href="paper/On_Ambient_Temperature_of_Transformer_Substations_in_Desert_Climates.pdf"><b>ISGT</b></a>), Washington, DC, USA, pp. 1&ndash;4, Feb. 2021.</li>
+			<!-- [已注释隐藏：ISICAS 2020，与 TCAS-I 期刊版重复] <li>B. Wang, M.-K. Law, S. B. Belhaouari, and A. Bermak, &ldquo;Near-Optimal Decoding of Incremental Delta-Sigma ADC Output,&rdquo; <i>IEEE Int. Symp. Integr. Circuits Syst.</i> (<a class="venue-link" href="paper/Near-optimal Decoding of Incremental Delta-Sigma ADC Output.pdf"><b>ISICAS</b></a>), Aug. 2020.</li> -->
+			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;On Fully Differential Incremental &Delta;&Sigma; ADC with Initial Feedback Zeroing and 1.5-Bit Feedback,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/On_Fully_Differential_Incremental_DS_ADC_with_Initial_Feedback_Zeroing_and_1.5-Bit_Feedback.pdf"><b>ISCAS</b></a>), Seville, Spain, pp. 1&ndash;5, Oct. 2020.</li>
+			<li>T. Delbruck, et al., &ldquo;Lessons Learned the Hard Way (Invited Paper),&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="https://ieeexplore.ieee.org/document/9180983"><b>ISCAS</b></a>), Seville, Spain, pp. 1&ndash;18, Oct. 2020.</li>
+			<li>T. N. Lin, B. Wang, S. B. Belhaouari, and A. Bermak, &ldquo;A Chopper Instrumentation Amplifier with Amplifier Slicing Technique for Offset Reduction,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/A_Chopper_Instrumentation_Amplifier_with_Amplifier_Slicing_Technique_for_Offset_Reduction.pdf"><b>ISCAS</b></a>), Seville, Spain, pp. 1&ndash;5, Oct. 2020.</li>
+			<li>S. Khan, S. Ali, H. M. Al-Mohsin, B. Wang, and A. Bermak, &ldquo;Printing Sensor on Flexible Substrates for Detection of Volatile Organic Compounds,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Printing_Sensor_on_Flexible_Substrates_for_Detection_of_Volatile_Organic_Compounds.pdf"><b>ISCAS</b></a>), Seville, Spain, pp. 1&ndash;5, Oct. 2020.</li>
+			<li>Z. Z. Zeng, S. P. Shen, B. Wang, J. J. Estrada-L&oacute;pez, R. Murch, and E. S&aacute;nchez-Sinencio, &ldquo;An Ultra-Low-Power Power Management Circuit with Output Bootstrapping and Reverse Leakage Reduction Function for RF Energy Harvesting,&rdquo; <i>IEEE/MTT-S Int. Microw. Symp.</i> (<a class="venue-link" href="paper/An_Ultra-low-power_Power_Management_Circuit_with_Output_Bootstrapping_and_Reverse_Leakage_Reduction_Function_for_RF_Energy_Harvesting.pdf"><b>IMS</b></a>), Los Angeles, CA, USA, pp. 1059&ndash;1062, Aug. 2020.</li>
+			<li>B. Wang, J. H. Fernandez, and A. Massoud, &ldquo;A Wireless Battery Temperature Monitoring System for Electric Vehicle Charging,&rdquo; <i>IEEE Sensors Conf.</i> (<a class="venue-link" href="paper/A Wireless Battery Temperature Monitoring System for Electric Vehicle Charging.pdf"><b>SENSORS</b></a>), Montreal, QC, Canada, pp. 1&ndash;4, Oct. 2019.</li>
+			<li>Y. Yi, S. Ali, and B. Wang, &ldquo;An Inkjet-Printed Strain Sensor with a Carbon-Silver-Polyimide Topology,&rdquo; <i>IEEE Int. Conf. Flexible Printable Sensors Syst.</i> (<a class="venue-link" href="paper/An Inkjet-printed Strain Sensor with a Carbon-Silver-Polyimide Topology.pdf"><b>FLEPS</b></a>), Glasgow, UK, pp. 1&ndash;3, Jul. 2019.</li>
+			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Review and Analysis of Instrumentation Amplifier for IoT Applications,&rdquo; <i>IEEE Int. Midwest Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Review and Analysis of Instrumentation Amplifier for IoT Applications.pdf"><b>MWSCAS</b></a>), Windsor, ON, Canada, pp. 258&ndash;261, Aug. 2018.</li>
+			<li>T.-T. Zhang, M.-K. Law, B. Wang, P.-I. Mak, M.-I. Vai, and R. P. Martins, &ldquo;A 310 nW 14.2-Bit Iterative-Incremental ADC for Wearable Sensing Systems,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/A 310 nW 14.2-bit Iterative-Incremental ADC for Wearable Sensing Systems.pdf"><b>ISCAS</b></a>), Baltimore, MD, USA, pp. 1&ndash;4, May 2017.</li>
+			<li>D. P. Sun, M.-K. Law, B. Wang, P.-I. Mak, and R. P. Martins, &ldquo;Piecewise BJT Process Spread Compensation Exploiting Base Recombination Current,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Piecewise BJT Process Spread Compensation Exploiting Base Recombination Current.pdf"><b>ISCAS</b></a>), Baltimore, MD, USA, pp. 1&ndash;4, May 2017.</li>
+			<li>W. Xu, B. Gao, M. Ahmed, M. Z. Duan, B. Wang, S. Mohamad, A. Bermak, and Y.-K. Lee, &ldquo;A Wafer-Level Encapsulated CMOS MEMS Thermoresistive Calorimetric Flow Sensor with Integrated Packaging Design,&rdquo; <i>IEEE Int. Conf. Micro Electro Mech. Syst.</i> (<a class="venue-link" href="paper/A Wafer-level Encapsulated CMOS-MESM Thermoresistive Calorimetric Flow Sensor with Integrated Packaging Design.pdf"><b>MEMS</b></a>), Las Vegas, NV, USA, pp. 989&ndash;992, Jan. 2017.</li>
+			<li>X. Lu, B. Wang, Z.-H. Wen, X.-J. Zhao, Y. Cao, and A. Bermak, &ldquo;A Low Power Relaxation Oscillator with Process Insensitive Auto-Calibration Scheme,&rdquo; <i>IEEE Asia Pacific Conf. Circuits Syst.</i> (<a class="venue-link" href="paper/A Low Power Relaxation Oscillator with Process Insensitive Auto-calibration Scheme.pdf"><b>APCCAS</b></a>), Jeju, Korea, pp. 694&ndash;697, Oct. 2016.</li>
+			<li>B. Zhang, X.-P. Zhong, B. Wang, P. V. Sander, and A. Bermak, &ldquo;Wide Dynamic Range PSD Algorithms and Their Implementation for Compressive Imaging,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/Wide Dynamic Range PSD Algorithms and Their Implementation for Compressive Imaging.pdf"><b>ISCAS</b></a>), Montreal, QC, Canada, pp. 2727&ndash;2730, May 2016.</li>
+			<li>B. Wang, M.-K. Law, S. Mohamad, and A. Bermak, &ldquo;A 2.2&mu;W 15b Incremental Delta-Sigma ADC with Output-Driven Input Segmentation,&rdquo; <i>IEEE/ACM Asia South Pacific Design Autom. Conf.</i> (<a class="venue-link" href="paper/A 2.2uW 15b Incremental Delta-Sigma ADC with Output-Driven Input Segmentation.pdf"><b>ASP-DAC</b></a>), University Design Contest, Macao, China, pp. 7&ndash;8, Jan. 2016. <b><span class="text-accent pub-award"><i>(Best Design Award)</i></span></b></li>
+			<li>X.-P. Zhong, B. Wang, and A. Bermak, &ldquo;A Reconfigurable Time-Domain Comparator for Multi-Sensing Applications,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/A Reconfigurable Time-Domain Comparator for Multi-Sensing Applications.pdf"><b>ISCAS</b></a>), Lisbon, Portugal, pp. 349&ndash;352, May 2015.</li>
+			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;A Low-Cost Capacitive Relative Humidity Sensor for Food Moisture Monitoring Application,&rdquo; <i>Asia Symp. Quality Electron. Design</i> (<a class="venue-link" href="paper/A Low-Cost Capacitive Relative Humidity Sensor for Food Moisture Monitoring Application.pdf"><b>ASQED</b></a>), Penang, Malaysia, pp. 95&ndash;99, Jul. 2012.</li>
+			<li>F. Tang, B. Wang, and A. Bermak, &ldquo;80 dB Dynamic Range 100 kHz Bandwidth Inverter-Based &Sigma;&Delta; ADC for CMOS Image Sensor,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/80 dB Dynamic Range 100 kHz Bandwidth Inverter-based ADC for CMOS Image Sensor.pdf"><b>ISCAS</b></a>), Seoul, Korea, pp. 3094&ndash;3097, May 2012.</li>
+			<li>B. Wang, M.-K. Law, F. Tang, and A. Bermak, &ldquo;A Sub-1V BJT-Based CMOS Temperature Sensor from &minus;55&deg;C to 125&deg;C,&rdquo; <i>IEEE Int. Symp. Circuits Syst.</i> (<a class="venue-link" href="paper/A Sub-1V BJT-based CMOS Temperature Sensor from -55oC to 125oC.pdf"><b>ISCAS</b></a>), Seoul, Korea, pp. 3114&ndash;3117, May 2012.</li>
+		</ol>
 
-			<li>A. Abubakar, B. Wang*, and A. Bermak, &ldquo;A 1.5-2.0 TOPS/W 2T-Pixel CMOS Imager with Programmable In-Pixel Multi-Bit Feature Extraction,&rdquo; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, Accepted, Feb. 2026. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
+		<!-- ============ Patents（IEEE 专利引用格式；按日期倒序；已授权专利写 U.S. Patent 号与授权日，未授权申请写 U.S. Patent Appl. Pub. 公开号与公开日；链接指向 Google Patents） ============ -->
+		<h3 class="pub-section">Patents</h3>
+		<ol class="pub-list">
+			<li>B. Wang, &ldquo;High Performance CMOS Shooting Integrator,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US20260155785A1/en">U.S. Patent Appl. Pub. 2026/0155785 A1</a>, Jun. 4, 2026.</li>
+			<li>B. Wang, &ldquo;Complementary Metal-Oxide-Semiconductor Temperature Sensor with Wide-Range Sensing Capability and High Energy-Efficiency,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US12613142B2/en">U.S. Patent 12&nbsp;613&nbsp;142</a>, Apr. 28, 2026.</li>
+			<li>B. Wang and M. A. Awan, &ldquo;Integrated Laser Doppler Blood Flow Measurement System and Methods of Use,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US12471795B2/en">U.S. Patent 12&nbsp;471&nbsp;795</a>, Nov. 18, 2025.</li>
+			<li>B. Wang, &ldquo;Passive RFID Tag with Embedded Sensor Interface,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US12412060B2/en">U.S. Patent 12&nbsp;412&nbsp;060</a>, Sep. 9, 2025.</li>
+			<li>B. Wang and J. Schneider, &ldquo;Linear Decimation Filters for Incremental Delta-Sigma Analog to Digital Converters,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US20240178819A1/en">U.S. Patent Appl. Pub. 2024/0178819 A1</a>, May 30, 2024.</li>
+			<li>B. Wang, H. F. Zhu, J. Liu, J. Yi, and Q. B. Zhu, &ldquo;Chip Wiring Layer Temperature Sensing Circuit, Temperature Sensing Method and Chip Thereof,&rdquo; <a class="patent-link" href="https://patents.google.com/patent/US11686624B2/en">U.S. Patent 11&nbsp;686&nbsp;624</a>, Jun. 27, 2023.</li>
+		</ol>
 
-			<li>M. A. Awan, M. H. Farooq, M. A. Akram, and B. Wang, &ldquo;A 4 nW 114 dB DR Electrochemical Sensing Interface IC with Digital-Intensive Regulation Loop,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, Accepted. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>H. Sang, Z. Wang, L. He, G. Zhao, W. Xie, B. Wang, R. P. Martins, and M. K. Law, &ldquo;VoxCAD: A 0.82-to-81.0 mW Intelligent 3D-Perception dToF SoC with Sector-Wise Voxelization and High-Density Tri-Mode eDRAM CIM Macro,&rdquo; <i>IEEE Int&rsquo;l. Solid-State Circ. Conf. (<b>ISSCC</b>)</i>, pp. 114-116, Feb. 2025. <a href="paper/Tsensor_ISSCC_2022.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-
-			<br>
-			<li>X. Y. Song, L. F. Huang, L. Z. Hong, B. Wang, X. F. Pan, and W. Xu, &ldquo;A Single-Chip Pulse-Driven CMOS-MEMS Flow Sensing System With Sub-mm/s Flow Detection Limit,&rdquo; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, vol. 73, no. 1, pp. 51 - 59, Nov. 2025. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2025 ============ -->
-		<br>
-		<h3>2025</h3>
-		&nbsp;
-		<ul>
-			<li>S. Shurbaji, A. Khan, M. K. Hassan, A. Bermak, W.‐D. Li, K. H. Biswas, and Bo Wang, &ldquo;Advances in Electrochemical Urea Biosensors: Trends and Future Prospects,&rdquo; <i><b>Advanced Sensor Research</b></i>, e00117, Dec. 2025. <a href="paper/Advances in Electrochemical Urea Biosensors Trends andFuture Prospects.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>A. Ghonem, A. Bermak and B. Wang, &ldquo;Incremental Delta-Sigma ADC with Reduced Conversion Cycles via Quantization-Skip,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, London, UK, May 2025. <a href="paper/Incremental_Delta-Sigma_ADC_with_Reduced_Conversion_Cycles_via_Quantization-Skip.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>N. Quadir, M. A. Awan, B. Wang and A. Bermak, &ldquo;Current-Mirror Based Ambient Light Rejection Technique for VLC Receiver,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, London, UK, May 2025. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>B. Wang, A. Bermak and M.-K. Law, &ldquo;A 16-bit Incremental ADC Enabled by An Efficient Shooting Integrator with Inherent Noise Reduction,&rdquo; <i>IEEE Custom Integrated Circuits Conf. (<b>CICC</b>)</i>, Boston, USA, April 2025. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2024 ============ -->
-		<br>
-		<h3>2024</h3>
-		&nbsp;
-		<ul>
-			<li>Y. J. Geng, H. C. Lin, B. Wang and C. Wang, &ldquo;Cryo-CMOS Dual-Qubit Homodyne Reflectometer Array with Degenerate Parametric Amplification,&rdquo; <i>IEEE Journal of Solid-State Circuits (<b>JSSC</b>)</i>, vol. 59, no. 5, pp. 1486-1496, Oct. 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>M. A. Awan, K. Ahmad, A. Bermak and B. Wang, &ldquo;An Asynchronous CMOS Current Readout with 124 dB Dynamic Range for Bioluminescence Sensing,&rdquo; <i>IEEE Solid-State Circuits Letter (<b>SSCL</b>)</i>, vol. 40, no. 1, pp. 140-144, Oct. 2024. <a href="paper/An_Asynchronous_CMOS_Current_Readout_With_124-dB_Dynamic_Range_for_Bioluminescence_Sensing.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>Z. U. Islam, A. Bermak and B. Wang, &ldquo;A Review of Microstrip Patch Antenna-Based Passive Sensors,&rdquo; <i><b>Sensors</b></i>, vol. 24, no. 19, pp. 6355, Sept. 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>W. Xu, Z. J. Li, Z. T. Fang, B. Wang, et al., &ldquo;A sub-5mW monolithic CMOS-MEMS thermal flow sensing SoC with &plusmn;6m/s linear range,&rdquo; <i>IEEE Journal of Solid-State Circuits (<b>JSSC</b>)</i>, vol. 59, no. 5, pp. 1486-1496, May 2024. <a href="paper/A_Sub-5mW_Monolithic_CMOS-MEMS_Thermal_Flow_Sensing_SoC_With_6_m_s_Linear_Range.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. Duan, Z. X. Peng, B. Wang, A. Khelif, Y.K. Lee, and A. Bermak, &ldquo;A highly integrated Lab-on-a-CMOS platform for real-time monitoring of E. Coli growth kinetics,&rdquo; <i>IEEE Trans. Biomedical Circ. and Syst. (<b>TBioCAS</b>)</i>, vol. 18, no. 1, pp. 174-185, Feb. 2024. <a href="paper/A_Highly_Integrated_Lab-on-a-CMOS_Platform_for_Real-Time_Monitoring_of_E._Coli_Growth_Kinetics.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>X. L. Chen, J. C. Wu, B. Wang and M.-K. Law, &ldquo;A 0.9V CMOS Voltage Reference with 0.41% Untrimmed Accuracy and 44.7 ppm/&deg;C TC from -35&deg;C to 130&deg;C,&rdquo; <i>IEEE Asian Solid-State Circ. Conf. (<b>A-SSCC</b>)</i>, Hiroshima, Japan, 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-
-			<li>K. Hu, J. C. Wu, B. Wang and M.-K. Law, &ldquo;A 33.6nW Capacitively Coupled Chopper Amplifier with Stacked Input-Boosted Gate-and-Bulk-Driven Inverter Achieving 0.59 NEF and 0.42 PEF in 180nm CMOS,&rdquo; <i>IEEE Asian Solid-State Circ. Conf. (<b>A-SSCC</b>)</i>, Hiroshima, Japan, 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. A. Awan, S. Shurbaji, A. Bermak, K. H. Biswas and B. Wang, &ldquo;A Low Noise Current Readout with 124 dB Dynamic Range for Bioluminescence Sensing,&rdquo; <i>IEEE Biomedical Circ. and Syst. Conf. (<b>BioCAS</b>)</i>, Xi&rsquo;an, China, 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>A. Bermak, T. Liu, Z. Zhao, B. Wang and M. Zhang, &ldquo;20 Years of Biomedical Image Acquisition and Processing at BioCAS,&rdquo; <i>IEEE Biomedical Circ. and Syst. Conf. (<b>BioCAS</b>)</i>, Xi&rsquo;an, China, 2024. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2023 ============ -->
-		<br>
-		<h3>2023</h3>
-		&nbsp;
-		<ul>
-			<li>Y. Geng, H. Lin, B. Wang and C. Wang, &ldquo;A Cryo-CMOS Parametric Frequency Divider With &minus;189.1 dBm/Hz Output Noise Floor at 4.2 K for High-Fidelity All-Parametric Quantum Reflectometer,&rdquo; <i>IEEE Microwave and Wireless Technology Letters (<b>MWTL</b>)</i>, vol. 33, no. 12, pp. 1650-1653, Dec. 2023.<a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M. K. Law, and J. Schneider, &ldquo;L2min2/2s: efficient linear reconstruction filter for incremental delta-sigma ADCs,&rdquo; <i>IEEE Trans. Signal Processing (<b>TSP</b>)</i>, vol. 71, pp. 3229-3241, 2023. <a href="paper/L2min2-Efficient Linear Reconstruction Filter for Incremental Delta-Sigma ADCs.pdf"><span style="font-size:small">Read PDF&raquo;</span></a> or <a class="ieee-link" href="https://ieeexplore.ieee.org/document/10254386"><span style="font-size:small">Access in IEEE&raquo;</span></a></li>
-			<br>
-			<li>K. E. Jeon, T. N. Lin, J. She, S. Wong, R. Govindan, T. Al-Ansari, and B. Wang, &ldquo;LuXSensing beacon: batteryless IoT sensor, design methodology, and field test for sustainable greenhouse monitoring,&rdquo; <i>IEEE Trans. AgriFood Electronics (<b>TAFE</b>)</i>, vol. 1, no. 2, pp. 86-98, Dec. 2023. <a href="paper/LuXSensing_Beacon_Batteryless_IoT_Sensor_Design_Methodology_and_Field_Test_for_Sustainable_Greenhouse_Monitoring.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. Yang, M. D. Li, Z. J. Wang, Y. Yang, L. Zhang, B. Wang, and F. Tang, &ldquo;A 100-ppm integrated TDM-based single-phase wattmeter for smart grid,&rdquo; <i>IEEE Trans. Circ. Syst. II: Express Briefs (<b>TCAS-II</b>)</i>, vol. 70, no. 2, pp. 406-410, Feb. 2023. <a href="paper/A_100-ppm_Integrated_TDM-Based_Single-Phase_Wattmeter_for_Smart_Grid.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, M. Chiao, K. A. Mahmoud, and B. Wang, &ldquo;An MXene-doped PVA/PVP hydrogel-based strain sensor applicable in liquid environment,&rdquo; <i>Smart Materials and Structures (<b>SMS</b>)</i>, vol. 32, no. 2, pp. 025010, Jan. 2023. <a href="paper/An MXene-doped PVA PVP hydrogel-based strain sensor applicable in liquid environment.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Geng, H. Lin, B. Wang and C. Wang, &ldquo;A Cryo-CMOS 4.5~7GHz dual-qubit homodyne reflectometer array with high Q degenerate parametric amplifier through dynamic mode coupling,&rdquo; <i>IEEE Asian Solid-State Circuits Conf. (<b>A-SSCC</b>)</i>, pp. 1-2, Nov. 2023.<a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>N. Fares, B. Wang and S. Bakiras, &ldquo;Design and implementation of certificateless cryptography for IoT applications,&rdquo; <i>IEEE Int&rsquo;l. Midwest Symp. Circ. Syst. (<b>MWSCAS</b>)</i>, pp. 933-937, Aug. 2023. <a href="paper/Design_and_Implementation_of_Certificateless_Cryptography_for_IoT_Applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>K. E. Jeon, J. She, and B. Wang, &ldquo;Information-aware sensing framework for long-lasting IoT sensors in greenhouse,&rdquo; <i>IEEE Wireless Comm. and Networking Conf. (<b>WCNC</b>)</i>, pp. 1-6, March 2023. <a href="paper/Information-Aware_Sensing_Framework_for_Long-Lasting_IoT_Sensors_in_Greenhouse.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2022 ============ -->
-		<br>
-		<h3>2022</h3>
-		&nbsp;
-		<ul>
-			<li>B. Wang, and M. K. Law, &ldquo;Subranging BJT-based CMOS temperature sensor with a &plusmn;0.45&deg;C inaccuracy (3&sigma;) from &minus;50&deg;C to 180&deg;C and a resolution-FoM of 7.2 pJ&middot;K² at 150&deg;C,&rdquo; <i>IEEE Journal of Solid-State Circuits (<b>JSSC</b>)</i>, vol. 57, no. 12, pp. 3693-3703, Dec. 2022. <a href="paper/Subranging BJT-Based CMOS Temperature Sensor With a ±0.45°C Inaccuracy (3σ) From −50°C to 180°C and a Resolution-FoM of 7.2 pJ·K² at 150°C.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. A. Awan, M. Ahmed, and B. Wang, &ldquo;A laser Doppler blood flow measurement system with a 151.4 dB&Omega; gain and 0.05% nonlinearity for PAD patients,&rdquo; <i><b>IEEE Sensor J.</b></i>, vol. 22, no. 14, pp. 14196-14204, July 2022. <a href="paper/A_Laser_Doppler_Blood_Flow_Measurement_System.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, M. Chiao, K. A. Mahmoud, L. Wu, and B. Wang, &ldquo;Preparation and characterization of PVA/PVP conductive hydrogels formed by freeze&ndash;thaw processes as a promising material for sensor applications,&rdquo; <i>Journal of Materials Science (<b>JMS</b>)</i>, vol. 57, pp. 8029&ndash;8038, April 2022. <a href="paper/Preparation and characterization of PVA-PVP conductive hydrogels formed by freeze-thaw processes as a promising material for sensor applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. A. Akbar, B. Wang, and A. Bermak, &ldquo;Self-repairing carry-lookahead adder with hot-standby topology using fault-localization and partial reconfiguration,&rdquo; <i>IEEE Open Journal of Circuits and Systems (<b>OJCAS</b>)</i>, vol. 3, pp. 50-58, March 2022. <a href="paper/Self-Repairing_Carry-Lookahead_Adder_With_Hot-Standby_Topology_Using_Fault-Localization_and_Partial_Reconfiguration.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, B. Wang, X. Liu, and C. Li, &ldquo;Flexible piezoresistive strain sensor based on CNTs&ndash;polymer composites: a brief review,&rdquo; <i><b>Carbon Letters</b></i>, Feb. 2022. <a href=""><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Analysis of output ripple shape and amplitude in chopper instrumentation amplifier,&rdquo; <i>IEEE Trans. Circ. Syst. II: Express Briefs (<b>TCAS-II</b>)</i>, vol. 69, no. 2, pp. 299-303, Feb. 2022. <a href="paper/Analysis_of_Output_Ripple_Shape_and_Amplitude_in_Chopper_Instrumentation_Amplifier.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>N. A. Quadir, M. Hamdi, M. A. Awan, B. Wang and A. Bermak, &ldquo;Design and analysis of a dual-band bistatic backscatter circuit for passive RFID tags,&rdquo; <i>IEEE Int&rsquo;l. Symp. Embedded Multicore/Many-core Systems-on-Chip (<b>MCSoC</b>)</i>, pp. 301-304, Dec. 2022. <a href="paper/Design_and_Analysis_of_A_Dual-Band_Bistatic_Backscatter_Circuit_for_Passive_RFID_Tags.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Z. J. Li, Z. T. Fang, B. Wang, M. Ahmed, X. F. Pan, S. T. Han, X. J. Zhao, and W. Xu, &ldquo;System-level modeling and design of a temperature compensated CMOS MEMS thermal flow sensor,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2022. <a href="paper/System-Level_Modeling_and_Design_of_a_Temperature_Compensated_CMOS_MEMS_Thermal_Flow_Sensor.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M. K. Law, and A. Bermak, &ldquo;A BJT-based CMOS temperature sensor achieving an inaccuracy of &plusmn;0.45<sup>o</sup>C (3&sigma;) from -50<sup>o</sup>C to 180<sup>o</sup>C and a resolution-FoM of 7.2pJ&middot;K<sup>2</sup> at 150<sup>o</sup>C,&rdquo; <i>IEEE Int&rsquo;l. Solid-State Circ. Conf. (<b>ISSCC</b>)</i>, pp. 72-74, Feb. 2022. <a href="paper/Tsensor_ISSCC_2022.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2021 ============ -->
-		<br>
-		<h3>2021</h3>
-		&nbsp;
-		<ul>
-			<li>S. Khan, S. Ali, A. Khan, B. Wang, T. Al-Ansari, and A. Bermak, &ldquo;Substrate treatment evaluation and their impact on printing results for wearable electronics,&rdquo; <i><b>Frontiers in Electronics</b></i>, Nov. 2021. <a href="paper/Substrate treatment evaluation and their impact on printing results for wearable electronics.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Ripple suppression in capacitive-gain chopper instrumentation amplifier using amplifier slicing,&rdquo; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, vol. 68, no. 10, pp. 3991-4000, Oct. 2021. <a href="paper/Ripple_Suppression_in_Capacitive-Gain_Chopper_Instrumentation_Amplifier_Using_Amplifier_Slicing.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Z. Z. Zeng, J. J. Lopez, B. Wang, and E. S. Sinencio, &ldquo;A CMOS energy harvesting interface circuit with cycle-to-cycle frequency-to-amplitude conversion MPPT for centimeter-scale wind turbine,&rdquo; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, vol. 68, no. 9, pp. 3587-3597, Sept. 2021. <a href="paper/A CMOS Energy Harvesting Interface Circuit With Cycle-to-Cycle Frequency-to-Amplitude Conversion MPPT for Centimeter-Scale Wind Turbine.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>K. Khan, S. Ali, A. Khan, B. Wang,&nbsp;and A. Bermak, &ldquo;Inkjet printing of multi-stripes based deflection monitoring sensor on flexible substrate,&rdquo; <i><b>Sensors and Actuators A: Physical</b></i>, June 2021. <a href="paper/Inkjet printing of multi-stripes based deflection monitoring sensor on flexible substrate.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>A. Khan, K. Rahman, S. Ali, S. Khan, B. Wang, and A. Bermak, &ldquo;Fabrication of circuits by multi-nozzle electrohydrodynamic inkjet printing for soft wearable electronics,&rdquo; <i>Journal of Materials Research (<b>JMR</b>)</i>, vol. 36, pp. 3568&ndash;3578, April 2021. <a href="paper/Fabrication of circuits by multi-nozzle electrohydrodynamic inkjet printing for soft wearable electronics.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, C. Mu, and B. Wang, &ldquo;An electrochemically actuated drug delivery device with in-situ dosage sensing,&rdquo; <i>Smart Materials and Structures (<b>SMS</b>)</i>, vol. 30, no. 5, pp. 1-9, March 2021. <a href="paper/An electrochemically actuated drug delivery device with in-situ dosage sensing.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>K. Khan, S. Ali, A. Khan, B. Wang, and A. Bermak, &ldquo;Printing sensors on biocompatible substrates for selective detection of glucose,&rdquo; <i><b>IEEE Sensor J.</b></i>, vol. 21, no. 4, pp. 4167-4175, Feb. 2021. <a href="paper/Printing Sensors on Biocompatible Substrates for Selective Detection of Glucose.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. Akbar, B. Wang, and A. Bermak, &ldquo;A high-speed parallel architecture for ripple carry adder with fault detection and localization,&rdquo; <i><b>Electronics</b></i>, 1791, Jan. 2021. <a href="https://www.mdpi.com/2079-9292/10/15/1791"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, A. Samara, and B. Wang, &ldquo;A new approach for an ultra-thin piezoresistive sensor based on solidified carbon ink film,&rdquo; <i>Journal of Materials Science (<b>JMS</b>)</i>, 56, 607&ndash;614 (2021). <a href="paper/A new approach for an ultra-thin piezoresistive sensor based on solidified carbon ink film.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, S. W. Wang, and M. K. Law, &ldquo;On low-Leakage CMOS switches,&rdquo; <i>IEEE Int&rsquo;l. Midwest Symp. Circ. Syst. (<b>MWSCAS</b>)</i>, Aug. 2021. <a href="paper/On_Low-Leakage_CMOS_Switches.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>N. A. Quadir, M. A. Awan, A. Mohamed, and B. Wang, &ldquo;An active inductor based TIA with ambient light rejection for VLC applications,&rdquo; <i>IEEE Int&rsquo;l. Midwest Symp. Circ. Syst. (<b>MWSCAS</b>)</i>, Aug. 2021. <a href="paper/An_Active_Inductor_Based_TIA_with_Ambient_Light_Rejection_for_VLC_Applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>M. A. Awan, B. Wang, N. A. Quadir, and A. Bermak, &ldquo;Review and analysis of CMOS current readout circuits for biosensing applications,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2021. <a href="paper/Review_and_Analysis_of_CMOS_Current_Readout_Circuits_for_Biosensing_Applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>J. H. Fernandez, B. Wang, A. Massoud, S. Talib, M. Shhaab, and A. Mohamed, &ldquo;On ambient temperature of transformer substations in desert climates,&rdquo; <i>IEEE PES Innovative Smart Grid Technologies (<b>ISGT</b>)</i>, Feb. 2021. <a href="paper/On_Ambient_Temperature_of_Transformer_Substations_in_Desert_Climates.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2020 ============ -->
-		<br>
-		<h3>2020</h3>
-		&nbsp;
-		<ul>
-			<li>M. Akbar, B. Wang, and A. Bermak, &ldquo;Self-repairing hybrid adder with hot-standby topology using fault-localization,&rdquo; <i><b>IEEE Access</b></i>, vol. 8, pp. 150051-150058, Aug. 2020. <a href="https://ieeexplore.ieee.org/document/9166473"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, S. Brahim Belhaouari, and A. Bermak, &ldquo;Near-optimal decoding of incremental delta-Sigma ADC output,&rdquo; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, vol. 67, no. 11, pp. 3670-3680, Nov. 2020. <a href="paper/Near-optimal Decoding of Incremental Delta-Sigma ADC Output.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang et al., &ldquo;A noise-reduced light-to-frequency converter for sub-0.1% perfusion index blood SpO<sub>2</sub> sensing,&rdquo; <i>IEEE Trans. Biomed. Circ. and Syst. (<b>TBioCAS</b>)</i>, vol. 14, no. 5, pp. 931-941, Oct. 2020. <a href="paper/A_Noise-Reduced_Light-to-Frequency_Converter_for_Sub-0.1_Perfusion_Index_Blood_SpO2_Sensing.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang et al., &ldquo;A 32-Step phase-compensated spread-spectrum RF-PLL with 19.44-dB EMI reduction and 10-fs extra RMS jitter,&rdquo; <i>IEEE Trans. Microw. Theory Techn. (<b>TMTT</b>)</i>, vol. 68, no. 4, pp. 1564-1575, April 2020. <a href="paper/A_32-Step_Phase-Compensated_Spread-Spectrum_RF-PLL_With_19.44-dB_EMI_Reduction_and_10-fs_Extra_RMS_Jitter.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, S. Brahim Belhaouari, and A. Bermak, &ldquo;Near-optimal decoding of incremental delta-sigma ADC output,&rdquo; <i>IEEE Int&rsquo;l. Symp. on Integrated Circ. Syst. (<b>ISICAS</b>)</i>, Aug. 2020. <a href="paper/Near-optimal Decoding of Incremental Delta-Sigma ADC Output.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M. K. Law, and A. Bermak, &ldquo;On fully differential incremental &Delta;&Sigma; ADC with initial feedback zeroing and 1.5-Bit feedback,&quot; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2020. <a href="paper/On_Fully_Differential_Incremental_DS_ADC_with_Initial_Feedback_Zeroing_and_1.5-Bit_Feedback.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Tobi Delbruck et. al., &ldquo;Invited Paper: lessons learned the hard way,&quot; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2020. <a href="paper/Lessons Learned the Hard Way.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. N. Lin, B. Wang, S. B. Belhaouari, and A. Bermak, &ldquo;A chopper instrumentation amplifier with amplifier slicing technique for offset reduction,&quot; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2020. <a href="paper/A_Chopper_Instrumentation_Amplifier_with_Amplifier_Slicing_Technique_for_Offset_Reduction.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>S. Khan, S. Ali, H. Mohsin, B. Wang, and A. Bermak, &ldquo;Printing sensor on flexible substrates for detection of volatile organic compounds,&quot; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May. 2020. <a href="paper/Printing_Sensor_on_Flexible_Substrates_for_Detection_of_Volatile_Organic_Compounds.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Z. Z. Zeng, S. P. Shen, B. Wang, J. Johan, R. Murch, and E. S&aacute;nchez, &ldquo;An ultra-low-power power management circuit with output bootstrapping and reverse leakage reduction function for RF energy harvesting,&quot; <i>IEEE/MTT-S Int&rsquo;l. Microwave Symp. (<b>IMS</b>)</i>, June 2020. <a href="paper/An_Ultra-low-power_Power_Management_Circuit_with_Output_Bootstrapping_and_Reverse_Leakage_Reduction_Function_for_RF_Energy_Harvesting.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-		</ul>
-
-		<!-- ============ 2020 之前 ============ -->
-		<br>
-		<h3>Before 2020</h3>
-		&nbsp;
-		<ul>
-			<li>B. Wang, M.-K. Law, J. Yi, C.-Y. Tsui, and A. Bermak, &ldquo;A -12.3 dBm UHF passive RFID sense tag for grid thermal monitoring,&rdquo; <i>IEEE Trans. Ind. Electron. (<b>TIE</b>)</i>, vol. 66, no. 11, pp. 8811-8820, Nov. 2019. <a href="paper/A -12.3 dBm UHF Passive RFID Sense Tag for Grid Thermal Monitoring.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, B. Wang, and A. Bermak, &ldquo;A low-cost strain gauge displacement sensor fabricated via shadow mask printing,&rdquo; <i><b>Sensors</b></i>, 4713, Oct. 2019. <a href="paper/A Low-Cost Strain Gauge Displacement Sensor Fabricated via Shadow Mask Printing.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>C. Li, B. Wang, Huang, R., and Y. Yi, &ldquo;A resonant coupling power transfer system using two driving coils,&rdquo; <i><b>Energies</b></i>, 2914, July 2019. <a href="paper/A Resonant Coupling Power Transfer System Using Two Driving Coils.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>W. Xu, B. Wang, M. Z. Duan, M. Ahmed, A. Bermak, and Y. K. Lee, &ldquo;A 3D integrated micro calorimetric flow sensor in CMOS MEMS technology,&rdquo; <i><b>IEEE Sensors Letters</b></i>, vol. 3, no. 2, pp. 1-4, Feb. 2019. <a href="paper/A 3D Integrated Micro Calorimetric Flow Sensor in CMOS MEMS Technology.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, C.-Y. Tsui, and A. Bermak, &ldquo;A 10.6 pJ&middot;K<sup>2</sup> resolution FoM temperature sensor using astable multivibrator,&rdquo; <i>IEEE Trans. Circ. Syst. II: Express Briefs (<b>TCAS-II</b>)</i>, vol. 65, no. 7, pp. 869-873, July 2018. <a href="paper/A 10.6 pJK2 Resolution FoM Temperature Sensor Using Astable Multivibrator.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang, S. Li, B. Wang, A. Bermak, X. Zhou, and S. Hu, &quot;A low power class-AB audio power amplifier with dynamic transconductance compensation in 55 nm CMOS process,&quot; <i>IEEE Trans. Circ. and Syst. I: Regular Papers (<b>TCAS-I</b>)</i>, vol. 63, no. 9, pp. 1360-1369, Sept. 2016. <a href="paper/A Low Power Class-AB Audio Power Amplifier With Dynamic Transconductance Compensation in 55 nm CMOS Process.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang, B. Wang, and A. Bermak, &ldquo;A column-parallel inverter-based cyclic ADC for CMOS image sensor with capacitance and clock scaling,&rdquo; <i>IEEE Trans. Electron Devices (<b>TED</b>)</i>, vol. 63, no.1, pp.162-167, Jan. 2016. <a href="paper/A Column-Parallel Inverter-Based Cyclic ADC for CMOS Image Sensor With Capacitance and Clock Scaling.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, A. Bermak, and F. Tang, &ldquo;BJT process spread compensation utilizing base recombination current in standard CMOS,&rdquo; <i>IEEE Electron Device Lett. (<b>EDL</b>)</i>, vol.36, no.11, pp.1111-1113, Nov. 2015. <a href="paper/BJT Process Spread Compensation Utilizing Base Recombination Current in Standard CMOS.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;A precision CMOS voltage reference exploiting silicon bandgap narrowing effect,&rdquo; <i>IEEE Trans. Electron Devices (<b>TED</b>)</i>, vol.62, no.7, pp.2128 - 2135, Jul. 2015. <a href="paper/A Precision CMOS Voltage Reference Exploiting Silicon Bandgap Narrowing Effect.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, A. Bermak, and H.-C. Luong, &ldquo;A passive RFID tag embedded temperature sensor with improved process spreads immunity for a -30 <sup>o</sup>C to 60 <sup>o</sup>C sensing range,&rdquo; <i>IEEE Tran. Circ. Syst. I: Reg. Papers (<b>TCAS-I</b>)</i>, vol.61, no.2, pp. 337 - 346, Feb. 2014. <a href="paper/A Passive RFID Tag Embedded Temperature Sensor With Improved Process Spreads Immunity for a -30 °C to 60 °C Sensing Range.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang, D.-G. Chen, B. Wang, and A. Bermak, &ldquo;CMOS on-chip stable true-random ID generation using antenna effect,&rdquo; <i>IEEE Electron Device Lett. (<b>EDL</b>)</i>, vol.35, no.1, pp. 54 - 56, Jan. 2014. <a href="paper/CMOS On-Chip Stable True-Random ID Generation Using Antenna Effect.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang, D.-G. Chen, B. Wang, and A. Bermak, &ldquo;Low-power CMOS image sensor based on column-parallel single-slope/SAR quantization scheme,&rdquo; <i>IEEE Trans. Electron Devices (<b>TED</b>)</i>, vol.60, no.8, pp. 2561 - 2566, Aug. 2013. <a href="paper/Low-Power CMOS Image Sensor Based on Column-Parallel Single-Slope-SAR Quantization Scheme.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<!-- 新论文从此处向上添加 -->
-			<li>B. Wang, J. H. Fernandez, and A. Massoud, &ldquo;A wireless battery temperature monitoring system for electric vehicle charging,&quot; <i><b>IEEE Sensors Conf.</b></i>, Montreal, Canada, Nov. 2019. <a href="paper/A Wireless Battery Temperature Monitoring System for Electric Vehicle Charging.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>Y. Yi, S. Ali, and B. Wang, &ldquo;An inkjet-printed strain sensor with a carbon-silver-polyimide topology,&rdquo; <i>IEEE Int&rsquo;l. Conf. on Flexible and Printable Sensors and Systems (<b>FLEPS</b>)</i>, Glasgow, UK, July. 2019. <a href="paper/An Inkjet-printed Strain Sensor with a Carbon-Silver-Polyimide Topology.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. N. Lin, B. Wang, and A. Bermak, &ldquo;Review and analysis of instrumentation amplifier for IoT applications,&rdquo; <i>IEEE Int&rsquo;l. Midwest Symp. Circ. Syst. (<b>MWSCAS</b>)</i>, Windsor, Canada, Aug. 2018. <a href="paper/Review and Analysis of Instrumentation Amplifier for IoT Applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>T. T. Zhang, M.-K. Law, B. Wang, Pui-In Mak, Mang-I Vai, and R. P. Martins, &ldquo;A 310 nW 14.2-bit iterative-incremental ADC for wearable sensing systems,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May 2017. <a href="paper/A 310 nW 14.2-bit Iterative-Incremental ADC for Wearable Sensing Systems.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>D. P. Sun, M.-K. Law, B. Wang, Pui-In Mak, and R. P. Martins, &ldquo;Piecewise BJT process spread compensation exploiting base recombination current,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, May 2017. <a href="paper/Piecewise BJT Process Spread Compensation Exploiting Base Recombination Current.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>W. Xu, B. Gao, M. Ahmed, M. Duan, B. Wang, S. Mohamad, A. Bermak, and Y.-K. Lee, &ldquo;A wafer-level encapsulated CMOS-MESM thermoresistive calorimetric flow sensor with integrated packaging design,&rdquo; <i>IEEE Int&rsquo;l. Conf. Micro Electro Mechanical Syst. (<b>MEMS</b>)</i>, Jan. 2017. <a href="paper/A Wafer-level Encapsulated CMOS-MESM Thermoresistive Calorimetric Flow Sensor with Integrated Packaging Design.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>X. Lu, B. Wang, Z.-H. Wen, X.-J. Zhao, Y. Cao, and A. Bermak, &quot;A low power relaxation oscillator with process insensitive auto-calibration scheme,&quot; <i>IEEE Asia Pacific Conf. Circ. Syst. (<b>APCCAS</b>)</i>, Oct. 2016. <a href="paper/A Low Power Relaxation Oscillator with Process Insensitive Auto-calibration Scheme.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Zhang, X.-P. Zhong, B. Wang, P. Sander, and A. Bermak, &ldquo;Wide dynamic range PSD algorithms and their implementation for compressive imaging,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, Montreal, QC, pp. 2727-2730, May 2016. <a href="paper/Wide Dynamic Range PSD Algorithms and Their Implementation for Compressive Imaging.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, S. Mohamad, and A. Bermak, &ldquo;A 2.2uW 15b incremental delta-sigma A/D with output-driven input segmentation,&rdquo; <i>IEEE/ACM Asia and South Pacific Design Automation Conf. (<b>ASP-DAC</b>)</i>, University Design Contest, Jan. 2016 <b><span class="text-accent"><i>(Best Design Award)</i></span></b> <a href="paper/A 2.2uW 15b Incremental Delta-Sigma ADC with Output-Driven Input Segmentation.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>X.-P. Zhong, B. Wang, and A. Bermak, &ldquo;A reconfigurable time-domain comparator for multi-sensing applications,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, Lisbon, Portugal, pp. 349 &ndash; 352, May 2015. <a href="paper/A Reconfigurable Time-Domain Comparator for Multi-Sensing Applications.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;A low-cost capacitive relative humidity sensor for food moisture monitoring application,&rdquo; <i>Asia Symp. Quality Electronic Design (<b>ASQED</b>)</i>, Penang, Malaysia, pp. 95 - 99, July 2012. <a href="paper/A Low-Cost Capacitive Relative Humidity Sensor for Food Moisture Monitoring Application.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>F. Tang, B. Wang, and A. Bermak, &ldquo;80 dB dynamic range 100 kHz bandwidth inverter-based ADC for CMOS image sensor,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, Seoul, Korea, pp. 3094-3097, May 2012. <a href="paper/80 dB Dynamic Range 100 kHz Bandwidth Inverter-based ADC for CMOS Image Sensor.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			<li>B. Wang, M.-K. Law, and A. Bermak, &ldquo;A sub-1V BJT-based CMOS temperature sensor from -55 <sup>o</sup>C to 125 <sup>o</sup>C,&rdquo; <i>IEEE Int&rsquo;l. Symp. Circ. Syst. (<b>ISCAS</b>)</i>, Seoul, Korea, pp.3114-3117, May 2012. <a href="paper/A Sub-1V BJT-based CMOS Temperature Sensor from -55oC to 125oC.pdf"><span style="font-size:small">Read PDF&raquo;</span></a></li>
-			<br>
-			&nbsp;
-		</ul>
-
-		<p align="right"><a href="#top"><span style="font-size:small"><i>Back to top&raquo;</i></span></a></p>
+		<p style="text-align:right"><a href="#top"><span style="font-size:small"><i>Back to top&raquo;</i></span></a></p>
 	</div>
 </div>
-	<!-- 链接域名悬停提示框（模仿浏览器原生链接预览，排除导航栏与 Read PDF»） -->
-	<script src="js/link-tooltip.js"></script>
+	<!-- 链接悬停提示框已全局关闭（本页不加载 js/link-tooltip.js）；如需恢复取消下面一行的注释 -->
+	<!--<script src="js/link-tooltip.js"></script>-->
 </body>
 </html>

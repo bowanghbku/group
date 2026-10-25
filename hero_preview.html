@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero 背景方案预览 — LTU3E</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;700&family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+	:root { --accent: #7D0E2D; }
+	* { box-sizing: border-box; }
+	body {
+		margin: 0; padding: 40px 16px 80px;
+		background: #2b2f36;
+		font-family: "Nunito Sans", Arial, sans-serif;
+	}
+	.pv-wrap { max-width: 1000px; margin: 0 auto; }
+	.pv-head { color: #fff; margin: 0 0 8px; font-size: 26px; font-family: Oswald, sans-serif; letter-spacing: .04em; }
+	.pv-sub  { color: #aab2bd; margin: 0 0 34px; font-size: 14px; line-height: 1.6; }
+	.pv-label {
+		color: #fff; font-family: Oswald, sans-serif; font-size: 19px;
+		letter-spacing: .05em; margin: 44px 0 6px;
+	}
+	.pv-label b { color: #ffd166; }
+	.pv-note { color: #9aa3ad; font-size: 13.5px; line-height: 1.7; margin: 0 0 12px; }
+	.pv-note em { color: #d7dde4; font-style: normal; }
+
+	/* —— 模拟真实页面骨架（1000px 白框 + 红色导航） —— */
+	.frame {
+		width: 100%; background: #E9EBEE; margin: 0 auto;
+		box-shadow: 0 6px 26px rgba(0,0,0,.45);
+	}
+	.mainheader nav {
+		background: var(--accent); height: 72px; padding: 0 10px;
+		display: flex; align-items: center;
+	}
+	.mainheader nav ul { list-style: none; display: flex; margin: 0; padding: 0; height: 100%; align-items: center; }
+	.mainheader nav li { font-family: Anton, sans-serif; font-size: 15px; letter-spacing: .5px; text-transform: uppercase; }
+	.mainheader nav a { color: #fff; text-decoration: none; display: block; padding: 0 14px; }
+	.mainheader nav li:first-child a { padding-left: 20px; text-decoration: underline; }
+	.onebox { background: #fff; padding: 0 30px 26px; }
+
+	/* —— 真实 hero 文字规格（取自 css/main.css） —— */
+	.hero { text-align: center; padding: 72px 24px 64px; position: relative; }
+	.hero h1 {
+		font-family: Oswald, sans-serif; font-size: 40px; font-weight: 700;
+		letter-spacing: .05em; margin: 0; line-height: 1.2; color: #000;
+	}
+	.hero p {
+		font-family: "Nunito Sans", sans-serif; font-size: 15px; font-weight: 300;
+		letter-spacing: .1em; margin: 18px 0 0; line-height: 1.7; color: #333;
+	}
+	.pv-body { padding: 26px 0 0; color: #8a9099; font-size: 13px; line-height: 1.9; }
+	.pv-body .ln { height: 9px; background: #eef0f3; border-radius: 4px; margin-bottom: 9px; }
+
+	/* ============ 方案 A：全幅 · 深色遮罩 + 白字（推荐） ============ */
+	.hero-a {
+		margin: 0 -30px;                 /* 抵消 onebox 左右 padding，铺满白框 */
+		background: url("images/LTU3E.jpeg") center 42% / cover no-repeat;
+	}
+	.hero-a::before {
+		content: ""; position: absolute; inset: 0;
+		background: rgba(17, 24, 39, .68);
+	}
+	.hero-a > * { position: relative; }
+	.hero-a h1 { color: #fff; }
+	.hero-a p  { color: rgba(255,255,255,.88); }
+
+	/* ============ 方案 B：圆角卡片 · 深色遮罩 + 白字 ============ */
+	.hero-b {
+		margin: 26px 0 6px; border-radius: 10px; overflow: hidden;
+		background: url("images/LTU3E.jpeg") center 42% / cover no-repeat;
+		padding: 58px 24px 52px;
+	}
+	.hero-b::before { content: ""; position: absolute; inset: 0; background: rgba(17,24,39,.62); }
+	.hero-b > * { position: relative; }
+	.hero-b h1 { color: #fff; }
+	.hero-b p  { color: rgba(255,255,255,.88); }
+
+	/* ============ 方案 C：全幅 · 浅色磨砂 + 黑字 ============ */
+	.hero-c {
+		margin: 0 -30px;
+		background: url("images/LTU3E.jpeg") center 42% / cover no-repeat;
+	}
+	.hero-c::before {
+		content: ""; position: absolute; inset: 0;
+		background: rgba(255,255,255,.82);
+		backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+	}
+	.hero-c > * { position: relative; }
+	.hero-c h1 { color: #000; }
+	.hero-c p  { color: #3d434b; }
+
+/* ============ 方案 D′：全幅 · 上下压暗/中段透光渐变 + 白字（已应用到 index.html） ============ */
+.hero-d {
+	display: flex; flex-direction: column;
+	justify-content: flex-end; align-items: center;   /* 文字沉到横幅底部并居中 */
+	margin: 0 -30px; padding: 196px 24px 56px;
+	background: url("images/LTU3E.jpeg") center 38% / cover no-repeat;
+	overflow: hidden;
+}
+.hero-d::before {
+	content: ""; position: absolute; inset: 0;
+	background: linear-gradient(180deg,
+		rgba(9,13,20,.34) 0%,     /* 顶部压亮边 */
+		rgba(9,13,20,.12) 22%,    /* 中段最透：裸片主体清晰 */
+		rgba(9,13,20,.26) 42%,
+		rgba(9,13,20,.62) 68%,
+		rgba(9,13,20,.88) 88%,
+		rgba(9,13,20,.94) 100%);  /* 底部最深：白字对比度最高 */
+}
+.hero-d::after {                  /* 底部主题红细线：呼应导航栏 + 收口横幅 */
+	content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+	height: 3px; background: #7D0E2D;
+}
+.hero-d > * { position: relative; }
+.hero-d h1 { color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.6); }
+.hero-d p  { color: rgba(255,255,255,.92); margin-top: 22px; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
+
+	@media (max-width: 760px) {
+		.hero { padding: 40px 18px 36px; }
+		.hero h1 { font-size: 28px; }
+		.hero-d { padding-top: 96px; }
+	}
+</style>
+</head>
+<body>
+<div class="pv-wrap">
+	<h2 class="pv-head">「Integrated Sensor IC Design Lab」标题区背景 · 4 个方案</h2>
+	<p class="pv-sub">
+		背景图均为 images/LTU3E.jpeg（1086×1090，比例 1:1）。标题区实际高度约 250px、宽 940–1000px，
+		所以背景会用 cover 裁掉图片上下约 60%，取中部裸片纹理。<br>
+		原图偏亮且细节极密，<b style="color:#ffd166">不加遮罩任何方案都会看不清字</b>，以下均已加遮罩。
+	</p>
+
+	<!-- ============ A ============ -->
+	<div class="pv-label">方案 A · <b>全幅深色遮罩 + 白字</b>（推荐）</div>
+	<p class="pv-note">
+		背景铺满整个白框宽度（抵消左右 30px 内边距），整块深蓝灰遮罩压住裸片细节，白字对比度最高。
+		<em>视觉冲击最强、任何屏幕都可读；但页面整体从「白底」变成「深色横幅开场」，与现有浅色风格反差最大。</em>
+	</p>
+	<div class="frame">
+		<div class="mainheader"><nav><ul>
+			<li><a href="#">HOME</a></li><li><a href="#">RESEARCH</a></li><li><a href="#">PUBLICATIONS</a></li><li><a href="#">GROUP</a></li>
+		</ul></nav></div>
+		<div class="onebox">
+			<section class="hero hero-a">
+				<h1>Integrated Sensor IC Design Lab</h1>
+				<p>Analog and Mixed-Signal Circuits for Intelligent Sensing.<br>ISIC Lab@HBKU</p>
+			</section>
+			<div class="pv-body">
+				<div class="ln" style="width:88%"></div><div class="ln" style="width:72%"></div><div class="ln" style="width:80%"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ============ B ============ -->
+	<div class="pv-label">方案 B · <b>圆角卡片深色 + 白字</b></div>
+	<p class="pv-note">
+		保留 30px 白边，背景做成圆角卡片嵌在白框里。
+		<em>最贴合现有「白盒 + 留白」的版式，改动观感最小；冲击力比 A 弱一些。</em>
+	</p>
+	<div class="frame">
+		<div class="mainheader"><nav><ul>
+			<li><a href="#">HOME</a></li><li><a href="#">RESEARCH</a></li><li><a href="#">PUBLICATIONS</a></li><li><a href="#">GROUP</a></li>
+		</ul></nav></div>
+		<div class="onebox">
+			<section class="hero hero-b">
+				<h1>Integrated Sensor IC Design Lab</h1>
+				<p>Analog and Mixed-Signal Circuits for Intelligent Sensing.<br>ISIC Lab@HBKU</p>
+			</section>
+			<div class="pv-body">
+				<div class="ln" style="width:88%"></div><div class="ln" style="width:72%"></div><div class="ln" style="width:80%"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ============ C ============ -->
+	<div class="pv-label">方案 C · <b>浅色磨砂 + 黑字</b></div>
+	<p class="pv-note">
+		白色半透明遮罩 + 3px 磨砂模糊，裸片变成隐约的浅色纹理，文字仍是黑字。
+		<em>最保持网站现在的浅色气质，裸片若隐若现；但背景几乎「看不见」，效果最含蓄。</em>
+	</p>
+	<div class="frame">
+		<div class="mainheader"><nav><ul>
+			<li><a href="#">HOME</a></li><li><a href="#">RESEARCH</a></li><li><a href="#">PUBLICATIONS</a></li><li><a href="#">GROUP</a></li>
+		</ul></nav></div>
+		<div class="onebox">
+			<section class="hero hero-c">
+				<h1>Integrated Sensor IC Design Lab</h1>
+				<p>Analog and Mixed-Signal Circuits for Intelligent Sensing.<br>ISIC Lab@HBKU</p>
+			</section>
+			<div class="pv-body">
+				<div class="ln" style="width:88%"></div><div class="ln" style="width:72%"></div><div class="ln" style="width:80%"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ============ D ============ -->
+	<div class="pv-label">方案 D′ · <b>上下压暗 / 中段透光渐变 + 白字</b>（已应用到 index.html）</div>
+	<p class="pv-note">
+		在 D 的基础上做了三处加强：① 渐变改成「顶部 34% → 中段 12% → 底部 94%」的双向压暗，
+		顶部不再刺眼、中段裸片纹理反而更清晰；② 横幅加高到约 340px，裸片露出更多；
+		③ 标题副标题加投影兜底，底部再压一条主题红细线与导航栏呼应。
+		<em>裸片展示完整 + 文字始终可读，兼顾「作品展示」与可读性。</em>
+	</p>
+	<div class="frame">
+		<div class="mainheader"><nav><ul>
+			<li><a href="#">HOME</a></li><li><a href="#">RESEARCH</a></li><li><a href="#">PUBLICATIONS</a></li><li><a href="#">GROUP</a></li>
+		</ul></nav></div>
+		<div class="onebox">
+			<section class="hero hero-d">
+				<h1>Integrated Sensor IC Design Lab</h1>
+				<p>Analog and Mixed-Signal Circuits for Intelligent Sensing.<br>ISIC Lab@HBKU</p>
+			</section>
+			<div class="pv-body">
+				<div class="ln" style="width:88%"></div><div class="ln" style="width:72%"></div><div class="ln" style="width:80%"></div>
+			</div>
+		</div>
+	</div>
+
+	<p class="pv-sub" style="margin-top:36px">
+		<b style="color:#ffd166">D′ 已经写进 css/main.css 的 .lab-hero 规则，刷新 index.html 即可看到真实效果。</b>
+		HTML 未改动（.lab-hero__photo 仍保持注释隐藏）。想换回白底或改其他方案，说一声即可。<br>
+		另外提醒：LTU3E.jpeg 目前 989 KB，做背景建议压到 200 KB 以内（首屏加载会明显变快），需要的话我一并处理。
+	</p>
+</div>
+</body>
+</html>
