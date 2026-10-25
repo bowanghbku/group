@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -36,11 +36,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3654"
-     inkscape:window-height="2125"
+     inkscape:window-height="2126"
      id="namedview170"
      showgrid="false"
      inkscape:zoom="3.9333333"
-     inkscape:cx="121.89162"
+     inkscape:cx="72.442467"
      inkscape:cy="88.062744"
      inkscape:window-x="175"
      inkscape:window-y="-11"
@@ -123,28 +123,31 @@
   <!-- panel backgrounds -->
   <rect
      x="6"
-     y="14"
+     y="14.000001"
      width="118"
-     height="168"
+     height="177.66103"
      rx="8"
-     fill="#F3F4F6"
-     id="rect16" />
+     id="rect16"
+     style="fill:#f3f4f6;stroke-width:1"
+     ry="8" />
   <rect
      x="131"
-     y="14"
+     y="14.000001"
      width="118"
-     height="168"
+     height="177.66103"
      rx="8"
-     fill="#F3F4F6"
-     id="rect18" />
+     id="rect18"
+     style="fill:#f3f4f6;stroke-width:1"
+     ry="8" />
   <rect
      x="256"
-     y="14"
+     y="14.000001"
      width="118"
-     height="168"
+     height="177.66103"
      rx="8"
-     fill="#F3F4F6"
-     id="rect20" />
+     id="rect20"
+     style="fill:#f3f4f6;stroke-width:1"
+     ry="8" />
   <!-- (1) temperature sensor: die with BJT + thermometer -->
   <rect
      x="22"
@@ -190,7 +193,7 @@
   </text>
   <text
      x="65"
-     y="177"
+     y="181"
      class="sm"
      id="text50"
      style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
@@ -305,7 +308,7 @@
   </text>
   <text
      x="190"
-     y="177"
+     y="181"
      class="sm"
      id="text126"
      style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
@@ -338,7 +341,7 @@
   </text>
   <text
      x="315"
-     y="177"
+     y="181"
      class="sm"
      id="text162"
      style="font-size:7.5px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;text-anchor:middle;fill:#6b7280">
@@ -349,15 +352,16 @@
   <!-- base bar -->
   <rect
      x="6"
-     y="194"
+     y="200"
      width="368"
      height="32"
      rx="8"
-     fill="#7D0E2D"
-     id="rect164" />
+     id="rect164"
+     ry="8"
+     style="fill:#7d0e2d" />
   <text
      x="190"
-     y="214"
+     y="220"
      style="font-weight:600;font-size:10px;font-family:Inter, 'Helvetica Neue', Arial, sans-serif;letter-spacing:0.40000001px;text-anchor:middle;fill:#ffffff"
      id="text166">Sensing · Readout · (Processing) — integrated on chip</text>
   <g
